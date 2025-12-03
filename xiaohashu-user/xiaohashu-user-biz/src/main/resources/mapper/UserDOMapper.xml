@@ -28,7 +28,6 @@
     where id = #{id,jdbcType=BIGINT}
   </select>
     <select id="selectByPhone" resultType="com.quanxiaoha.xiaohashu.user.biz.domain.dataobject.UserDO">
-     select
         <include refid="Base_Column_List" />
         from t_user
         where phone = #{phone}
@@ -37,7 +36,7 @@
     delete from t_user
     where id = #{id,jdbcType=BIGINT}
   </delete>
-  <insert id="insert" parameterType="com.quanxiaoha.xiaohashu.user.biz.domain.dataobject.UserDO" useGeneratedKeys="true" keyProperty="id">
+  <insert id="insert" parameterType="com.quanxiaoha.xiaohashu.user.biz.domain.dataobject.UserDO">
     insert into t_user (id, xiaohashu_id, `password`, 
       nickname, avatar, birthday, 
       background_img, phone, sex, 

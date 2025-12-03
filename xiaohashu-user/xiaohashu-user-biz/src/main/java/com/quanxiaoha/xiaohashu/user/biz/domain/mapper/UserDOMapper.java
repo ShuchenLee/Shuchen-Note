@@ -4,7 +4,7 @@ import com.quanxiaoha.xiaohashu.user.biz.domain.dataobject.UserDO;
 
 public interface UserDOMapper {
     int deleteByPrimaryKey(Long id);
-    UserDO selectByPhone(String phone);
+
     int insert(UserDO record);
 
     int insertSelective(UserDO record);
@@ -14,4 +14,6 @@ public interface UserDOMapper {
     int updateByPrimaryKeySelective(UserDO record);
 
     int updateByPrimaryKey(UserDO record);
+
+    UserDO selectByPhone(String phone);
 }

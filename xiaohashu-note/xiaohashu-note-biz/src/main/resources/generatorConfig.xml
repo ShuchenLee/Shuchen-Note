@@ -45,11 +45,34 @@
                              targetProject="src/main/java"/>
 
         <!-- 需要生成的表-实体类 -->
-        <table tableName="t_user" domainObjectName="UserDO"
+        <table tableName="t_note" domainObjectName="NoteDO"
                enableCountByExample="false"
                enableUpdateByExample="false"
                enableDeleteByExample="false"
                enableSelectByExample="false"
                selectByExampleQueryId="false"/>
+        <table tableName="t_channel" domainObjectName="ChannelDO"
+               enableCountByExample="false"
+               enableUpdateByExample="false"
+               enableDeleteByExample="false"
+               enableSelectByExample="false"
+               selectByExampleQueryId="false"/>
+        <!-- 需要生成的表-实体类 -->
+        <table tableName="t_topic" domainObjectName="TopicDO"
+               enableCountByExample="false"
+               enableUpdateByExample="false"
+               enableDeleteByExample="false"
+               enableSelectByExample="false"
+               selectByExampleQueryId="false"/>
+        <!-- 需要生成的表-实体类 -->
+        <table tableName="t_channel_topic_rel" domainObjectName="ChannelTopicRelDO"
+               enableCountByExample="false"
+               enableUpdateByExample="false"
+               enableDeleteByExample="false"
+               enableSelectByExample="false"
+               selectByExampleQueryId="false"/>
+
+
+
     </context>
 </generatorConfiguration>
