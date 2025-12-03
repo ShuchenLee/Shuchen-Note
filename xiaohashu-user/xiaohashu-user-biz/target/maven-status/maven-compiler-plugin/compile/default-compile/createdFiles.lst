@@ -1,0 +1,13 @@
+com\quanxiaoha\xiaohashu\user\biz\domain\mapper\UserDOMapper.class
+com\quanxiaoha\xiaohashu\user\biz\enums\ResponseCodeEnum.class
+com\quanxiaoha\xiaohashu\user\biz\XiaohashuUserApplication.class
+com\quanxiaoha\xiaohashu\user\biz\rpc\OssRpcService.class
+com\quanxiaoha\xiaohashu\user\biz\domain\dataobject\UserDO.class
+com\quanxiaoha\xiaohashu\user\biz\domain\dataobject\UserDO$UserDOBuilder.class
+com\quanxiaoha\xiaohashu\user\biz\service\impl\UserServiceImpl.class
+com\quanxiaoha\xiaohashu\user\biz\enums\SexEnum.class
+com\quanxiaoha\xiaohashu\user\biz\service\UserService.class
+com\quanxiaoha\xiaohashu\user\biz\model\vo\UpdateUserReqVO.class
+com\quanxiaoha\xiaohashu\user\biz\exception\GlobalExceptionHandler.class
+com\quanxiaoha\xiaohashu\user\biz\model\vo\UpdateUserReqVO$UpdateUserReqVOBuilder.class
+com\quanxiaoha\xiaohashu\user\biz\controller\UserContorller.class

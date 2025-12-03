@@ -1,0 +1,3 @@
+com\quanxiaoha\xiaohashu\oss\constants\ApiConstants.class
+com\quanxiaoha\xiaohashu\oss\api\FileFeignApi.class
+com\quanxiaoha\xiaohashu\oss\config\FeignConfig.class

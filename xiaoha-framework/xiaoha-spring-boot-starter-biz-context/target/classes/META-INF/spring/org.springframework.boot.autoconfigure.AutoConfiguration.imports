@@ -1,0 +1,2 @@
+com.quanxiaoha.xiaohashu.context.config.ContextAutoConfig
+com.quanxiaoha.xiaohashu.context.config.FeignContextConfiguration

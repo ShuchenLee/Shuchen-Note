@@ -1,0 +1,9 @@
+storage:
+  minio:
+    endpoint: http://192.168.88.101:9000
+    accessKey: quanxiaoha
+    secretKey: quanxiaoha
+  aliyun:
+    endpoint: oss-cn-beijing.aliyuncs.com
+    accessKey: LTAI5tJnm35MmchVLYM8v3EH
+    secretKey: 0DSHY4apLPJ8iBuDGvcoESXp9QBuRr

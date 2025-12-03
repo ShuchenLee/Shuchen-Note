@@ -1,0 +1,11 @@
+2025-11-28 09:06:01.449 [main] INFO  c.q.xiaohashu.auth.XiaohashuAuthApplicationTests - Starting XiaohashuAuthApplicationTests using Java 17.0.12 with PID 5184 (started by Administrator in G:\xiaohashu\xiaohashu-auth)
+2025-11-28 09:06:01.450 [main] INFO  c.q.xiaohashu.auth.XiaohashuAuthApplicationTests - The following 1 profile is active: "dev"
+2025-11-28 09:06:02.913 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-11-28 09:06:02.939 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-11-28 09:06:02.989 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 25 ms. Found 0 Redis repository interfaces.
+2025-11-28 09:06:04.825 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+2025-11-28 09:06:05.291 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2025-11-28 09:06:05.824 [main] INFO  c.q.xiaohashu.auth.XiaohashuAuthApplicationTests - Started XiaohashuAuthApplicationTests in 4.874 seconds (process running for 7.216)
+2025-11-28 09:06:06.173 [task-1] INFO  c.q.xiaohashu.auth.XiaohashuAuthApplicationTests - 你好
+2025-11-28 09:06:06.184 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...
+2025-11-28 09:06:06.187 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Annotation profile for xiaohashu" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$PROJECT_DIR$/../../../work/maven-repo/org/projectlombok/lombok/1.18.30/lombok-1.18.30.jar" />
+        </processorPath>
+        <module name="xiaohashu-auth" />
+        <module name="xiaohashu-oss-api" />
+        <module name="xiaohashu-user-api" />
+        <module name="xiaoha-spring-boot-starter-biz-context" />
+        <module name="xiaohashu-oss-biz" />
+        <module name="xiaoha-spring-boot-starter-jackson" />
+        <module name="xiaohashu-user-biz" />
+        <module name="xiaohashu-gateway" />
+        <module name="xiaoha-common" />
+        <module name="xiaoha-spring-boot-starter-biz-operationlog" />
+        <module name="xiaohashu-kv-api" />
+      </profile>
+      <profile name="Annotation profile for xiaohashu-kv-biz" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$PROJECT_DIR$/../../../work/maven-repo/org/projectlombok/lombok/1.18.30/lombok-1.18.30.jar" />
+          <entry name="$PROJECT_DIR$/../../../work/maven-repo/org/projectlombok/lombok/1.18.30/lombok-1.18.30.jar" />
+        </processorPath>
+        <module name="xiaohashu-kv-biz" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel target="11" />
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="xiaohashu-auth" options="" />
+    </option>
+  </component>
+</project>

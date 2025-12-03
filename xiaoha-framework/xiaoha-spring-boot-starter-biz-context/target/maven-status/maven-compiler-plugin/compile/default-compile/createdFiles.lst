@@ -1,0 +1,5 @@
+com\quanxiaoha\config\FeignContextConfiguration.class
+com\quanxiaoha\config\ContextAutoConfig.class
+com\quanxiaoha\holder\ContextHolder.class
+com\quanxiaoha\filter\UserIdContextFilter.class
+com\quanxiaoha\Interceptor\FeignRequestInterceptor.class
