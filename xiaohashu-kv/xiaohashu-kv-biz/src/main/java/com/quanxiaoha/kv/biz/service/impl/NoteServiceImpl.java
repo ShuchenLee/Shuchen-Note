@@ -7,6 +7,7 @@ import com.quanxiaoha.kv.biz.service.NoteService;
 import com.quanxiaoha.xiaohashu.common.exception.BizException;
 import com.quanxiaoha.xiaohashu.common.response.Response;
 import com.quanxiaoha.xiaohashu.kv.api.dto.req.AddNoteContentReqDTO;
+import com.quanxiaoha.xiaohashu.kv.api.dto.req.DeleteNoteContentDTO;
 import com.quanxiaoha.xiaohashu.kv.api.dto.req.FindNoteContentReqDTO;
 import com.quanxiaoha.xiaohashu.kv.api.dto.resp.FindNoteContentRespDTO;
 import jakarta.annotation.Resource;
@@ -49,5 +50,14 @@ public class NoteServiceImpl implements NoteService {
                 .content(option.get().getContent())
                 .build();
         return Response.success(result);
+    }
+
+    @Override
+    public Response<?> deleteNoteContent(DeleteNoteContentDTO deleteNoteContentDTO) {
+        //get noteId
+        String noteId = deleteNoteContentDTO.getNoteId();
+        //delete note
+        noteContentRepository.deleteById(UUID.fromString(noteId));
+        return Response.success();
     }
 }

@@ -16,3 +16,21 @@ spring:
             - Path=/user/**
           filters:
             - StripPrefix=1
+        - id: id
+          uri: lb://xiaohashu-distributed-id-generator
+          predicates:
+            - Path=/id/**
+          filters:
+            - StripPrefix=1
+        - id: kv
+          uri: lb://xiaohashu-kv
+          predicates:
+            - Path=/kv/**
+          filters:
+            - StripPrefix=1
+        - id: oss
+          uri: lb://xiaohashu-oss
+          predicates:
+            - Path=/file/**
+          filters:
+            - StripPrefix=1

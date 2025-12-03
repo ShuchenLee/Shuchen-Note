@@ -3,6 +3,7 @@ package com.quanxiaoha.kv.biz.controller;
 import com.quanxiaoha.kv.biz.service.NoteService;
 import com.quanxiaoha.xiaohashu.common.response.Response;
 import com.quanxiaoha.xiaohashu.kv.api.dto.req.AddNoteContentReqDTO;
+import com.quanxiaoha.xiaohashu.kv.api.dto.req.DeleteNoteContentDTO;
 import com.quanxiaoha.xiaohashu.kv.api.dto.req.FindNoteContentReqDTO;
 import com.quanxiaoha.xiaohashu.kv.api.dto.resp.FindNoteContentRespDTO;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,8 +20,12 @@ public class NoteController {
     public Response<?> addNote(@RequestBody AddNoteContentReqDTO addNoteContentReqDTO) {
         return noteService.addNoteContent(addNoteContentReqDTO);
     }
-    @GetMapping("note/content/find")
+    @GetMapping("/note/content/find")
     public Response<FindNoteContentRespDTO> findNoteContent(@Validated @RequestBody FindNoteContentReqDTO findNoteContentReqDTO) {
         return noteService.findNoteContent(findNoteContentReqDTO);
+    }
+    @DeleteMapping("/note/content/delete")
+    public Response<?> deleteNoteContent(@Validated @RequestBody DeleteNoteContentDTO deleteNoteContentDTO) {
+        return noteService.deleteNoteContent(deleteNoteContentDTO);
     }
 }

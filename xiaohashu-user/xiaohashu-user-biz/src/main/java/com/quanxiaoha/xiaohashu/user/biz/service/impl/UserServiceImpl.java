@@ -9,7 +9,6 @@ import com.quanxiaoha.xiaohashu.common.response.Response;
 import com.quanxiaoha.xiaohashu.common.util.JsonUtils;
 import com.quanxiaoha.xiaohashu.common.util.ParamUtils;
 import com.quanxiaoha.xiaohashu.context.holder.ContextHolder;
-import com.quanxiaoha.xiaohashu.oss.api.fileapi.FileFeignApi;
 import com.quanxiaoha.xiaohashu.user.api.dto.req.FindByUserPhoneReqDTO;
 import com.quanxiaoha.xiaohashu.user.api.dto.req.RegisterUserReqDTO;
 import com.quanxiaoha.xiaohashu.user.api.dto.req.UpdatePasswordReqDTO;
@@ -24,9 +23,11 @@ import com.quanxiaoha.xiaohashu.user.biz.domain.mapper.UserDOMapper;
 import com.quanxiaoha.xiaohashu.user.biz.domain.mapper.UserRoleDOMapper;
 import com.quanxiaoha.xiaohashu.user.biz.enums.ResponseCodeEnum;
 import com.quanxiaoha.xiaohashu.user.biz.enums.SexEnum;
+import com.quanxiaoha.xiaohashu.user.biz.rpc.DistributedIdGeneratorService;
 import com.quanxiaoha.xiaohashu.user.biz.vo.UpdateUserReqVO;
 import com.quanxiaoha.xiaohashu.user.biz.rpc.OssRpcService;
 import com.quanxiaoha.xiaohashu.user.biz.service.UserService;
+import jakarta.annotation.Resource;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
@@ -49,6 +50,8 @@ public class UserServiceImpl implements UserService {
     private UserRoleDOMapper userRoleDOMapper;
     @Autowired
     private OssRpcService ossRpcService;
+    @Resource
+    private DistributedIdGeneratorService distributedIdGeneratorService;
     @Autowired
     private UserDOMapper userDOMapper;
     @Autowired
@@ -136,8 +139,13 @@ public class UserServiceImpl implements UserService {
             log.info("==> 用户已经注册, phone: {}, userDO: {}", phone, JsonUtils.toJsonString(userDO1));
             return Response.success(userDO1.getId());
         }
-        Long xiaohashuId = redisTemplate.opsForValue().increment(RedisConstants.XIAOHASHU_ID_GENERATOR_KEY);
+
+        String xiaohashuId = distributedIdGeneratorService.getXiaohashuId();
+        // RPC: 调用分布式 ID 生成服务生成用户 ID
+        String userIdStr = distributedIdGeneratorService.getUserId();
+        Long userId = Long.valueOf(userIdStr);
         UserDO userDO = UserDO.builder()
+                .id(userId)
                 .phone(phone)
                 .xiaohashuId(String.valueOf(xiaohashuId))
                 .nickname("小红薯" + xiaohashuId)
@@ -147,7 +155,6 @@ public class UserServiceImpl implements UserService {
                 .isDeleted(DeletedEnum.NO.getValue())
                 .build();
         userDOMapper.insert(userDO);
-        Long userId = userDO.getId();
         // 给该用户分配一个默认角色
         UserRoleDO userRoleDO = UserRoleDO.builder()
                 .userId(userId)

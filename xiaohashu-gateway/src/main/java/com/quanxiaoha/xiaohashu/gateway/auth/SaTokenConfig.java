@@ -27,7 +27,7 @@ public class SaTokenConfig {
                     ;
 
                     // 权限认证 -- 不同模块, 校验不同权限
-                    SaRouter.match("/auth/logout", r -> StpUtil.checkPermission("app:note:publish"));
+                    //SaRouter.match("/auth/logout", r -> StpUtil.checkPermission("app:note:publish"));
                     //SaRouter.match("/auth/user/logout", r -> StpUtil.checkRole("common_user"));
 
                     // 更多匹配 ...  */

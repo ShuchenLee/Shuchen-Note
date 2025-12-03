@@ -12,14 +12,16 @@
         </processorPath>
         <module name="xiaohashu-auth" />
         <module name="xiaohashu-oss-api" />
-        <module name="xiaohashu-user-api" />
-        <module name="xiaoha-spring-boot-starter-biz-context" />
         <module name="xiaohashu-oss-biz" />
+        <module name="xiaohashu-gateway" />
+        <module name="xiaoha-spring-boot-starter-biz-operationlog" />
+        <module name="xiaohashu-user-api" />
+        <module name="xiaohashu-distributed-id-generator-biz" />
+        <module name="xiaoha-spring-boot-starter-biz-context" />
         <module name="xiaoha-spring-boot-starter-jackson" />
         <module name="xiaohashu-user-biz" />
-        <module name="xiaohashu-gateway" />
         <module name="xiaoha-common" />
-        <module name="xiaoha-spring-boot-starter-biz-operationlog" />
+        <module name="xiaohashu-distributed-id-generator-api" />
         <module name="xiaohashu-kv-api" />
       </profile>
       <profile name="Annotation profile for xiaohashu-kv-biz" enabled="true">

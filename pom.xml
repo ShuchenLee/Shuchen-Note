@@ -26,6 +26,7 @@
         <module>xiaohashu-user</module>
         <module>xiaohashu-kv</module>
         <module>xiaohashu-kv/xiaohashu-kv-biz</module>
+        <module>xiaohashu-distributed-id-generator</module>
     </modules>
 
     <properties>
@@ -94,7 +95,11 @@
                 <artifactId>xiaohashu-oss-api</artifactId>
                 <version>${revision}</version>
             </dependency>
-
+            <dependency>
+                <groupId>com.quanxiaoha</groupId>
+                <artifactId>xiaohashu-distributed-id-generator-api</artifactId>
+                <version>${revision}</version>
+            </dependency>
             <dependency>
                 <groupId>javax.xml.bind</groupId>
                 <artifactId>jaxb-api</artifactId>

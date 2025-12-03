@@ -22,11 +22,5 @@
     <schema id="15" parent="1" name="7"/>
     <schema id="16" parent="1" name="8"/>
     <schema id="17" parent="1" name="9"/>
-    <string id="18" parent="2" name="Authorization:login:session:7"/>
-    <string id="19" parent="2" name="Authorization:login:token:FgEkfXSS3DlfrKg91CSWZDx9PjBPgWZ7RR52sEYfeLX2vn9141PhpaMRFbnG0mzbcfsthHbr38b79yqZ5uMVA5bS2kta8oJigb9Ad94PUAMSy9f5i8wQvrnnv5UvXaAZ"/>
-    <string id="20" parent="2" name="push.permission.flag"/>
-    <string id="21" parent="2" name="role:permissions:common_user"/>
-    <string id="22" parent="2" name="user:roles:7"/>
-    <string id="23" parent="2" name="xiaohashu.id.generator"/>
   </database-model>
 </dataSource>
