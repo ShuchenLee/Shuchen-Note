@@ -28,6 +28,9 @@
         <module>xiaohashu-kv/xiaohashu-kv-biz</module>
         <module>xiaohashu-distributed-id-generator</module>
         <module>xiaohashu-note</module>
+        <module>xiaohashu-user-relation</module>
+        <module>xiaohashu-count</module>
+
     </modules>
 
     <properties>
@@ -60,9 +63,12 @@
         <spring-cloud.version>2022.0.0</spring-cloud.version>
         <dysmsapi.version>2.0.24</dysmsapi.version>
 
+        <rocketmq.version>2.2.3</rocketmq.version>
+
         <guava.version>33.0.0-jre</guava.version>
         <hutool.version>5.8.26</hutool.version>
         <commons-lang3.version>3.12.0</commons-lang3.version>
+        <caffeine.version>3.1.8</caffeine.version>
 
         <!-- 依赖包版本 -->
         <lombok.version>1.18.30</lombok.version>
@@ -70,6 +76,7 @@
         <mysql-connector-java.version>8.0.29</mysql-connector-java.version>
         <druid.version>1.2.23</druid.version>
         <flatten-maven-plugin.version>1.5.0</flatten-maven-plugin.version>
+        <buffertrigger.version>0.2.21</buffertrigger.version>
 
         <mybatis-generator-maven-plugin.version>1.3.5</mybatis-generator-maven-plugin.version>
     </properties>
@@ -90,6 +97,21 @@
                 <artifactId>aliyun-sdk-oss</artifactId>
                 <version>${aliyun-sdk-oss.version}</version>
             </dependency>
+
+            <!-- Rocket MQ -->
+            <dependency>
+                <groupId>org.apache.rocketmq</groupId>
+                <artifactId>rocketmq-spring-boot-starter</artifactId>
+                <version>${rocketmq.version}</version>
+            </dependency>
+
+            <!-- Caffeine 本地缓存 -->
+            <dependency>
+                <groupId>com.github.ben-manes.caffeine</groupId>
+                <artifactId>caffeine</artifactId>
+                <version>${caffeine.version}</version>
+            </dependency>
+
 
             <dependency>
                 <groupId>com.quanxiaoha</groupId>
@@ -273,7 +295,12 @@
                 <artifactId>nacos-config-spring-boot-starter</artifactId>
                 <version>${nacos-config.version}</version>
             </dependency>
-
+            <!-- 快手 Buffer Trigger -->
+            <dependency>
+                <groupId>com.github.phantomthief</groupId>
+                <artifactId>buffer-trigger</artifactId>
+                <version>${buffertrigger.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 

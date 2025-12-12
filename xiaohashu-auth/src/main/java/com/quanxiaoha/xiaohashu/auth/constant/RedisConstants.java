@@ -13,6 +13,8 @@ public class RedisConstants {
      */
     private static final String ROLE_PERMISSIONS_KEY_PREFIX = "role:permissions:";
 
+    public static final String TOKEN_PERFIX  = "Authorization:login:token:";
+
     /**
      * 构建验证码 KEY
      *

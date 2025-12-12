@@ -34,3 +34,15 @@ spring:
             - Path=/file/**
           filters:
             - StripPrefix=1
+        - id: note
+          uri: lb://xiaohashu-note
+          predicates:
+            - Path=/note/**
+          filters:
+            - StripPrefix=1
+        - id: user-relation
+          uri: lb://xiaohashu-user-relation
+          predicates:
+            - Path=/relation/**
+          filters:
+            - StripPrefix=1

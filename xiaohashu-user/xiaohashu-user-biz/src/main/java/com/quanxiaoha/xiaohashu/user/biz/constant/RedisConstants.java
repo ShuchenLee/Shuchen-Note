@@ -16,6 +16,10 @@ public class RedisConstants {
      * 角色对应的权限集合 KEY 前缀
      */
     private static final String ROLE_PERMISSIONS_KEY_PREFIX = "role:permissions:";
+    private static final String USER_PREFIX = "user:info:";
+    public static String buildUserInfoKey(Long userId) {
+        return USER_PREFIX + userId;
+    }
 
     /**
      * 用户对应的角色集合 KEY

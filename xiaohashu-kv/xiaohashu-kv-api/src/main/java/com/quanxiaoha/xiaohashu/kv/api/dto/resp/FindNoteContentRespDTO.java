@@ -10,6 +10,6 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Builder
 public class FindNoteContentRespDTO {
-    String noteId;
+    String uuid;
     String content;
 }

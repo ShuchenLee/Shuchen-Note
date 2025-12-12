@@ -12,7 +12,7 @@ public class ContextHolder {
     public static void setUserId(Object value) {
         LOGIN_USER_CONTEXT_THREAD_LOCAL.get().put(GlobalConstants.UserId, value);
     }
-    public static Object getUserId() {
+    public static Long getUserId() {
         Object value = LOGIN_USER_CONTEXT_THREAD_LOCAL.get().get(GlobalConstants.UserId);
         if (Objects.isNull(value)) {
             return null;

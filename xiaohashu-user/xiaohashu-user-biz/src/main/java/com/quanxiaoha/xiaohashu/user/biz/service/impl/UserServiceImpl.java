@@ -1,7 +1,11 @@
 package com.quanxiaoha.xiaohashu.user.biz.service.impl;
 
+import cn.hutool.core.collection.CollUtil;
+import cn.hutool.core.collection.CollectionUtil;
+import cn.hutool.core.util.RandomUtil;
 import com.alibaba.cloud.commons.lang.StringUtils;
 import com.alibaba.nacos.shaded.com.google.common.base.Preconditions;
+import com.github.benmanes.caffeine.cache.Cache;
 import com.quanxiaoha.xiaohashu.common.enums.DeletedEnum;
 import com.quanxiaoha.xiaohashu.common.enums.StatusEnum;
 import com.quanxiaoha.xiaohashu.common.exception.BizException;
@@ -9,9 +13,8 @@ import com.quanxiaoha.xiaohashu.common.response.Response;
 import com.quanxiaoha.xiaohashu.common.util.JsonUtils;
 import com.quanxiaoha.xiaohashu.common.util.ParamUtils;
 import com.quanxiaoha.xiaohashu.context.holder.ContextHolder;
-import com.quanxiaoha.xiaohashu.user.api.dto.req.FindByUserPhoneReqDTO;
-import com.quanxiaoha.xiaohashu.user.api.dto.req.RegisterUserReqDTO;
-import com.quanxiaoha.xiaohashu.user.api.dto.req.UpdatePasswordReqDTO;
+import com.quanxiaoha.xiaohashu.user.api.dto.req.*;
+import com.quanxiaoha.xiaohashu.user.api.dto.resp.FindByUserIdRespDTO;
 import com.quanxiaoha.xiaohashu.user.api.dto.resp.FindByUserPhoneRespDTO;
 import com.quanxiaoha.xiaohashu.user.biz.constant.RedisConstants;
 import com.quanxiaoha.xiaohashu.user.biz.constant.RoleConstants;
@@ -30,20 +33,27 @@ import com.quanxiaoha.xiaohashu.user.biz.service.UserService;
 import jakarta.annotation.Resource;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DataAccessException;
+import org.springframework.data.redis.core.RedisOperations;
 import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.data.redis.core.SessionCallback;
+import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Objects;
+import java.util.*;
+import java.util.concurrent.Executor;
+import java.util.concurrent.TimeUnit;
+import java.util.stream.Collectors;
 
 @Service
 @Slf4j
 public class UserServiceImpl implements UserService {
+    @Resource(name = "caffeineCache")
+    private Cache<Long,FindByUserIdRespDTO> caffeineCache;
     @Autowired
     private RoleDOMapper roleDOMapper;
     @Autowired
@@ -56,6 +66,9 @@ public class UserServiceImpl implements UserService {
     private UserDOMapper userDOMapper;
     @Autowired
     private RedisTemplate redisTemplate;
+    @Resource(name = "taskExecutor")
+    private ThreadPoolTaskExecutor threadPoolTaskExecutor;
+
     @Override
     public Response<?> updateUserInfo(UpdateUserReqVO updateUserReqVO) {
         //get login user id
@@ -208,4 +221,129 @@ public class UserServiceImpl implements UserService {
         userDOMapper.updateByPrimaryKeySelective(userDO);
         return Response.success();
     }
+
+    @Override
+    public Response<FindByUserIdRespDTO> findUserById(FindByUserIdReqDTO findByUserIdReqDTO) {
+        //get userId
+        Long userId = findByUserIdReqDTO.getUserId();
+        //get info from caffeine cache
+        FindByUserIdRespDTO findByUserIdRespDTOCache = caffeineCache.getIfPresent(userId);
+        if(Objects.nonNull(findByUserIdRespDTOCache)) {
+            log.info("==========从本地缓存中读取用户{}的数据",userId);
+            return Response.success(findByUserIdRespDTOCache);
+        }
+        //get user info from redis
+        String userRedisKey = RedisConstants.buildUserInfoKey(userId);
+        String userInfoValue = (String)redisTemplate.opsForValue().get(userRedisKey);
+        if(StringUtils.isNotBlank(userInfoValue)) {
+            log.info("========从Reids中读取到了用户{}的信息",userId);
+            FindByUserIdRespDTO findByUserIdRespDTORedis = JsonUtils.Parse_Object(userInfoValue,FindByUserIdRespDTO.class);
+            //add user info to caffeine cache
+            threadPoolTaskExecutor.execute(() -> {
+                caffeineCache.put(userId,findByUserIdRespDTORedis);
+            });
+            return Response.success(findByUserIdRespDTORedis);
+        }
+        //no userid info in redis
+        // search user in database
+        // no user in database
+        UserDO userDO = userDOMapper.selectByPrimaryKey(userId);
+        if(Objects.isNull(userDO)) {
+            //store null object to redis to avoid cache through
+            Long expireSeconds = 60L + RandomUtil.randomInt(60);
+            threadPoolTaskExecutor.execute(()->{
+                redisTemplate.opsForValue().set(userRedisKey, "null",expireSeconds, TimeUnit.SECONDS);
+            });
+            throw new BizException(ResponseCodeEnum.USER_NOT_EXIST);
+        }
+        //find user in database
+        //construct result
+        log.info("========从数据库中读取到了用户{}的信息",userId);
+        FindByUserIdRespDTO findByUserIdRespDTO = FindByUserIdRespDTO.builder()
+                .userId(userDO.getId())
+                .nickName(userDO.getNickname())
+                .avatar(userDO.getAvatar())
+                .introduction(userDO.getIntroduction())
+                .build();
+        //save the user info into redis
+        threadPoolTaskExecutor.execute(()->{
+            log.info("========将用户{}的信息写入Redis",userId);
+            Long expireSeconds = 60*60*24L + RandomUtil.randomInt(60*60*24);
+            redisTemplate.opsForValue().set(userRedisKey,JsonUtils.toJsonString(findByUserIdRespDTO) ,expireSeconds, TimeUnit.SECONDS);
+        });
+
+        return Response.success(findByUserIdRespDTO);
+    }
+
+    @Override
+    public Response<List<FindByUserIdRespDTO>> findUsersByIds(FindUsersByIdsReqDTO findUsersByIdsReqDTO) {
+        //get id list
+        List<Long> userId = findUsersByIdsReqDTO.getUserIdList();
+        //get users info from redis
+        List<String> redisKeyList = userId.stream().map(RedisConstants::buildUserInfoKey).collect(Collectors.toList());
+        List<Object> redisResult = redisTemplate.opsForValue().multiGet(redisKeyList);
+        if(Objects.nonNull(redisResult)) {
+            redisResult = redisResult.stream().filter(Objects::nonNull).toList();
+        }
+        List<FindByUserIdRespDTO> resultList = new ArrayList<>();
+        if(CollectionUtil.isNotEmpty(redisResult)){
+            resultList = redisResult.stream()
+                    .map(value-> JsonUtils.Parse_Object(String.valueOf(value),FindByUserIdRespDTO.class))
+                    .collect(Collectors.toList());
+            if(resultList.size() == userId.size()) {
+                return Response.success(resultList);
+            }
+        }
+        //get user info from database
+        //part of user need to query
+        List<Long> userNeedQuery = new ArrayList<>();
+        if(CollectionUtil.isNotEmpty(redisResult)){
+            Map<Long, FindByUserIdRespDTO> redisResultMap = resultList.stream().collect(Collectors.toMap(FindByUserIdRespDTO::getUserId, p -> p));
+            userNeedQuery = userId.stream().filter(id -> Objects.isNull(redisResultMap.get(id))).toList();
+        }else{
+            //all user need to query
+            userNeedQuery = userId;
+        }
+        //query left user info from database
+        List<FindByUserIdRespDTO> leftResultList = null;
+        List<UserDO> leftUsers = userDOMapper.selectUsersByIds(userNeedQuery);
+        leftUsers = leftUsers.stream().filter(Objects::nonNull).toList();
+        //put these users info into redis
+        if(CollectionUtil.isNotEmpty(leftUsers)) {
+            log.info("=========put left user info into redis");
+            leftResultList = leftUsers.stream()
+                    .map(user -> FindByUserIdRespDTO.builder()
+                            .userId(user.getId())
+                            .avatar(user.getAvatar())
+                            .nickName(user.getNickname())
+                            .introduction(user.getIntroduction())
+                            .build())
+                    .collect(Collectors.toList());
+            List<FindByUserIdRespDTO> finalLeftUserInfo = leftResultList;
+            //todo put into redis
+            threadPoolTaskExecutor.submit(()->{
+                Map<Long, FindByUserIdRespDTO> redisMap = finalLeftUserInfo.stream().collect(Collectors.toMap(FindByUserIdRespDTO::getUserId, p -> p));
+                //execute redis pipeline
+                redisTemplate.executePipelined(new SessionCallback<>() {
+                    @Override
+                    public Object execute(RedisOperations operations) throws DataAccessException {
+                        for (Long  userId : redisMap.keySet()) {
+                            String redisKey = RedisConstants.buildUserInfoKey(userId);
+                            String redisValue = JsonUtils.toJsonString(redisMap.get(userId));
+                            long expireSeconds = 60*60*24 + RandomUtil.randomInt(60*60*24);
+                            redisTemplate.opsForValue().set(redisKey,redisValue,expireSeconds, TimeUnit.SECONDS);
+                        }
+                        return null;
+                    }
+                });
+            });
+        }
+        //merge data
+        if(CollUtil.isNotEmpty(leftResultList)) {
+            log.info("==========merge data");
+            resultList.addAll(leftResultList);
+        }
+        return Response.success(resultList);
+    }
+
 }

@@ -19,6 +19,8 @@ public class RedisConstants {
      */
     private static final String ROLE_PERMISSIONS_KEY_PREFIX = "role:permissions:";
 
+    public static final String SA_TOKEN_TOKEN_KEY_PREFIX = "Authorization:login:token:";
+
     /**
      * 构建角色对应的权限集合 KEY
      * @param roleKey

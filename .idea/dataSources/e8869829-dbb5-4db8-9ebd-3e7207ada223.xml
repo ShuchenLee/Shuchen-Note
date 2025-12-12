@@ -2,7 +2,7 @@
 <dataSource name="xiaohashu-redis">
   <database-model serializer="dbm" dbms="REDIS" family-id="REDIS" format-version="4.53">
     <root id="1">
-      <ServerVersion>6.2.6</ServerVersion>
+      <ServerVersion>7.2.3</ServerVersion>
     </root>
     <schema id="2" parent="1" name="0">
       <Current>1</Current>
@@ -22,5 +22,10 @@
     <schema id="15" parent="1" name="7"/>
     <schema id="16" parent="1" name="8"/>
     <schema id="17" parent="1" name="9"/>
+    <data__structure id="18" parent="2" name="newFilter"/>
+    <string id="19" parent="2" name="Authorization:login:session:2100"/>
+    <string id="20" parent="2" name="Authorization:login:token:CE9waSg1ZEKJcJbyyaKKBPxGVcdd2PXoHMSg5IF6Xq1bo7VNDhkeHyfCuPmV518EbWmV6zQd9AbQqFkhotb8XvJB6CqQf4OoBHGxeOTEYyde0l8QY63uqPS40pXUloUE"/>
+    <string id="21" parent="2" name="push.permission.flag"/>
+    <string id="22" parent="2" name="role:permissions:common_user"/>
   </database-model>
 </dataSource>
