@@ -1,0 +1,2 @@
+elasticsearch:
+  address: 192.168.88.101:9200 # Elasticsearch 地址

@@ -1,0 +1,162 @@
+2025-12-13 19:39:11.261 [main] WARN  com.alibaba.nacos.client.logging.NacosLogging - Load Logback Configuration of Nacos fail, message: Could not initialize Logback Nacos logging from classpath:nacos-logback.xml
+2025-12-13 19:39:11.318 [main] WARN  com.alibaba.nacos.client.logging.NacosLogging - Load Logback Configuration of Nacos fail, message: Could not initialize Logback Nacos logging from classpath:nacos-logback.xml
+2025-12-13 19:39:11.678 [main] WARN  com.alibaba.nacos.client.logging.NacosLogging - Load Logback Configuration of Nacos fail, message: Could not initialize Logback Nacos logging from classpath:nacos-logback.xml
+2025-12-13 19:39:11.693 [main] WARN  com.alibaba.nacos.client.logging.NacosLogging - Load Logback Configuration of Nacos fail, message: Could not initialize Logback Nacos logging from classpath:nacos-logback.xml
+2025-12-13 19:39:11.729 [main] INFO  com.quanxiaoha.xiaohashu.note.biz.test - The following 1 profile is active: "dev"
+2025-12-13 19:39:12.247 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-12-13 19:39:12.251 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-12-13 19:39:12.276 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 9 ms. Found 0 Redis repository interfaces.
+2025-12-13 19:39:12.439 [main] INFO  o.springframework.cloud.context.scope.GenericScope - BeanFactory id=5d2daa16-ef0c-349a-a549-87bd69753c2a
+2025-12-13 19:39:12.487 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'com.quanxiaoha.xiaohashu.user.api.userapi.UserFeignApi' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2025-12-13 19:39:12.487 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'com.quanxiaoha.xiaohashu.api.DistributedIdGeneratorFeignApi' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2025-12-13 19:39:12.488 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'com.quanxiaoha.xiaohashu.kv.api.dto.api.KeyValueFeignApi' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2025-12-13 19:39:12.682 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.apache.rocketmq.spring.autoconfigure.MessageConverterConfiguration' of type [org.apache.rocketmq.spring.autoconfigure.MessageConverterConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2025-12-13 19:39:12.722 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'createRocketMQMessageConverter' of type [org.apache.rocketmq.spring.support.RocketMQMessageConverter] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2025-12-13 19:39:12.724 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.commons.config.CommonsConfigAutoConfiguration' of type [org.springframework.cloud.commons.config.CommonsConfigAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2025-12-13 19:39:12.725 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2025-12-13 19:39:12.725 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'loadBalancerClientsDefaultsMappingsProvider' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration$$Lambda$1000/0x000001f3015a8b30] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2025-12-13 19:39:12.728 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'defaultsBindHandlerAdvisor' of type [org.springframework.cloud.commons.config.DefaultsBindHandlerAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2025-12-13 19:39:12.733 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'rocketmq-org.apache.rocketmq.spring.autoconfigure.RocketMQProperties' of type [org.apache.rocketmq.spring.autoconfigure.RocketMQProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2025-12-13 19:39:12.734 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.apache.rocketmq.spring.autoconfigure.ListenerContainerConfiguration' of type [org.apache.rocketmq.spring.autoconfigure.ListenerContainerConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2025-12-13 19:39:12.776 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+2025-12-13 19:39:13.200 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2025-12-13 19:39:13.918 [main] INFO  o.a.r.s.support.DefaultRocketMQListenerContainer - running container: DefaultRocketMQListenerContainer{consumerGroup='xiaohashu_group_CollectNoteTopic', namespace='', nameServer='192.168.88.101:9876', topic='CollectNoteTopic', consumeMode=ORDERLY, selectorType=TAG, selectorExpression='*', messageModel=CLUSTERING', tlsEnable=false, instanceName=DEFAULT}
+2025-12-13 19:39:13.918 [main] INFO  o.a.r.s.a.ListenerContainerConfiguration - Register the listener to container, listenerBeanName:collectNoteConsumer, containerBeanName:org.apache.rocketmq.spring.support.DefaultRocketMQListenerContainer_1
+2025-12-13 19:39:14.231 [main] INFO  o.a.r.s.support.DefaultRocketMQListenerContainer - running container: DefaultRocketMQListenerContainer{consumerGroup='xiaohashu_group_DelayDeleteNoteRedisCacheTopic', namespace='', nameServer='192.168.88.101:9876', topic='DelayDeleteNoteRedisCacheTopic', consumeMode=CONCURRENTLY, selectorType=TAG, selectorExpression='*', messageModel=BROADCASTING', tlsEnable=false, instanceName=DEFAULT}
+2025-12-13 19:39:14.231 [main] INFO  o.a.r.s.a.ListenerContainerConfiguration - Register the listener to container, listenerBeanName:delayDeleteRedisConsumer, containerBeanName:org.apache.rocketmq.spring.support.DefaultRocketMQListenerContainer_2
+2025-12-13 19:39:14.353 [main] INFO  o.s.cloud.openfeign.FeignClientFactoryBean - For 'xiaohashu-distributed-id-generator' URL not provided. Will try picking an instance via load-balancing.
+2025-12-13 19:39:14.411 [main] INFO  o.s.cloud.openfeign.FeignClientFactoryBean - For 'xiaohashu-kv' URL not provided. Will try picking an instance via load-balancing.
+2025-12-13 19:39:14.439 [main] INFO  o.a.r.s.autoconfigure.RocketMQAutoConfiguration - a producer (xiaohashu_group) init on namesrv 192.168.88.101:9876
+2025-12-13 19:39:14.493 [main] INFO  o.s.cloud.openfeign.FeignClientFactoryBean - For 'xiaohashu-user' URL not provided. Will try picking an instance via load-balancing.
+2025-12-13 19:39:14.528 [main] INFO  o.a.r.s.support.DefaultRocketMQListenerContainer - running container: DefaultRocketMQListenerContainer{consumerGroup='xiaohashu_groupDelayDeleteNoteRedisCacheTopic', namespace='', nameServer='192.168.88.101:9876', topic='DeleteNoteLocalCacheTopic', consumeMode=CONCURRENTLY, selectorType=TAG, selectorExpression='*', messageModel=BROADCASTING', tlsEnable=false, instanceName=DEFAULT}
+2025-12-13 19:39:14.529 [main] INFO  o.a.r.s.a.ListenerContainerConfiguration - Register the listener to container, listenerBeanName:deleteNoteCacheConsumer, containerBeanName:org.apache.rocketmq.spring.support.DefaultRocketMQListenerContainer_3
+2025-12-13 19:39:14.579 [main] INFO  o.a.r.s.support.DefaultRocketMQListenerContainer - running container: DefaultRocketMQListenerContainer{consumerGroup='xiaohashu_group_LikeNoteTopic', namespace='', nameServer='192.168.88.101:9876', topic='LikeNoteTopic', consumeMode=ORDERLY, selectorType=TAG, selectorExpression='*', messageModel=CLUSTERING', tlsEnable=false, instanceName=DEFAULT}
+2025-12-13 19:39:14.579 [main] INFO  o.a.r.s.a.ListenerContainerConfiguration - Register the listener to container, listenerBeanName:likeNoteConsumer, containerBeanName:org.apache.rocketmq.spring.support.DefaultRocketMQListenerContainer_4
+2025-12-13 19:39:14.975 [ConsumeMessageThread_xiaohashu_group_CollectNoteTopic_1] INFO  c.q.x.note.biz.consumer.CollectNoteConsumer - ===========consumer get collect\uncollect message
+2025-12-13 19:39:14.975 [ConsumeMessageThread_xiaohashu_group_CollectNoteTopic_1] INFO  c.q.x.note.biz.consumer.CollectNoteConsumer - ======get message to store Uncollect info to database
+2025-12-13 19:39:15.229 [ConsumeMessageThread_xiaohashu_group_CollectNoteTopic_1] WARN  o.a.r.s.support.DefaultRocketMQListenerContainer - consume message failed. messageId:7F000001653C63947C6B41FBE6F90000, topic:CollectNoteTopic, reconsumeTimes:0
+org.springframework.dao.DataIntegrityViolationException: 
+### Error updating database.  Cause: java.sql.SQLIntegrityConstraintViolationException: Column 'status' cannot be null
+### The error may exist in file [D:\data\java\xiaohashu\xiaohashu-note\xiaohashu-note-biz\target\classes\mapper\NoteCollectionDOMapper.xml]
+### The error may involve com.quanxiaoha.xiaohashu.note.biz.domain.mapper.NoteCollectionDOMapper.insertOrUpdate-Inline
+### The error occurred while setting parameters
+### SQL: INSERT INTO t_note_like (user_id, note_id, create_time, status)         VALUES (?, ?, ?, ?)             ON DUPLICATE KEY UPDATE create_time = ?, status = ?;
+### Cause: java.sql.SQLIntegrityConstraintViolationException: Column 'status' cannot be null
+; Column 'status' cannot be null
+	at org.springframework.jdbc.support.SQLExceptionSubclassTranslator.doTranslate(SQLExceptionSubclassTranslator.java:95)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:70)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:79)
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:92)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:439)
+	at jdk.proxy1/jdk.proxy1.$Proxy90.insert(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.insert(SqlSessionTemplate.java:272)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:62)
+	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:142)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:86)
+	at jdk.proxy1/jdk.proxy1.$Proxy91.insertOrUpdate(Unknown Source)
+	at com.quanxiaoha.xiaohashu.note.biz.consumer.CollectNoteConsumer.handleCollectMessage(CollectNoteConsumer.java:47)
+	at com.quanxiaoha.xiaohashu.note.biz.consumer.CollectNoteConsumer.onMessage(CollectNoteConsumer.java:30)
+	at com.quanxiaoha.xiaohashu.note.biz.consumer.CollectNoteConsumer.onMessage(CollectNoteConsumer.java:16)
+	at org.apache.rocketmq.spring.support.DefaultRocketMQListenerContainer.handleMessage(DefaultRocketMQListenerContainer.java:461)
+	at org.apache.rocketmq.spring.support.DefaultRocketMQListenerContainer.access$100(DefaultRocketMQListenerContainer.java:71)
+	at org.apache.rocketmq.spring.support.DefaultRocketMQListenerContainer$DefaultMessageListenerOrderly.consumeMessage(DefaultRocketMQListenerContainer.java:444)
+	at org.apache.rocketmq.client.impl.consumer.ConsumeMessageOrderlyService$ConsumeRequest.run(ConsumeMessageOrderlyService.java:498)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:264)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: java.sql.SQLIntegrityConstraintViolationException: Column 'status' cannot be null
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:117)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:916)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:354)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:3462)
+	at com.alibaba.druid.filter.FilterAdapter.preparedStatement_execute(FilterAdapter.java:1063)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:3460)
+	at com.alibaba.druid.filter.FilterEventAdapter.preparedStatement_execute(FilterEventAdapter.java:434)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:3460)
+	at com.alibaba.druid.proxy.jdbc.PreparedStatementProxyImpl.execute(PreparedStatementProxyImpl.java:158)
+	at com.alibaba.druid.pool.DruidPooledPreparedStatement.execute(DruidPooledPreparedStatement.java:483)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.update(PreparedStatementHandler.java:48)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.update(RoutingStatementHandler.java:75)
+	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:50)
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117)
+	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:76)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:197)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.insert(DefaultSqlSession.java:184)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:425)
+	... 19 common frames omitted
+2025-12-13 19:39:16.248 [ConsumeMessageThread_xiaohashu_group_CollectNoteTopic_2] INFO  c.q.x.note.biz.consumer.CollectNoteConsumer - ===========consumer get collect\uncollect message
+2025-12-13 19:39:16.249 [ConsumeMessageThread_xiaohashu_group_CollectNoteTopic_2] INFO  c.q.x.note.biz.consumer.CollectNoteConsumer - ======get message to store Uncollect info to database
+2025-12-13 19:39:16.252 [ConsumeMessageThread_xiaohashu_group_CollectNoteTopic_2] WARN  o.a.r.s.support.DefaultRocketMQListenerContainer - consume message failed. messageId:7F000001653C63947C6B41FBE6F90000, topic:CollectNoteTopic, reconsumeTimes:1
+org.springframework.dao.DataIntegrityViolationException: 
+### Error updating database.  Cause: java.sql.SQLIntegrityConstraintViolationException: Column 'status' cannot be null
+### The error may exist in file [D:\data\java\xiaohashu\xiaohashu-note\xiaohashu-note-biz\target\classes\mapper\NoteCollectionDOMapper.xml]
+### The error may involve com.quanxiaoha.xiaohashu.note.biz.domain.mapper.NoteCollectionDOMapper.insertOrUpdate-Inline
+### The error occurred while setting parameters
+### SQL: INSERT INTO t_note_like (user_id, note_id, create_time, status)         VALUES (?, ?, ?, ?)             ON DUPLICATE KEY UPDATE create_time = ?, status = ?;
+### Cause: java.sql.SQLIntegrityConstraintViolationException: Column 'status' cannot be null
+; Column 'status' cannot be null
+	at org.springframework.jdbc.support.SQLExceptionSubclassTranslator.doTranslate(SQLExceptionSubclassTranslator.java:95)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:70)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:79)
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:92)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:439)
+	at jdk.proxy1/jdk.proxy1.$Proxy90.insert(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.insert(SqlSessionTemplate.java:272)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:62)
+	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:142)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:86)
+	at jdk.proxy1/jdk.proxy1.$Proxy91.insertOrUpdate(Unknown Source)
+	at com.quanxiaoha.xiaohashu.note.biz.consumer.CollectNoteConsumer.handleCollectMessage(CollectNoteConsumer.java:47)
+	at com.quanxiaoha.xiaohashu.note.biz.consumer.CollectNoteConsumer.onMessage(CollectNoteConsumer.java:30)
+	at com.quanxiaoha.xiaohashu.note.biz.consumer.CollectNoteConsumer.onMessage(CollectNoteConsumer.java:16)
+	at org.apache.rocketmq.spring.support.DefaultRocketMQListenerContainer.handleMessage(DefaultRocketMQListenerContainer.java:461)
+	at org.apache.rocketmq.spring.support.DefaultRocketMQListenerContainer.access$100(DefaultRocketMQListenerContainer.java:71)
+	at org.apache.rocketmq.spring.support.DefaultRocketMQListenerContainer$DefaultMessageListenerOrderly.consumeMessage(DefaultRocketMQListenerContainer.java:444)
+	at org.apache.rocketmq.client.impl.consumer.ConsumeMessageOrderlyService$ConsumeRequest.run(ConsumeMessageOrderlyService.java:498)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:264)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: java.sql.SQLIntegrityConstraintViolationException: Column 'status' cannot be null
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:117)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:916)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:354)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:3462)
+	at com.alibaba.druid.filter.FilterAdapter.preparedStatement_execute(FilterAdapter.java:1063)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:3460)
+	at com.alibaba.druid.filter.FilterEventAdapter.preparedStatement_execute(FilterEventAdapter.java:434)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:3460)
+	at com.alibaba.druid.proxy.jdbc.PreparedStatementProxyImpl.execute(PreparedStatementProxyImpl.java:158)
+	at com.alibaba.druid.pool.DruidPooledPreparedStatement.execute(DruidPooledPreparedStatement.java:483)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.update(PreparedStatementHandler.java:48)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.update(RoutingStatementHandler.java:75)
+	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:50)
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117)
+	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:76)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:197)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.insert(DefaultSqlSession.java:184)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:425)
+	... 19 common frames omitted
+2025-12-13 19:39:16.621 [main] INFO  com.quanxiaoha.xiaohashu.note.biz.test - Started test in 5.778 seconds (process running for 6.544)
+2025-12-13 19:39:16.968 [main] INFO  com.quanxiaoha.xiaohashu.note.biz.test - =================1
+2025-12-13 19:39:17.004 [SpringApplicationShutdownHook] INFO  o.a.r.s.support.DefaultRocketMQListenerContainer - container destroyed, DefaultRocketMQListenerContainer{consumerGroup='xiaohashu_group_LikeNoteTopic', namespace='', nameServer='192.168.88.101:9876', topic='LikeNoteTopic', consumeMode=ORDERLY, selectorType=TAG, selectorExpression='*', messageModel=CLUSTERING', tlsEnable=false, instanceName=DEFAULT}
+2025-12-13 19:39:17.004 [SpringApplicationShutdownHook] INFO  o.a.r.s.support.DefaultRocketMQListenerContainer - container destroyed, DefaultRocketMQListenerContainer{consumerGroup='xiaohashu_groupDelayDeleteNoteRedisCacheTopic', namespace='', nameServer='192.168.88.101:9876', topic='DeleteNoteLocalCacheTopic', consumeMode=CONCURRENTLY, selectorType=TAG, selectorExpression='*', messageModel=BROADCASTING', tlsEnable=false, instanceName=DEFAULT}
+2025-12-13 19:39:17.011 [SpringApplicationShutdownHook] INFO  o.a.r.s.support.DefaultRocketMQListenerContainer - container destroyed, DefaultRocketMQListenerContainer{consumerGroup='xiaohashu_group_DelayDeleteNoteRedisCacheTopic', namespace='', nameServer='192.168.88.101:9876', topic='DelayDeleteNoteRedisCacheTopic', consumeMode=CONCURRENTLY, selectorType=TAG, selectorExpression='*', messageModel=BROADCASTING', tlsEnable=false, instanceName=DEFAULT}
+2025-12-13 19:39:17.025 [SpringApplicationShutdownHook] INFO  o.a.r.s.support.DefaultRocketMQListenerContainer - container destroyed, DefaultRocketMQListenerContainer{consumerGroup='xiaohashu_group_CollectNoteTopic', namespace='', nameServer='192.168.88.101:9876', topic='CollectNoteTopic', consumeMode=ORDERLY, selectorType=TAG, selectorExpression='*', messageModel=CLUSTERING', tlsEnable=false, instanceName=DEFAULT}
+2025-12-13 19:39:17.025 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...
+2025-12-13 19:39:17.028 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed

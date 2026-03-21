@@ -1,0 +1,828 @@
+2025-12-17 15:02:52.951 [main] WARN  com.alibaba.nacos.client.logging.NacosLogging - Load Logback Configuration of Nacos fail, message: Could not initialize Logback Nacos logging from classpath:nacos-logback.xml
+2025-12-17 15:02:52.993 [main] WARN  com.alibaba.nacos.client.logging.NacosLogging - Load Logback Configuration of Nacos fail, message: Could not initialize Logback Nacos logging from classpath:nacos-logback.xml
+2025-12-17 15:02:53.149 [main] WARN  com.alibaba.nacos.client.logging.NacosLogging - Load Logback Configuration of Nacos fail, message: Could not initialize Logback Nacos logging from classpath:nacos-logback.xml
+2025-12-17 15:02:53.151 [main] INFO  com.alibaba.nacos.client.utils.ParamUtil - [settings] [req-serv] nacos-server port:8848
+2025-12-17 15:02:53.151 [main] INFO  com.alibaba.nacos.client.utils.ParamUtil - [settings] [http-client] connect timeout:1000
+2025-12-17 15:02:53.151 [main] INFO  com.alibaba.nacos.client.utils.ParamUtil - PER_TASK_CONFIG_SIZE: 3000.0
+2025-12-17 15:02:53.172 [main] INFO  c.a.n.p.auth.spi.client.ClientAuthPluginManager - [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.impl.NacosClientAuthServiceImpl success.
+2025-12-17 15:02:53.173 [main] INFO  c.a.n.p.auth.spi.client.ClientAuthPluginManager - [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.ram.RamClientAuthServiceImpl success.
+2025-12-17 15:02:53.174 [main] INFO  c.a.n.client.auth.ram.identify.CredentialWatcher - null No credential found
+2025-12-17 15:02:53.326 [main] WARN  com.alibaba.nacos.client.logging.NacosLogging - Load Logback Configuration of Nacos fail, message: Could not initialize Logback Nacos logging from classpath:nacos-logback.xml
+2025-12-17 15:02:53.335 [main] INFO  c.a.n.client.config.impl.LocalConfigInfoProcessor - LOCAL_SNAPSHOT_PATH:C:\Users\LeeShuchen\nacos\config
+2025-12-17 15:02:53.337 [main] INFO  com.alibaba.nacos.common.remote.client - [RpcClientFactory] create a new rpc client of 35f44806-a54c-435a-8495-661307accde2_config-0
+2025-12-17 15:02:53.354 [main] INFO  com.alibaba.nacos.common.remote.client - [35f44806-a54c-435a-8495-661307accde2_config-0] Register server push request handler:com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient$$Lambda$583/0x000002448136e698
+2025-12-17 15:02:53.354 [main] INFO  com.alibaba.nacos.common.remote.client - [35f44806-a54c-435a-8495-661307accde2_config-0] Register server push request handler:com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient$$Lambda$584/0x000002448136eab8
+2025-12-17 15:02:53.354 [main] INFO  com.alibaba.nacos.common.remote.client - [35f44806-a54c-435a-8495-661307accde2_config-0] Registry connection listener to current client:com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient$1
+2025-12-17 15:02:53.355 [main] INFO  com.alibaba.nacos.common.remote.client - [35f44806-a54c-435a-8495-661307accde2_config-0] RpcClient init, ServerListFactory = com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient$2
+2025-12-17 15:02:53.360 [main] INFO  com.alibaba.nacos.common.remote.client - [35f44806-a54c-435a-8495-661307accde2_config-0] Try to connect to server on start up, server: {serverIp = '192.168.88.101', server main port = 8848}
+2025-12-17 15:02:53.379 [main] INFO  c.a.nacos.common.remote.client.grpc.GrpcClient - grpc client connection server:192.168.88.101 ip,serverPort:9848,grpcTslConfig:{"sslProvider":"OPENSSL","enableTls":false,"mutualAuthEnable":false,"trustAll":false}
+2025-12-17 15:02:53.945 [main] INFO  com.alibaba.nacos.common.remote.client - [35f44806-a54c-435a-8495-661307accde2_config-0] Success to connect to server [192.168.88.101:8848] on start up, connectionId = 1765304015431_192.168.88.1_58649
+2025-12-17 15:02:53.945 [com.alibaba.nacos.client.remote.worker] INFO  com.alibaba.nacos.common.remote.client - [35f44806-a54c-435a-8495-661307accde2_config-0] Notify connected event to listeners.
+2025-12-17 15:02:53.945 [com.alibaba.nacos.client.remote.worker] INFO  com.alibaba.nacos.client.config.impl.ClientWorker - [35f44806-a54c-435a-8495-661307accde2_config-0] Connected,notify listen context...
+2025-12-17 15:02:53.946 [main] INFO  com.alibaba.nacos.common.remote.client - [35f44806-a54c-435a-8495-661307accde2_config-0] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$ConnectResetRequestHandler
+2025-12-17 15:02:53.946 [main] INFO  com.alibaba.nacos.common.remote.client - [35f44806-a54c-435a-8495-661307accde2_config-0] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$$Lambda$604/0x00000244814d43d0
+2025-12-17 15:02:53.975 [main] INFO  com.alibaba.nacos.client.config.impl.Limiter - limitTime:5.0
+2025-12-17 15:02:53.986 [main] WARN  c.a.cloud.nacos.client.NacosPropertySourceBuilder - Ignore the empty nacos configuration and get it based on dataId[xiaohashu-user-count] & group[DEFAULT_GROUP]
+2025-12-17 15:02:53.987 [main] WARN  c.a.cloud.nacos.client.NacosPropertySourceBuilder - Ignore the empty nacos configuration and get it based on dataId[xiaohashu-user-count.yaml] & group[DEFAULT_GROUP]
+2025-12-17 15:02:53.992 [main] WARN  c.a.cloud.nacos.client.NacosPropertySourceBuilder - Ignore the empty nacos configuration and get it based on dataId[xiaohashu-user-count-dev.yaml] & group[DEFAULT_GROUP]
+2025-12-17 15:02:53.993 [main] INFO  o.s.c.b.c.PropertySourceBootstrapConfiguration - Located property source: [BootstrapPropertySource {name='bootstrapProperties-xiaohashu-user-count-dev.yaml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-xiaohashu-user-count.yaml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-xiaohashu-user-count,DEFAULT_GROUP'}]
+2025-12-17 15:02:53.996 [main] WARN  com.alibaba.nacos.client.logging.NacosLogging - Load Logback Configuration of Nacos fail, message: Could not initialize Logback Nacos logging from classpath:nacos-logback.xml
+2025-12-17 15:02:53.996 [main] INFO  c.q.x.count.biz.XiaohashuCountBizApplication - The following 1 profile is active: "dev"
+2025-12-17 15:02:54.580 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-12-17 15:02:54.581 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-12-17 15:02:54.594 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 5 ms. Found 0 Redis repository interfaces.
+2025-12-17 15:02:54.680 [main] INFO  o.springframework.cloud.context.scope.GenericScope - BeanFactory id=92c1d77c-f6de-367d-afcb-d95bc09ed733
+2025-12-17 15:02:54.831 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.apache.rocketmq.spring.autoconfigure.MessageConverterConfiguration' of type [org.apache.rocketmq.spring.autoconfigure.MessageConverterConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2025-12-17 15:02:54.863 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'createRocketMQMessageConverter' of type [org.apache.rocketmq.spring.support.RocketMQMessageConverter] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2025-12-17 15:02:54.865 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.commons.config.CommonsConfigAutoConfiguration' of type [org.springframework.cloud.commons.config.CommonsConfigAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2025-12-17 15:02:54.869 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2025-12-17 15:02:54.869 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'loadBalancerClientsDefaultsMappingsProvider' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration$$Lambda$757/0x0000024481693590] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2025-12-17 15:02:54.869 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'defaultsBindHandlerAdvisor' of type [org.springframework.cloud.commons.config.DefaultsBindHandlerAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2025-12-17 15:02:54.872 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'rocketmq-org.apache.rocketmq.spring.autoconfigure.RocketMQProperties' of type [org.apache.rocketmq.spring.autoconfigure.RocketMQProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2025-12-17 15:02:54.872 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.apache.rocketmq.spring.autoconfigure.ListenerContainerConfiguration' of type [org.apache.rocketmq.spring.autoconfigure.ListenerContainerConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2025-12-17 15:02:55.008 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8088 (http)
+2025-12-17 15:02:55.014 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-12-17 15:02:55.014 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.5]
+2025-12-17 15:02:55.067 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-12-17 15:02:55.067 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1063 ms
+2025-12-17 15:02:55.156 [main] INFO  o.a.r.s.autoconfigure.RocketMQAutoConfiguration - a producer (xiaohashu_group) init on namesrv 192.168.88.101:9876
+2025-12-17 15:02:55.536 [main] INFO  o.a.r.s.support.DefaultRocketMQListenerContainer - running container: DefaultRocketMQListenerContainer{consumerGroup='xiaohashu_group_CountCollectLikeTopic', namespace='', nameServer='192.168.88.101:9876', topic='CountCollectLikeTopic', consumeMode=CONCURRENTLY, selectorType=TAG, selectorExpression='*', messageModel=CLUSTERING', tlsEnable=false, instanceName=DEFAULT}
+2025-12-17 15:02:55.536 [main] INFO  o.a.r.s.a.ListenerContainerConfiguration - Register the listener to container, listenerBeanName:countCollectUncollectConsumer, containerBeanName:org.apache.rocketmq.spring.support.DefaultRocketMQListenerContainer_1
+2025-12-17 15:02:55.543 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+2025-12-17 15:02:55.763 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2025-12-17 15:02:55.970 [main] INFO  o.a.r.s.support.DefaultRocketMQListenerContainer - running container: DefaultRocketMQListenerContainer{consumerGroup='xiaohashu_groupCountFansDBTopic', namespace='', nameServer='192.168.88.101:9876', topic='CountFansDBTopic', consumeMode=ORDERLY, selectorType=TAG, selectorExpression='*', messageModel=CLUSTERING', tlsEnable=false, instanceName=DEFAULT}
+2025-12-17 15:02:55.971 [main] INFO  o.a.r.s.a.ListenerContainerConfiguration - Register the listener to container, listenerBeanName:countFans2DBConsumer, containerBeanName:org.apache.rocketmq.spring.support.DefaultRocketMQListenerContainer_2
+2025-12-17 15:02:56.016 [main] INFO  o.a.r.s.support.DefaultRocketMQListenerContainer - running container: DefaultRocketMQListenerContainer{consumerGroup='xiaohashu_groupCountFansTopic', namespace='', nameServer='192.168.88.101:9876', topic='CountFansTopic', consumeMode=ORDERLY, selectorType=TAG, selectorExpression='*', messageModel=CLUSTERING', tlsEnable=false, instanceName=DEFAULT}
+2025-12-17 15:02:56.016 [main] INFO  o.a.r.s.a.ListenerContainerConfiguration - Register the listener to container, listenerBeanName:countFansConsumer, containerBeanName:org.apache.rocketmq.spring.support.DefaultRocketMQListenerContainer_3
+2025-12-17 15:02:56.056 [main] INFO  o.a.r.s.support.DefaultRocketMQListenerContainer - running container: DefaultRocketMQListenerContainer{consumerGroup='xiaohashu_groupCountFOLLOWINGDBTopic', namespace='', nameServer='192.168.88.101:9876', topic='CountFOLLOWINGDBTopic', consumeMode=ORDERLY, selectorType=TAG, selectorExpression='*', messageModel=CLUSTERING', tlsEnable=false, instanceName=DEFAULT}
+2025-12-17 15:02:56.056 [main] INFO  o.a.r.s.a.ListenerContainerConfiguration - Register the listener to container, listenerBeanName:countFollowing2DBConsumer, containerBeanName:org.apache.rocketmq.spring.support.DefaultRocketMQListenerContainer_4
+2025-12-17 15:02:56.106 [main] INFO  o.a.r.s.support.DefaultRocketMQListenerContainer - running container: DefaultRocketMQListenerContainer{consumerGroup='xiaohashu_groupCountFollowingTopic', namespace='', nameServer='192.168.88.101:9876', topic='CountFollowingTopic', consumeMode=ORDERLY, selectorType=TAG, selectorExpression='*', messageModel=CLUSTERING', tlsEnable=false, instanceName=DEFAULT}
+2025-12-17 15:02:56.106 [main] INFO  o.a.r.s.a.ListenerContainerConfiguration - Register the listener to container, listenerBeanName:countFollowingConsumer, containerBeanName:org.apache.rocketmq.spring.support.DefaultRocketMQListenerContainer_5
+2025-12-17 15:02:56.184 [main] INFO  o.a.r.s.support.DefaultRocketMQListenerContainer - running container: DefaultRocketMQListenerContainer{consumerGroup='xiaohashu_group_CountNoteLikeTopic', namespace='', nameServer='192.168.88.101:9876', topic='CountNoteLikeTopic', consumeMode=CONCURRENTLY, selectorType=TAG, selectorExpression='*', messageModel=CLUSTERING', tlsEnable=false, instanceName=DEFAULT}
+2025-12-17 15:02:56.184 [main] INFO  o.a.r.s.a.ListenerContainerConfiguration - Register the listener to container, listenerBeanName:countLikeUnlikeConsumer, containerBeanName:org.apache.rocketmq.spring.support.DefaultRocketMQListenerContainer_6
+2025-12-17 15:02:56.240 [main] INFO  o.a.r.s.support.DefaultRocketMQListenerContainer - running container: DefaultRocketMQListenerContainer{consumerGroup='xiaohashu_groupCountCollectDBTopic', namespace='', nameServer='192.168.88.101:9876', topic='CountCollectDBTopic', consumeMode=CONCURRENTLY, selectorType=TAG, selectorExpression='*', messageModel=CLUSTERING', tlsEnable=false, instanceName=DEFAULT}
+2025-12-17 15:02:56.240 [main] INFO  o.a.r.s.a.ListenerContainerConfiguration - Register the listener to container, listenerBeanName:countNoteCollect2DBConsumer, containerBeanName:org.apache.rocketmq.spring.support.DefaultRocketMQListenerContainer_7
+2025-12-17 15:02:56.283 [main] INFO  o.a.r.s.support.DefaultRocketMQListenerContainer - running container: DefaultRocketMQListenerContainer{consumerGroup='xiaohashu_groupCountLikeDBTopic', namespace='', nameServer='192.168.88.101:9876', topic='CountLikeDBTopic', consumeMode=CONCURRENTLY, selectorType=TAG, selectorExpression='*', messageModel=CLUSTERING', tlsEnable=false, instanceName=DEFAULT}
+2025-12-17 15:02:56.284 [main] INFO  o.a.r.s.a.ListenerContainerConfiguration - Register the listener to container, listenerBeanName:countNoteLike2DBConsumer, containerBeanName:org.apache.rocketmq.spring.support.DefaultRocketMQListenerContainer_8
+2025-12-17 15:02:56.327 [main] INFO  o.a.r.s.support.DefaultRocketMQListenerContainer - running container: DefaultRocketMQListenerContainer{consumerGroup='xiaohashu_group_CountPublishTopic', namespace='', nameServer='192.168.88.101:9876', topic='CountPublishTopic', consumeMode=CONCURRENTLY, selectorType=TAG, selectorExpression='*', messageModel=CLUSTERING', tlsEnable=false, instanceName=DEFAULT}
+2025-12-17 15:02:56.327 [main] INFO  o.a.r.s.a.ListenerContainerConfiguration - Register the listener to container, listenerBeanName:countPublishNoteConsumer, containerBeanName:org.apache.rocketmq.spring.support.DefaultRocketMQListenerContainer_9
+2025-12-17 15:02:56.822 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8088 (http) with context path ''
+2025-12-17 15:02:56.825 [main] INFO  com.alibaba.nacos.client.naming - initializer namespace from ans.namespace attribute : null
+2025-12-17 15:02:56.825 [main] INFO  com.alibaba.nacos.client.naming - initializer namespace from ALIBABA_ALIWARE_NAMESPACE attribute :null
+2025-12-17 15:02:56.825 [main] INFO  com.alibaba.nacos.client.naming - initializer namespace from namespace attribute :null
+2025-12-17 15:02:56.830 [main] INFO  c.a.n.p.auth.spi.client.ClientAuthPluginManager - [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.impl.NacosClientAuthServiceImpl success.
+2025-12-17 15:02:56.830 [main] INFO  c.a.n.p.auth.spi.client.ClientAuthPluginManager - [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.ram.RamClientAuthServiceImpl success.
+2025-12-17 15:02:56.833 [main] INFO  com.alibaba.nacos.common.remote.client - [RpcClientFactory] create a new rpc client of e7302ab0-2aa0-498e-94a7-ca5fabd29e5c
+2025-12-17 15:02:56.835 [main] INFO  com.alibaba.nacos.common.remote.client - [e7302ab0-2aa0-498e-94a7-ca5fabd29e5c] RpcClient init, ServerListFactory = com.alibaba.nacos.client.naming.core.ServerListManager
+2025-12-17 15:02:56.835 [main] INFO  com.alibaba.nacos.common.remote.client - [e7302ab0-2aa0-498e-94a7-ca5fabd29e5c] Registry connection listener to current client:com.alibaba.nacos.client.naming.remote.gprc.redo.NamingGrpcRedoService
+2025-12-17 15:02:56.835 [main] INFO  com.alibaba.nacos.common.remote.client - [e7302ab0-2aa0-498e-94a7-ca5fabd29e5c] Register server push request handler:com.alibaba.nacos.client.naming.remote.gprc.NamingPushRequestHandler
+2025-12-17 15:02:56.835 [main] INFO  com.alibaba.nacos.common.remote.client - [e7302ab0-2aa0-498e-94a7-ca5fabd29e5c] Try to connect to server on start up, server: {serverIp = '192.168.88.101', server main port = 8848}
+2025-12-17 15:02:56.835 [main] INFO  c.a.nacos.common.remote.client.grpc.GrpcClient - grpc client connection server:192.168.88.101 ip,serverPort:9848,grpcTslConfig:{"sslProvider":"OPENSSL","enableTls":false,"mutualAuthEnable":false,"trustAll":false}
+2025-12-17 15:02:57.109 [main] INFO  com.alibaba.nacos.common.remote.client - [e7302ab0-2aa0-498e-94a7-ca5fabd29e5c] Success to connect to server [192.168.88.101:8848] on start up, connectionId = 1765304018644_192.168.88.1_58680
+2025-12-17 15:02:57.109 [main] INFO  com.alibaba.nacos.common.remote.client - [e7302ab0-2aa0-498e-94a7-ca5fabd29e5c] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$ConnectResetRequestHandler
+2025-12-17 15:02:57.109 [main] INFO  com.alibaba.nacos.common.remote.client - [e7302ab0-2aa0-498e-94a7-ca5fabd29e5c] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$$Lambda$604/0x00000244814d43d0
+2025-12-17 15:02:57.109 [com.alibaba.nacos.client.remote.worker] INFO  com.alibaba.nacos.common.remote.client - [e7302ab0-2aa0-498e-94a7-ca5fabd29e5c] Notify connected event to listeners.
+2025-12-17 15:02:57.109 [com.alibaba.nacos.client.remote.worker] INFO  com.alibaba.nacos.client.naming - Grpc connection connect
+2025-12-17 15:02:57.110 [main] INFO  com.alibaba.nacos.client.naming - [REGISTER-SERVICE] xiaohashu registering service xiaohashu-user-count with instance Instance{instanceId='null', ip='172.28.129.13', port=8088, weight=1.0, healthy=true, enabled=true, ephemeral=true, clusterName='DEFAULT', serviceName='null', metadata={IPv6=[2001:da8:c800:9000:0:0:1:c7d9], preserved.register.source=SPRING_CLOUD}}
+2025-12-17 15:02:57.120 [main] INFO  c.a.cloud.nacos.registry.NacosServiceRegistry - nacos registry, DEFAULT_GROUP xiaohashu-user-count 172.28.129.13:8088 register finished
+2025-12-17 15:02:57.221 [main] INFO  c.q.x.count.biz.XiaohashuCountBizApplication - Started XiaohashuCountBizApplication in 4.712 seconds (process running for 5.045)
+2025-12-17 15:02:57.223 [main] INFO  com.alibaba.nacos.client.config.impl.CacheData - nacos.cache.data.init.snapshot = true 
+2025-12-17 15:02:57.224 [main] INFO  com.alibaba.nacos.client.config.impl.ClientWorker - [fixed-xiaohashu-192.168.88.101_8848] [subscribe] xiaohashu-user-count+DEFAULT_GROUP+xiaohashu
+2025-12-17 15:02:57.228 [main] INFO  com.alibaba.nacos.client.config.impl.CacheData - [fixed-xiaohashu-192.168.88.101_8848] [add-listener] ok, tenant=xiaohashu, dataId=xiaohashu-user-count, group=DEFAULT_GROUP, cnt=1
+2025-12-17 15:02:57.228 [main] INFO  c.a.cloud.nacos.refresh.NacosContextRefresher - [Nacos Config] Listening config: dataId=xiaohashu-user-count, group=DEFAULT_GROUP
+2025-12-17 15:02:57.229 [main] INFO  com.alibaba.nacos.client.config.impl.ClientWorker - [fixed-xiaohashu-192.168.88.101_8848] [subscribe] xiaohashu-user-count.yaml+DEFAULT_GROUP+xiaohashu
+2025-12-17 15:02:57.229 [main] INFO  com.alibaba.nacos.client.config.impl.CacheData - [fixed-xiaohashu-192.168.88.101_8848] [add-listener] ok, tenant=xiaohashu, dataId=xiaohashu-user-count.yaml, group=DEFAULT_GROUP, cnt=1
+2025-12-17 15:02:57.229 [main] INFO  c.a.cloud.nacos.refresh.NacosContextRefresher - [Nacos Config] Listening config: dataId=xiaohashu-user-count.yaml, group=DEFAULT_GROUP
+2025-12-17 15:02:57.229 [main] INFO  com.alibaba.nacos.client.config.impl.ClientWorker - [fixed-xiaohashu-192.168.88.101_8848] [subscribe] xiaohashu-user-count-dev.yaml+DEFAULT_GROUP+xiaohashu
+2025-12-17 15:02:57.229 [main] INFO  com.alibaba.nacos.client.config.impl.CacheData - [fixed-xiaohashu-192.168.88.101_8848] [add-listener] ok, tenant=xiaohashu, dataId=xiaohashu-user-count-dev.yaml, group=DEFAULT_GROUP, cnt=1
+2025-12-17 15:02:57.229 [main] INFO  c.a.cloud.nacos.refresh.NacosContextRefresher - [Nacos Config] Listening config: dataId=xiaohashu-user-count-dev.yaml, group=DEFAULT_GROUP
+2025-12-17 15:02:57.348 [ConsumeMessageThread_xiaohashu_group_CountPublishTopic_1] INFO  c.q.x.count.biz.consumer.CountPublishNoteConsumer - =======get message to handle publish\unpublish count
+2025-12-17 15:02:57.348 [ConsumeMessageThread_xiaohashu_group_CountPublishTopic_1] INFO  c.q.x.count.biz.consumer.CountPublishNoteConsumer - =======get message to handle publish count
+2025-12-17 15:02:57.365 [ConsumeMessageThread_xiaohashu_group_CountPublishTopic_1] WARN  o.a.r.s.support.DefaultRocketMQListenerContainer - consume message failed. messageId:7F000001395863947C6B4A6E9CB00001, topic:CountPublishTopic, reconsumeTimes:8
+com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot construct instance of `com.quanxiaoha.xiaohashu.count.biz.model.dto.CountPublishNoteDTO` (although at least one Creator exists): no String-argument constructor/factory method to deserialize from String value ('CountPublishTopic:Publish')
+ at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 1, column: 1]
+	at com.fasterxml.jackson.databind.exc.MismatchedInputException.from(MismatchedInputException.java:63)
+	at com.fasterxml.jackson.databind.DeserializationContext.reportInputMismatch(DeserializationContext.java:1754)
+	at com.fasterxml.jackson.databind.DeserializationContext.handleMissingInstantiator(DeserializationContext.java:1379)
+	at com.fasterxml.jackson.databind.deser.std.StdDeserializer._deserializeFromString(StdDeserializer.java:311)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.deserializeFromString(BeanDeserializerBase.java:1588)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer._deserializeOther(BeanDeserializer.java:197)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:187)
+	at com.fasterxml.jackson.databind.deser.DefaultDeserializationContext.readRootValue(DefaultDeserializationContext.java:342)
+	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:4899)
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3846)
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3814)
+	at com.quanxiaoha.xiaohashu.common.util.JsonUtils.Parse_Object(JsonUtils.java:40)
+	at com.quanxiaoha.xiaohashu.count.biz.consumer.CountPublishNoteConsumer.handlePublishMessage(CountPublishNoteConsumer.java:52)
+	at com.quanxiaoha.xiaohashu.count.biz.consumer.CountPublishNoteConsumer.onMessage(CountPublishNoteConsumer.java:46)
+	at com.quanxiaoha.xiaohashu.count.biz.consumer.CountPublishNoteConsumer.onMessage(CountPublishNoteConsumer.java:25)
+	at org.apache.rocketmq.spring.support.DefaultRocketMQListenerContainer.handleMessage(DefaultRocketMQListenerContainer.java:461)
+	at org.apache.rocketmq.spring.support.DefaultRocketMQListenerContainer.access$100(DefaultRocketMQListenerContainer.java:71)
+	at org.apache.rocketmq.spring.support.DefaultRocketMQListenerContainer$DefaultMessageListenerConcurrently.consumeMessage(DefaultRocketMQListenerContainer.java:421)
+	at org.apache.rocketmq.client.impl.consumer.ConsumeMessageConcurrentlyService$ConsumeRequest.run(ConsumeMessageConcurrentlyService.java:402)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2025-12-17 15:03:50.893 [pool-batch-consume-blocking-queue-thread-0] INFO  c.q.x.count.biz.consumer.CountLikeUnlikeConsumer - ==> 【笔记点赞数】聚合消息, size: 1
+2025-12-17 15:03:50.894 [pool-batch-consume-blocking-queue-thread-0] INFO  c.q.x.count.biz.consumer.CountLikeUnlikeConsumer - ==> 【笔记点赞数】聚合消息, ["{\"userId\":2100,\"noteId\":1,\"timeStamp\":\"2025-12-17 15:03:49\",\"type\":0}"]
+2025-12-17 15:03:51.088 [NettyClientPublicExecutor_1] INFO  c.q.x.count.biz.consumer.CountLikeUnlikeConsumer - ======send like note count message to database successfully
+2025-12-17 15:03:51.090 [ConsumeMessageThread_xiaohashu_groupCountLikeDBTopic_1] INFO  c.q.x.count.biz.consumer.CountNoteLike2DBConsumer - =====get message to save note like info into database
+2025-12-17 15:03:51.293 [ConsumeMessageThread_xiaohashu_groupCountLikeDBTopic_1] INFO  c.q.x.count.biz.consumer.CountNoteLike2DBConsumer - =====get message to save note like info into database successfully
+2025-12-17 15:04:42.195 [Thread-1] WARN  c.alibaba.nacos.common.http.HttpClientBeanHolder - [HttpClientBeanHolder] Start destroying common HttpClient
+2025-12-17 15:04:42.195 [Thread-7] WARN  com.alibaba.nacos.common.notify.NotifyCenter - [NotifyCenter] Start destroying Publisher
+2025-12-17 15:04:42.195 [Thread-7] WARN  com.alibaba.nacos.common.notify.NotifyCenter - [NotifyCenter] Destruction of the end
+2025-12-17 15:04:42.195 [Thread-1] WARN  c.alibaba.nacos.common.http.HttpClientBeanHolder - [HttpClientBeanHolder] Destruction of the end
+2025-12-17 15:04:42.214 [NettyClientSelector_1] INFO  RocketmqRemoting - closeChannel: close the connection to remote address[192.168.88.101:10911] result: true
+2025-12-17 15:04:42.220 [NettyClientSelector_1] INFO  RocketmqRemoting - closeChannel: close the connection to remote address[192.168.88.101:9876] result: true
+2025-12-17 15:04:42.239 [NettyClientSelector_1] INFO  RocketmqRemoting - closeChannel: close the connection to remote address[192.168.88.101:10911] result: true
+2025-12-17 15:04:42.240 [NettyClientSelector_1] INFO  RocketmqRemoting - closeChannel: close the connection to remote address[192.168.88.101:9876] result: true
+2025-12-17 15:04:42.260 [NettyClientSelector_1] INFO  RocketmqRemoting - closeChannel: close the connection to remote address[192.168.88.101:9876] result: true
+2025-12-17 15:04:42.260 [NettyClientSelector_1] INFO  RocketmqRemoting - closeChannel: close the connection to remote address[192.168.88.101:10911] result: true
+2025-12-17 15:04:42.285 [NettyClientSelector_1] INFO  RocketmqRemoting - closeChannel: close the connection to remote address[192.168.88.101:10911] result: true
+2025-12-17 15:04:42.285 [NettyClientSelector_1] INFO  RocketmqRemoting - closeChannel: close the connection to remote address[192.168.88.101:9876] result: true
+2025-12-17 15:04:42.302 [NettyClientSelector_1] INFO  RocketmqRemoting - closeChannel: close the connection to remote address[192.168.88.101:10911] result: true
+2025-12-17 15:04:42.303 [NettyClientSelector_1] INFO  RocketmqRemoting - closeChannel: close the connection to remote address[192.168.88.101:9876] result: true
+2025-12-17 15:04:42.313 [NettyClientSelector_1] INFO  RocketmqRemoting - closeChannel: close the connection to remote address[192.168.88.101:10911] result: true
+2025-12-17 15:04:42.313 [NettyClientSelector_1] INFO  RocketmqRemoting - closeChannel: close the connection to remote address[192.168.88.101:9876] result: true
+2025-12-17 15:04:42.322 [NettyClientSelector_1] INFO  RocketmqRemoting - closeChannel: close the connection to remote address[192.168.88.101:10911] result: true
+2025-12-17 15:04:42.323 [NettyClientSelector_1] INFO  RocketmqRemoting - closeChannel: close the connection to remote address[192.168.88.101:9876] result: true
+2025-12-17 15:04:42.333 [NettyClientSelector_1] INFO  RocketmqRemoting - closeChannel: close the connection to remote address[192.168.88.101:10911] result: true
+2025-12-17 15:04:42.333 [NettyClientSelector_1] INFO  RocketmqRemoting - closeChannel: close the connection to remote address[192.168.88.101:9876] result: true
+2025-12-17 15:04:42.348 [NettyClientSelector_1] INFO  RocketmqRemoting - closeChannel: close the connection to remote address[192.168.88.101:10911] result: true
+2025-12-17 15:04:42.348 [NettyClientSelector_1] INFO  RocketmqRemoting - closeChannel: close the connection to remote address[192.168.88.101:9876] result: true
+2025-12-17 15:04:42.364 [SpringApplicationShutdownHook] INFO  c.a.cloud.nacos.registry.NacosServiceRegistry - De-registering from Nacos Server now...
+2025-12-17 15:04:42.364 [SpringApplicationShutdownHook] INFO  com.alibaba.nacos.client.naming - [DEREGISTER-SERVICE] xiaohashu deregistering service xiaohashu-user-count with instance: Instance{instanceId='null', ip='172.28.129.13', port=8088, weight=1.0, healthy=true, enabled=true, ephemeral=true, clusterName='DEFAULT', serviceName='null', metadata={}}
+2025-12-17 15:04:42.601 [SpringApplicationShutdownHook] INFO  c.a.cloud.nacos.registry.NacosServiceRegistry - De-registration finished.
+2025-12-17 15:04:42.602 [SpringApplicationShutdownHook] INFO  com.alibaba.nacos.client.naming - com.alibaba.nacos.client.naming.cache.ServiceInfoHolder do shutdown begin
+2025-12-17 15:04:42.602 [SpringApplicationShutdownHook] INFO  com.alibaba.nacos.client.naming - com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown begin
+2025-12-17 15:04:42.602 [SpringApplicationShutdownHook] INFO  com.alibaba.nacos.client.naming - com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown stop
+2025-12-17 15:04:42.602 [SpringApplicationShutdownHook] INFO  com.alibaba.nacos.client.naming - com.alibaba.nacos.client.naming.cache.ServiceInfoHolder do shutdown stop
+2025-12-17 15:04:42.602 [SpringApplicationShutdownHook] INFO  com.alibaba.nacos.client.naming - com.alibaba.nacos.client.naming.remote.NamingClientProxyDelegate do shutdown begin
+2025-12-17 15:04:42.602 [SpringApplicationShutdownHook] INFO  com.alibaba.nacos.client.naming - com.alibaba.nacos.client.naming.core.ServiceInfoUpdateService do shutdown begin
+2025-12-17 15:04:42.602 [SpringApplicationShutdownHook] INFO  com.alibaba.nacos.client.naming - com.alibaba.nacos.client.naming.core.ServiceInfoUpdateService do shutdown stop
+2025-12-17 15:04:42.602 [SpringApplicationShutdownHook] INFO  com.alibaba.nacos.client.naming - com.alibaba.nacos.client.naming.core.ServerListManager do shutdown begin
+2025-12-17 15:04:42.602 [SpringApplicationShutdownHook] WARN  com.alibaba.nacos.client.naming - [NamingHttpClientManager] Start destroying NacosRestTemplate
+2025-12-17 15:04:42.602 [SpringApplicationShutdownHook] WARN  com.alibaba.nacos.client.naming - [NamingHttpClientManager] Destruction of the end
+2025-12-17 15:04:42.602 [SpringApplicationShutdownHook] INFO  com.alibaba.nacos.client.naming - com.alibaba.nacos.client.naming.core.ServerListManager do shutdown stop
+2025-12-17 15:04:42.602 [SpringApplicationShutdownHook] INFO  com.alibaba.nacos.client.naming - com.alibaba.nacos.client.naming.remote.http.NamingHttpClientProxy do shutdown begin
+2025-12-17 15:04:42.602 [SpringApplicationShutdownHook] WARN  com.alibaba.nacos.client.naming - [NamingHttpClientManager] Start destroying NacosRestTemplate
+2025-12-17 15:04:42.602 [SpringApplicationShutdownHook] WARN  com.alibaba.nacos.client.naming - [NamingHttpClientManager] Destruction of the end
+2025-12-17 15:04:42.602 [SpringApplicationShutdownHook] INFO  com.alibaba.nacos.client.naming - com.alibaba.nacos.client.naming.remote.http.NamingHttpClientProxy do shutdown stop
+2025-12-17 15:04:42.602 [SpringApplicationShutdownHook] INFO  com.alibaba.nacos.common.remote.client - Shutdown rpc client, set status to shutdown
+2025-12-17 15:04:42.602 [SpringApplicationShutdownHook] INFO  com.alibaba.nacos.common.remote.client - Shutdown client event executor java.util.concurrent.ScheduledThreadPoolExecutor@7adcf4f3[Running, pool size = 2, active threads = 2, queued tasks = 0, completed tasks = 0]
+2025-12-17 15:04:42.602 [SpringApplicationShutdownHook] INFO  com.alibaba.nacos.common.remote.client - Close current connection 1765304018644_192.168.88.1_58680
+2025-12-17 15:04:42.603 [nacos-grpc-client-executor-192.168.88.101-30] INFO  c.a.nacos.common.remote.client.grpc.GrpcClient - [1765304018644_192.168.88.1_58680]Ignore complete event,isRunning:false,isAbandon=false
+2025-12-17 15:04:42.604 [SpringApplicationShutdownHook] INFO  c.a.nacos.common.remote.client.grpc.GrpcClient - Shutdown grpc executor java.util.concurrent.ThreadPoolExecutor@1c274dc[Running, pool size = 4, active threads = 0, queued tasks = 0, completed tasks = 31]
+2025-12-17 15:04:42.604 [SpringApplicationShutdownHook] INFO  com.alibaba.nacos.client.naming - Shutdown grpc redo service executor java.util.concurrent.ScheduledThreadPoolExecutor@56f80b9a[Running, pool size = 1, active threads = 0, queued tasks = 1, completed tasks = 35]
+2025-12-17 15:04:42.604 [SpringApplicationShutdownHook] INFO  c.a.n.client.auth.ram.identify.CredentialWatcher - [null] CredentialWatcher is stopped
+2025-12-17 15:04:42.604 [SpringApplicationShutdownHook] INFO  c.a.n.client.auth.ram.identify.CredentialService - [null] CredentialService is freed
+2025-12-17 15:04:42.604 [SpringApplicationShutdownHook] INFO  com.alibaba.nacos.client.naming - com.alibaba.nacos.client.naming.remote.NamingClientProxyDelegate do shutdown stop
+2025-12-17 15:04:42.605 [SpringApplicationShutdownHook] INFO  o.a.r.s.support.DefaultRocketMQListenerContainer - container destroyed, DefaultRocketMQListenerContainer{consumerGroup='xiaohashu_group_CountPublishTopic', namespace='', nameServer='192.168.88.101:9876', topic='CountPublishTopic', consumeMode=CONCURRENTLY, selectorType=TAG, selectorExpression='*', messageModel=CLUSTERING', tlsEnable=false, instanceName=DEFAULT}
+2025-12-17 15:04:42.605 [SpringApplicationShutdownHook] INFO  o.a.r.s.support.DefaultRocketMQListenerContainer - container destroyed, DefaultRocketMQListenerContainer{consumerGroup='xiaohashu_groupCountLikeDBTopic', namespace='', nameServer='192.168.88.101:9876', topic='CountLikeDBTopic', consumeMode=CONCURRENTLY, selectorType=TAG, selectorExpression='*', messageModel=CLUSTERING', tlsEnable=false, instanceName=DEFAULT}
+2025-12-17 15:04:42.605 [SpringApplicationShutdownHook] INFO  o.a.r.s.support.DefaultRocketMQListenerContainer - container destroyed, DefaultRocketMQListenerContainer{consumerGroup='xiaohashu_groupCountCollectDBTopic', namespace='', nameServer='192.168.88.101:9876', topic='CountCollectDBTopic', consumeMode=CONCURRENTLY, selectorType=TAG, selectorExpression='*', messageModel=CLUSTERING', tlsEnable=false, instanceName=DEFAULT}
+2025-12-17 15:04:42.605 [SpringApplicationShutdownHook] INFO  o.a.r.s.support.DefaultRocketMQListenerContainer - container destroyed, DefaultRocketMQListenerContainer{consumerGroup='xiaohashu_group_CountNoteLikeTopic', namespace='', nameServer='192.168.88.101:9876', topic='CountNoteLikeTopic', consumeMode=CONCURRENTLY, selectorType=TAG, selectorExpression='*', messageModel=CLUSTERING', tlsEnable=false, instanceName=DEFAULT}
+2025-12-17 15:04:42.605 [SpringApplicationShutdownHook] INFO  o.a.r.s.support.DefaultRocketMQListenerContainer - container destroyed, DefaultRocketMQListenerContainer{consumerGroup='xiaohashu_groupCountFollowingTopic', namespace='', nameServer='192.168.88.101:9876', topic='CountFollowingTopic', consumeMode=ORDERLY, selectorType=TAG, selectorExpression='*', messageModel=CLUSTERING', tlsEnable=false, instanceName=DEFAULT}
+2025-12-17 15:04:42.605 [SpringApplicationShutdownHook] INFO  o.a.r.s.support.DefaultRocketMQListenerContainer - container destroyed, DefaultRocketMQListenerContainer{consumerGroup='xiaohashu_groupCountFOLLOWINGDBTopic', namespace='', nameServer='192.168.88.101:9876', topic='CountFOLLOWINGDBTopic', consumeMode=ORDERLY, selectorType=TAG, selectorExpression='*', messageModel=CLUSTERING', tlsEnable=false, instanceName=DEFAULT}
+2025-12-17 15:04:42.605 [SpringApplicationShutdownHook] INFO  o.a.r.s.support.DefaultRocketMQListenerContainer - container destroyed, DefaultRocketMQListenerContainer{consumerGroup='xiaohashu_groupCountFansTopic', namespace='', nameServer='192.168.88.101:9876', topic='CountFansTopic', consumeMode=ORDERLY, selectorType=TAG, selectorExpression='*', messageModel=CLUSTERING', tlsEnable=false, instanceName=DEFAULT}
+2025-12-17 15:04:42.605 [SpringApplicationShutdownHook] INFO  o.a.r.s.support.DefaultRocketMQListenerContainer - container destroyed, DefaultRocketMQListenerContainer{consumerGroup='xiaohashu_groupCountFansDBTopic', namespace='', nameServer='192.168.88.101:9876', topic='CountFansDBTopic', consumeMode=ORDERLY, selectorType=TAG, selectorExpression='*', messageModel=CLUSTERING', tlsEnable=false, instanceName=DEFAULT}
+2025-12-17 15:04:42.606 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...
+2025-12-17 15:04:42.609 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2025-12-17 15:04:42.609 [SpringApplicationShutdownHook] INFO  o.a.r.s.support.DefaultRocketMQListenerContainer - container destroyed, DefaultRocketMQListenerContainer{consumerGroup='xiaohashu_group_CountCollectLikeTopic', namespace='', nameServer='192.168.88.101:9876', topic='CountCollectLikeTopic', consumeMode=CONCURRENTLY, selectorType=TAG, selectorExpression='*', messageModel=CLUSTERING', tlsEnable=false, instanceName=DEFAULT}
+2025-12-17 15:04:42.740 [NettyClientSelector_1] INFO  RocketmqRemoting - closeChannel: close the connection to remote address[192.168.88.101:10911] result: true
+2025-12-17 15:04:42.740 [NettyClientSelector_1] INFO  RocketmqRemoting - closeChannel: close the connection to remote address[192.168.88.101:9876] result: true
+2025-12-17 16:02:58.241 [main] WARN  com.alibaba.nacos.client.logging.NacosLogging - Load Logback Configuration of Nacos fail, message: Could not initialize Logback Nacos logging from classpath:nacos-logback.xml
+2025-12-17 16:02:58.283 [main] WARN  com.alibaba.nacos.client.logging.NacosLogging - Load Logback Configuration of Nacos fail, message: Could not initialize Logback Nacos logging from classpath:nacos-logback.xml
+2025-12-17 16:02:58.453 [main] WARN  com.alibaba.nacos.client.logging.NacosLogging - Load Logback Configuration of Nacos fail, message: Could not initialize Logback Nacos logging from classpath:nacos-logback.xml
+2025-12-17 16:02:58.455 [main] INFO  com.alibaba.nacos.client.utils.ParamUtil - [settings] [req-serv] nacos-server port:8848
+2025-12-17 16:02:58.455 [main] INFO  com.alibaba.nacos.client.utils.ParamUtil - [settings] [http-client] connect timeout:1000
+2025-12-17 16:02:58.456 [main] INFO  com.alibaba.nacos.client.utils.ParamUtil - PER_TASK_CONFIG_SIZE: 3000.0
+2025-12-17 16:02:58.481 [main] INFO  c.a.n.p.auth.spi.client.ClientAuthPluginManager - [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.impl.NacosClientAuthServiceImpl success.
+2025-12-17 16:02:58.481 [main] INFO  c.a.n.p.auth.spi.client.ClientAuthPluginManager - [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.ram.RamClientAuthServiceImpl success.
+2025-12-17 16:02:58.485 [main] INFO  c.a.n.client.auth.ram.identify.CredentialWatcher - null No credential found
+2025-12-17 16:02:58.640 [main] WARN  com.alibaba.nacos.client.logging.NacosLogging - Load Logback Configuration of Nacos fail, message: Could not initialize Logback Nacos logging from classpath:nacos-logback.xml
+2025-12-17 16:02:58.650 [main] INFO  c.a.n.client.config.impl.LocalConfigInfoProcessor - LOCAL_SNAPSHOT_PATH:C:\Users\LeeShuchen\nacos\config
+2025-12-17 16:02:58.653 [main] INFO  com.alibaba.nacos.common.remote.client - [RpcClientFactory] create a new rpc client of 8a9bbd11-91b3-46ae-8ec7-e26ce1741143_config-0
+2025-12-17 16:02:58.670 [main] INFO  com.alibaba.nacos.common.remote.client - [8a9bbd11-91b3-46ae-8ec7-e26ce1741143_config-0] Register server push request handler:com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient$$Lambda$583/0x0000017d1536eb58
+2025-12-17 16:02:58.672 [main] INFO  com.alibaba.nacos.common.remote.client - [8a9bbd11-91b3-46ae-8ec7-e26ce1741143_config-0] Register server push request handler:com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient$$Lambda$584/0x0000017d1536ef78
+2025-12-17 16:02:58.672 [main] INFO  com.alibaba.nacos.common.remote.client - [8a9bbd11-91b3-46ae-8ec7-e26ce1741143_config-0] Registry connection listener to current client:com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient$1
+2025-12-17 16:02:58.672 [main] INFO  com.alibaba.nacos.common.remote.client - [8a9bbd11-91b3-46ae-8ec7-e26ce1741143_config-0] RpcClient init, ServerListFactory = com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient$2
+2025-12-17 16:02:58.676 [main] INFO  com.alibaba.nacos.common.remote.client - [8a9bbd11-91b3-46ae-8ec7-e26ce1741143_config-0] Try to connect to server on start up, server: {serverIp = '192.168.88.101', server main port = 8848}
+2025-12-17 16:02:58.704 [main] INFO  c.a.nacos.common.remote.client.grpc.GrpcClient - grpc client connection server:192.168.88.101 ip,serverPort:9848,grpcTslConfig:{"sslProvider":"OPENSSL","enableTls":false,"mutualAuthEnable":false,"trustAll":false}
+2025-12-17 16:02:59.461 [main] INFO  com.alibaba.nacos.common.remote.client - [8a9bbd11-91b3-46ae-8ec7-e26ce1741143_config-0] Success to connect to server [192.168.88.101:8848] on start up, connectionId = 1765307620939_192.168.88.1_61040
+2025-12-17 16:02:59.461 [com.alibaba.nacos.client.remote.worker] INFO  com.alibaba.nacos.common.remote.client - [8a9bbd11-91b3-46ae-8ec7-e26ce1741143_config-0] Notify connected event to listeners.
+2025-12-17 16:02:59.461 [com.alibaba.nacos.client.remote.worker] INFO  com.alibaba.nacos.client.config.impl.ClientWorker - [8a9bbd11-91b3-46ae-8ec7-e26ce1741143_config-0] Connected,notify listen context...
+2025-12-17 16:02:59.461 [main] INFO  com.alibaba.nacos.common.remote.client - [8a9bbd11-91b3-46ae-8ec7-e26ce1741143_config-0] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$ConnectResetRequestHandler
+2025-12-17 16:02:59.461 [main] INFO  com.alibaba.nacos.common.remote.client - [8a9bbd11-91b3-46ae-8ec7-e26ce1741143_config-0] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$$Lambda$604/0x0000017d154d4890
+2025-12-17 16:02:59.498 [main] INFO  com.alibaba.nacos.client.config.impl.Limiter - limitTime:5.0
+2025-12-17 16:02:59.509 [main] WARN  c.a.cloud.nacos.client.NacosPropertySourceBuilder - Ignore the empty nacos configuration and get it based on dataId[xiaohashu-user-count] & group[DEFAULT_GROUP]
+2025-12-17 16:02:59.514 [main] WARN  c.a.cloud.nacos.client.NacosPropertySourceBuilder - Ignore the empty nacos configuration and get it based on dataId[xiaohashu-user-count.yaml] & group[DEFAULT_GROUP]
+2025-12-17 16:02:59.517 [main] WARN  c.a.cloud.nacos.client.NacosPropertySourceBuilder - Ignore the empty nacos configuration and get it based on dataId[xiaohashu-user-count-dev.yaml] & group[DEFAULT_GROUP]
+2025-12-17 16:02:59.517 [main] INFO  o.s.c.b.c.PropertySourceBootstrapConfiguration - Located property source: [BootstrapPropertySource {name='bootstrapProperties-xiaohashu-user-count-dev.yaml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-xiaohashu-user-count.yaml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-xiaohashu-user-count,DEFAULT_GROUP'}]
+2025-12-17 16:02:59.522 [main] WARN  com.alibaba.nacos.client.logging.NacosLogging - Load Logback Configuration of Nacos fail, message: Could not initialize Logback Nacos logging from classpath:nacos-logback.xml
+2025-12-17 16:02:59.523 [main] INFO  c.q.x.count.biz.XiaohashuCountBizApplication - The following 1 profile is active: "dev"
+2025-12-17 16:03:00.055 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-12-17 16:03:00.057 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-12-17 16:03:00.073 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 6 ms. Found 0 Redis repository interfaces.
+2025-12-17 16:03:00.172 [main] INFO  o.springframework.cloud.context.scope.GenericScope - BeanFactory id=92c1d77c-f6de-367d-afcb-d95bc09ed733
+2025-12-17 16:03:00.344 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.apache.rocketmq.spring.autoconfigure.MessageConverterConfiguration' of type [org.apache.rocketmq.spring.autoconfigure.MessageConverterConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2025-12-17 16:03:00.379 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'createRocketMQMessageConverter' of type [org.apache.rocketmq.spring.support.RocketMQMessageConverter] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2025-12-17 16:03:00.382 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.commons.config.CommonsConfigAutoConfiguration' of type [org.springframework.cloud.commons.config.CommonsConfigAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2025-12-17 16:03:00.384 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2025-12-17 16:03:00.384 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'loadBalancerClientsDefaultsMappingsProvider' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration$$Lambda$757/0x0000017d15693c80] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2025-12-17 16:03:00.385 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'defaultsBindHandlerAdvisor' of type [org.springframework.cloud.commons.config.DefaultsBindHandlerAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2025-12-17 16:03:00.388 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'rocketmq-org.apache.rocketmq.spring.autoconfigure.RocketMQProperties' of type [org.apache.rocketmq.spring.autoconfigure.RocketMQProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2025-12-17 16:03:00.389 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.apache.rocketmq.spring.autoconfigure.ListenerContainerConfiguration' of type [org.apache.rocketmq.spring.autoconfigure.ListenerContainerConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2025-12-17 16:03:00.569 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8088 (http)
+2025-12-17 16:03:00.578 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-12-17 16:03:00.578 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.5]
+2025-12-17 16:03:00.637 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-12-17 16:03:00.637 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1105 ms
+2025-12-17 16:03:00.722 [main] INFO  o.a.r.s.autoconfigure.RocketMQAutoConfiguration - a producer (xiaohashu_group) init on namesrv 192.168.88.101:9876
+2025-12-17 16:03:01.094 [main] INFO  o.a.r.s.support.DefaultRocketMQListenerContainer - running container: DefaultRocketMQListenerContainer{consumerGroup='xiaohashu_group_CountCollectLikeTopic', namespace='', nameServer='192.168.88.101:9876', topic='CountCollectLikeTopic', consumeMode=CONCURRENTLY, selectorType=TAG, selectorExpression='*', messageModel=CLUSTERING', tlsEnable=false, instanceName=DEFAULT}
+2025-12-17 16:03:01.094 [main] INFO  o.a.r.s.a.ListenerContainerConfiguration - Register the listener to container, listenerBeanName:countCollectUncollectConsumer, containerBeanName:org.apache.rocketmq.spring.support.DefaultRocketMQListenerContainer_1
+2025-12-17 16:03:01.103 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+2025-12-17 16:03:01.322 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2025-12-17 16:03:01.526 [main] INFO  o.a.r.s.support.DefaultRocketMQListenerContainer - running container: DefaultRocketMQListenerContainer{consumerGroup='xiaohashu_groupCountFansDBTopic', namespace='', nameServer='192.168.88.101:9876', topic='CountFansDBTopic', consumeMode=ORDERLY, selectorType=TAG, selectorExpression='*', messageModel=CLUSTERING', tlsEnable=false, instanceName=DEFAULT}
+2025-12-17 16:03:01.527 [main] INFO  o.a.r.s.a.ListenerContainerConfiguration - Register the listener to container, listenerBeanName:countFans2DBConsumer, containerBeanName:org.apache.rocketmq.spring.support.DefaultRocketMQListenerContainer_2
+2025-12-17 16:03:01.582 [main] INFO  o.a.r.s.support.DefaultRocketMQListenerContainer - running container: DefaultRocketMQListenerContainer{consumerGroup='xiaohashu_groupCountFansTopic', namespace='', nameServer='192.168.88.101:9876', topic='CountFansTopic', consumeMode=ORDERLY, selectorType=TAG, selectorExpression='*', messageModel=CLUSTERING', tlsEnable=false, instanceName=DEFAULT}
+2025-12-17 16:03:01.583 [main] INFO  o.a.r.s.a.ListenerContainerConfiguration - Register the listener to container, listenerBeanName:countFansConsumer, containerBeanName:org.apache.rocketmq.spring.support.DefaultRocketMQListenerContainer_3
+2025-12-17 16:03:01.635 [main] INFO  o.a.r.s.support.DefaultRocketMQListenerContainer - running container: DefaultRocketMQListenerContainer{consumerGroup='xiaohashu_groupCountFOLLOWINGDBTopic', namespace='', nameServer='192.168.88.101:9876', topic='CountFOLLOWINGDBTopic', consumeMode=ORDERLY, selectorType=TAG, selectorExpression='*', messageModel=CLUSTERING', tlsEnable=false, instanceName=DEFAULT}
+2025-12-17 16:03:01.635 [main] INFO  o.a.r.s.a.ListenerContainerConfiguration - Register the listener to container, listenerBeanName:countFollowing2DBConsumer, containerBeanName:org.apache.rocketmq.spring.support.DefaultRocketMQListenerContainer_4
+2025-12-17 16:03:01.688 [main] INFO  o.a.r.s.support.DefaultRocketMQListenerContainer - running container: DefaultRocketMQListenerContainer{consumerGroup='xiaohashu_groupCountFollowingTopic', namespace='', nameServer='192.168.88.101:9876', topic='CountFollowingTopic', consumeMode=ORDERLY, selectorType=TAG, selectorExpression='*', messageModel=CLUSTERING', tlsEnable=false, instanceName=DEFAULT}
+2025-12-17 16:03:01.688 [main] INFO  o.a.r.s.a.ListenerContainerConfiguration - Register the listener to container, listenerBeanName:countFollowingConsumer, containerBeanName:org.apache.rocketmq.spring.support.DefaultRocketMQListenerContainer_5
+2025-12-17 16:03:01.741 [main] INFO  o.a.r.s.support.DefaultRocketMQListenerContainer - running container: DefaultRocketMQListenerContainer{consumerGroup='xiaohashu_group_CountNoteLikeTopic', namespace='', nameServer='192.168.88.101:9876', topic='CountNoteLikeTopic', consumeMode=CONCURRENTLY, selectorType=TAG, selectorExpression='*', messageModel=CLUSTERING', tlsEnable=false, instanceName=DEFAULT}
+2025-12-17 16:03:01.741 [main] INFO  o.a.r.s.a.ListenerContainerConfiguration - Register the listener to container, listenerBeanName:countLikeUnlikeConsumer, containerBeanName:org.apache.rocketmq.spring.support.DefaultRocketMQListenerContainer_6
+2025-12-17 16:03:01.793 [main] INFO  o.a.r.s.support.DefaultRocketMQListenerContainer - running container: DefaultRocketMQListenerContainer{consumerGroup='xiaohashu_groupCountCollectDBTopic', namespace='', nameServer='192.168.88.101:9876', topic='CountCollectDBTopic', consumeMode=CONCURRENTLY, selectorType=TAG, selectorExpression='*', messageModel=CLUSTERING', tlsEnable=false, instanceName=DEFAULT}
+2025-12-17 16:03:01.793 [main] INFO  o.a.r.s.a.ListenerContainerConfiguration - Register the listener to container, listenerBeanName:countNoteCollect2DBConsumer, containerBeanName:org.apache.rocketmq.spring.support.DefaultRocketMQListenerContainer_7
+2025-12-17 16:03:01.846 [main] INFO  o.a.r.s.support.DefaultRocketMQListenerContainer - running container: DefaultRocketMQListenerContainer{consumerGroup='xiaohashu_groupCountLikeDBTopic', namespace='', nameServer='192.168.88.101:9876', topic='CountLikeDBTopic', consumeMode=CONCURRENTLY, selectorType=TAG, selectorExpression='*', messageModel=CLUSTERING', tlsEnable=false, instanceName=DEFAULT}
+2025-12-17 16:03:01.846 [main] INFO  o.a.r.s.a.ListenerContainerConfiguration - Register the listener to container, listenerBeanName:countNoteLike2DBConsumer, containerBeanName:org.apache.rocketmq.spring.support.DefaultRocketMQListenerContainer_8
+2025-12-17 16:03:01.887 [main] INFO  o.a.r.s.support.DefaultRocketMQListenerContainer - running container: DefaultRocketMQListenerContainer{consumerGroup='xiaohashu_group_CountPublishTopic', namespace='', nameServer='192.168.88.101:9876', topic='CountPublishTopic', consumeMode=CONCURRENTLY, selectorType=TAG, selectorExpression='*', messageModel=CLUSTERING', tlsEnable=false, instanceName=DEFAULT}
+2025-12-17 16:03:01.887 [main] INFO  o.a.r.s.a.ListenerContainerConfiguration - Register the listener to container, listenerBeanName:countPublishNoteConsumer, containerBeanName:org.apache.rocketmq.spring.support.DefaultRocketMQListenerContainer_9
+2025-12-17 16:03:02.430 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8088 (http) with context path ''
+2025-12-17 16:03:02.434 [main] INFO  com.alibaba.nacos.client.naming - initializer namespace from ans.namespace attribute : null
+2025-12-17 16:03:02.434 [main] INFO  com.alibaba.nacos.client.naming - initializer namespace from ALIBABA_ALIWARE_NAMESPACE attribute :null
+2025-12-17 16:03:02.434 [main] INFO  com.alibaba.nacos.client.naming - initializer namespace from namespace attribute :null
+2025-12-17 16:03:02.440 [main] INFO  c.a.n.p.auth.spi.client.ClientAuthPluginManager - [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.impl.NacosClientAuthServiceImpl success.
+2025-12-17 16:03:02.440 [main] INFO  c.a.n.p.auth.spi.client.ClientAuthPluginManager - [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.ram.RamClientAuthServiceImpl success.
+2025-12-17 16:03:02.442 [main] INFO  com.alibaba.nacos.common.remote.client - [RpcClientFactory] create a new rpc client of 25c85853-499b-49d9-ae92-cc84d634b772
+2025-12-17 16:03:02.444 [main] INFO  com.alibaba.nacos.common.remote.client - [25c85853-499b-49d9-ae92-cc84d634b772] RpcClient init, ServerListFactory = com.alibaba.nacos.client.naming.core.ServerListManager
+2025-12-17 16:03:02.444 [main] INFO  com.alibaba.nacos.common.remote.client - [25c85853-499b-49d9-ae92-cc84d634b772] Registry connection listener to current client:com.alibaba.nacos.client.naming.remote.gprc.redo.NamingGrpcRedoService
+2025-12-17 16:03:02.445 [main] INFO  com.alibaba.nacos.common.remote.client - [25c85853-499b-49d9-ae92-cc84d634b772] Register server push request handler:com.alibaba.nacos.client.naming.remote.gprc.NamingPushRequestHandler
+2025-12-17 16:03:02.445 [main] INFO  com.alibaba.nacos.common.remote.client - [25c85853-499b-49d9-ae92-cc84d634b772] Try to connect to server on start up, server: {serverIp = '192.168.88.101', server main port = 8848}
+2025-12-17 16:03:02.446 [main] INFO  c.a.nacos.common.remote.client.grpc.GrpcClient - grpc client connection server:192.168.88.101 ip,serverPort:9848,grpcTslConfig:{"sslProvider":"OPENSSL","enableTls":false,"mutualAuthEnable":false,"trustAll":false}
+2025-12-17 16:03:02.558 [main] INFO  com.alibaba.nacos.common.remote.client - [25c85853-499b-49d9-ae92-cc84d634b772] Success to connect to server [192.168.88.101:8848] on start up, connectionId = 1765307624095_192.168.88.1_61072
+2025-12-17 16:03:02.558 [main] INFO  com.alibaba.nacos.common.remote.client - [25c85853-499b-49d9-ae92-cc84d634b772] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$ConnectResetRequestHandler
+2025-12-17 16:03:02.558 [main] INFO  com.alibaba.nacos.common.remote.client - [25c85853-499b-49d9-ae92-cc84d634b772] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$$Lambda$604/0x0000017d154d4890
+2025-12-17 16:03:02.558 [com.alibaba.nacos.client.remote.worker] INFO  com.alibaba.nacos.common.remote.client - [25c85853-499b-49d9-ae92-cc84d634b772] Notify connected event to listeners.
+2025-12-17 16:03:02.558 [com.alibaba.nacos.client.remote.worker] INFO  com.alibaba.nacos.client.naming - Grpc connection connect
+2025-12-17 16:03:02.559 [main] INFO  com.alibaba.nacos.client.naming - [REGISTER-SERVICE] xiaohashu registering service xiaohashu-user-count with instance Instance{instanceId='null', ip='172.28.129.13', port=8088, weight=1.0, healthy=true, enabled=true, ephemeral=true, clusterName='DEFAULT', serviceName='null', metadata={IPv6=[2001:da8:c800:9000:0:0:1:c7d9], preserved.register.source=SPRING_CLOUD}}
+2025-12-17 16:03:02.568 [main] INFO  c.a.cloud.nacos.registry.NacosServiceRegistry - nacos registry, DEFAULT_GROUP xiaohashu-user-count 172.28.129.13:8088 register finished
+2025-12-17 16:03:02.664 [main] INFO  c.q.x.count.biz.XiaohashuCountBizApplication - Started XiaohashuCountBizApplication in 4.859 seconds (process running for 5.213)
+2025-12-17 16:03:02.666 [main] INFO  com.alibaba.nacos.client.config.impl.CacheData - nacos.cache.data.init.snapshot = true 
+2025-12-17 16:03:02.667 [main] INFO  com.alibaba.nacos.client.config.impl.ClientWorker - [fixed-xiaohashu-192.168.88.101_8848] [subscribe] xiaohashu-user-count+DEFAULT_GROUP+xiaohashu
+2025-12-17 16:03:02.673 [main] INFO  com.alibaba.nacos.client.config.impl.CacheData - [fixed-xiaohashu-192.168.88.101_8848] [add-listener] ok, tenant=xiaohashu, dataId=xiaohashu-user-count, group=DEFAULT_GROUP, cnt=1
+2025-12-17 16:03:02.673 [main] INFO  c.a.cloud.nacos.refresh.NacosContextRefresher - [Nacos Config] Listening config: dataId=xiaohashu-user-count, group=DEFAULT_GROUP
+2025-12-17 16:03:02.673 [main] INFO  com.alibaba.nacos.client.config.impl.ClientWorker - [fixed-xiaohashu-192.168.88.101_8848] [subscribe] xiaohashu-user-count.yaml+DEFAULT_GROUP+xiaohashu
+2025-12-17 16:03:02.673 [main] INFO  com.alibaba.nacos.client.config.impl.CacheData - [fixed-xiaohashu-192.168.88.101_8848] [add-listener] ok, tenant=xiaohashu, dataId=xiaohashu-user-count.yaml, group=DEFAULT_GROUP, cnt=1
+2025-12-17 16:03:02.673 [main] INFO  c.a.cloud.nacos.refresh.NacosContextRefresher - [Nacos Config] Listening config: dataId=xiaohashu-user-count.yaml, group=DEFAULT_GROUP
+2025-12-17 16:03:02.673 [main] INFO  com.alibaba.nacos.client.config.impl.ClientWorker - [fixed-xiaohashu-192.168.88.101_8848] [subscribe] xiaohashu-user-count-dev.yaml+DEFAULT_GROUP+xiaohashu
+2025-12-17 16:03:02.673 [main] INFO  com.alibaba.nacos.client.config.impl.CacheData - [fixed-xiaohashu-192.168.88.101_8848] [add-listener] ok, tenant=xiaohashu, dataId=xiaohashu-user-count-dev.yaml, group=DEFAULT_GROUP, cnt=1
+2025-12-17 16:03:02.673 [main] INFO  c.a.cloud.nacos.refresh.NacosContextRefresher - [Nacos Config] Listening config: dataId=xiaohashu-user-count-dev.yaml, group=DEFAULT_GROUP
+2025-12-17 16:03:02.900 [ConsumeMessageThread_xiaohashu_group_CountPublishTopic_1] INFO  c.q.x.count.biz.consumer.CountPublishNoteConsumer - =======get message to handle publish\unpublish count
+2025-12-17 16:03:02.900 [ConsumeMessageThread_xiaohashu_group_CountPublishTopic_1] INFO  c.q.x.count.biz.consumer.CountPublishNoteConsumer - =======get message to handle publish count
+2025-12-17 16:03:02.916 [ConsumeMessageThread_xiaohashu_group_CountPublishTopic_1] WARN  o.a.r.s.support.DefaultRocketMQListenerContainer - consume message failed. messageId:7F000001395863947C6B4A6E9CB00001, topic:CountPublishTopic, reconsumeTimes:9
+com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot construct instance of `com.quanxiaoha.xiaohashu.count.biz.model.dto.CountPublishNoteDTO` (although at least one Creator exists): no String-argument constructor/factory method to deserialize from String value ('CountPublishTopic:Publish')
+ at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 1, column: 1]
+	at com.fasterxml.jackson.databind.exc.MismatchedInputException.from(MismatchedInputException.java:63)
+	at com.fasterxml.jackson.databind.DeserializationContext.reportInputMismatch(DeserializationContext.java:1754)
+	at com.fasterxml.jackson.databind.DeserializationContext.handleMissingInstantiator(DeserializationContext.java:1379)
+	at com.fasterxml.jackson.databind.deser.std.StdDeserializer._deserializeFromString(StdDeserializer.java:311)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.deserializeFromString(BeanDeserializerBase.java:1588)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer._deserializeOther(BeanDeserializer.java:197)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:187)
+	at com.fasterxml.jackson.databind.deser.DefaultDeserializationContext.readRootValue(DefaultDeserializationContext.java:342)
+	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:4899)
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3846)
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3814)
+	at com.quanxiaoha.xiaohashu.common.util.JsonUtils.Parse_Object(JsonUtils.java:42)
+	at com.quanxiaoha.xiaohashu.count.biz.consumer.CountPublishNoteConsumer.handlePublishMessage(CountPublishNoteConsumer.java:52)
+	at com.quanxiaoha.xiaohashu.count.biz.consumer.CountPublishNoteConsumer.onMessage(CountPublishNoteConsumer.java:46)
+	at com.quanxiaoha.xiaohashu.count.biz.consumer.CountPublishNoteConsumer.onMessage(CountPublishNoteConsumer.java:25)
+	at org.apache.rocketmq.spring.support.DefaultRocketMQListenerContainer.handleMessage(DefaultRocketMQListenerContainer.java:461)
+	at org.apache.rocketmq.spring.support.DefaultRocketMQListenerContainer.access$100(DefaultRocketMQListenerContainer.java:71)
+	at org.apache.rocketmq.spring.support.DefaultRocketMQListenerContainer$DefaultMessageListenerConcurrently.consumeMessage(DefaultRocketMQListenerContainer.java:421)
+	at org.apache.rocketmq.client.impl.consumer.ConsumeMessageConcurrentlyService$ConsumeRequest.run(ConsumeMessageConcurrentlyService.java:402)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2025-12-17 16:03:22.921 [pool-batch-consume-blocking-queue-thread-0] INFO  c.q.x.count.biz.consumer.CountLikeUnlikeConsumer - ==> 【笔记点赞数】聚合消息, size: 1
+2025-12-17 16:03:22.921 [pool-batch-consume-blocking-queue-thread-0] INFO  c.q.x.count.biz.consumer.CountLikeUnlikeConsumer - ==> 【笔记点赞数】聚合消息, ["{\"userId\":2100,\"noteId\":1,\"timeStamp\":\"2025-12-17 16:03:21\",\"type\":1,\"creatorId\":2100}"]
+2025-12-17 16:03:23.103 [NettyClientPublicExecutor_1] INFO  c.q.x.count.biz.consumer.CountLikeUnlikeConsumer - ======send like note count message to database successfully
+2025-12-17 16:03:23.104 [ConsumeMessageThread_xiaohashu_groupCountLikeDBTopic_1] INFO  c.q.x.count.biz.consumer.CountNoteLike2DBConsumer - =====get message to save note like info into database
+2025-12-17 16:03:23.278 [ConsumeMessageThread_xiaohashu_groupCountLikeDBTopic_1] INFO  c.q.x.count.biz.consumer.CountNoteLike2DBConsumer - =====get message to save note like info into database successfully
+2025-12-17 16:03:45.106 [pool-batch-consume-blocking-queue-thread-0] INFO  c.q.x.count.biz.consumer.CountLikeUnlikeConsumer - ==> 【笔记点赞数】聚合消息, size: 1
+2025-12-17 16:03:45.106 [pool-batch-consume-blocking-queue-thread-0] INFO  c.q.x.count.biz.consumer.CountLikeUnlikeConsumer - ==> 【笔记点赞数】聚合消息, ["{\"userId\":2100,\"noteId\":1,\"timeStamp\":\"2025-12-17 16:03:44\",\"type\":0,\"creatorId\":2100}"]
+2025-12-17 16:03:45.113 [NettyClientPublicExecutor_2] INFO  c.q.x.count.biz.consumer.CountLikeUnlikeConsumer - ======send like note count message to database successfully
+2025-12-17 16:03:45.162 [ConsumeMessageThread_xiaohashu_groupCountLikeDBTopic_2] INFO  c.q.x.count.biz.consumer.CountNoteLike2DBConsumer - =====get message to save note like info into database
+2025-12-17 16:03:45.174 [ConsumeMessageThread_xiaohashu_groupCountLikeDBTopic_2] INFO  c.q.x.count.biz.consumer.CountNoteLike2DBConsumer - =====get message to save note like info into database successfully
+2025-12-17 16:03:49.982 [Thread-1] WARN  c.alibaba.nacos.common.http.HttpClientBeanHolder - [HttpClientBeanHolder] Start destroying common HttpClient
+2025-12-17 16:03:49.982 [Thread-7] WARN  com.alibaba.nacos.common.notify.NotifyCenter - [NotifyCenter] Start destroying Publisher
+2025-12-17 16:03:49.982 [Thread-7] WARN  com.alibaba.nacos.common.notify.NotifyCenter - [NotifyCenter] Destruction of the end
+2025-12-17 16:03:49.982 [Thread-1] WARN  c.alibaba.nacos.common.http.HttpClientBeanHolder - [HttpClientBeanHolder] Destruction of the end
+2025-12-17 16:03:49.997 [NettyClientSelector_1] INFO  RocketmqRemoting - closeChannel: close the connection to remote address[192.168.88.101:10911] result: true
+2025-12-17 16:03:49.997 [NettyClientSelector_1] INFO  RocketmqRemoting - closeChannel: close the connection to remote address[192.168.88.101:9876] result: true
+2025-12-17 16:03:50.013 [NettyClientSelector_1] INFO  RocketmqRemoting - closeChannel: close the connection to remote address[192.168.88.101:10911] result: true
+2025-12-17 16:03:50.014 [NettyClientSelector_1] INFO  RocketmqRemoting - closeChannel: close the connection to remote address[192.168.88.101:9876] result: true
+2025-12-17 16:03:50.024 [NettyClientSelector_1] INFO  RocketmqRemoting - closeChannel: close the connection to remote address[192.168.88.101:10911] result: true
+2025-12-17 16:03:50.024 [NettyClientSelector_1] INFO  RocketmqRemoting - closeChannel: close the connection to remote address[192.168.88.101:9876] result: true
+2025-12-17 16:03:50.041 [NettyClientSelector_1] INFO  RocketmqRemoting - closeChannel: close the connection to remote address[192.168.88.101:10911] result: true
+2025-12-17 16:03:50.041 [NettyClientSelector_1] INFO  RocketmqRemoting - closeChannel: close the connection to remote address[192.168.88.101:9876] result: true
+2025-12-17 16:03:50.054 [NettyClientSelector_1] INFO  RocketmqRemoting - closeChannel: close the connection to remote address[192.168.88.101:10911] result: true
+2025-12-17 16:03:50.054 [NettyClientSelector_1] INFO  RocketmqRemoting - closeChannel: close the connection to remote address[192.168.88.101:9876] result: true
+2025-12-17 16:03:50.059 [NettyClientSelector_1] INFO  RocketmqRemoting - closeChannel: close the connection to remote address[192.168.88.101:10911] result: true
+2025-12-17 16:03:50.060 [NettyClientSelector_1] INFO  RocketmqRemoting - closeChannel: close the connection to remote address[192.168.88.101:9876] result: true
+2025-12-17 16:03:50.064 [NettyClientSelector_1] INFO  RocketmqRemoting - closeChannel: close the connection to remote address[192.168.88.101:10911] result: true
+2025-12-17 16:03:50.064 [NettyClientSelector_1] INFO  RocketmqRemoting - closeChannel: close the connection to remote address[192.168.88.101:9876] result: true
+2025-12-17 16:03:50.068 [NettyClientSelector_1] INFO  RocketmqRemoting - closeChannel: close the connection to remote address[192.168.88.101:10911] result: true
+2025-12-17 16:03:50.068 [NettyClientSelector_1] INFO  RocketmqRemoting - closeChannel: close the connection to remote address[192.168.88.101:9876] result: true
+2025-12-17 16:03:50.073 [NettyClientSelector_1] INFO  RocketmqRemoting - closeChannel: close the connection to remote address[192.168.88.101:9876] result: true
+2025-12-17 16:03:50.073 [NettyClientSelector_1] INFO  RocketmqRemoting - closeChannel: close the connection to remote address[192.168.88.101:10911] result: true
+2025-12-17 16:03:50.090 [SpringApplicationShutdownHook] INFO  c.a.cloud.nacos.registry.NacosServiceRegistry - De-registering from Nacos Server now...
+2025-12-17 16:03:50.090 [SpringApplicationShutdownHook] INFO  com.alibaba.nacos.client.naming - [DEREGISTER-SERVICE] xiaohashu deregistering service xiaohashu-user-count with instance: Instance{instanceId='null', ip='172.28.129.13', port=8088, weight=1.0, healthy=true, enabled=true, ephemeral=true, clusterName='DEFAULT', serviceName='null', metadata={}}
+2025-12-17 16:03:50.094 [SpringApplicationShutdownHook] INFO  c.a.cloud.nacos.registry.NacosServiceRegistry - De-registration finished.
+2025-12-17 16:03:50.095 [SpringApplicationShutdownHook] INFO  com.alibaba.nacos.client.naming - com.alibaba.nacos.client.naming.cache.ServiceInfoHolder do shutdown begin
+2025-12-17 16:03:50.095 [SpringApplicationShutdownHook] INFO  com.alibaba.nacos.client.naming - com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown begin
+2025-12-17 16:03:50.095 [SpringApplicationShutdownHook] INFO  com.alibaba.nacos.client.naming - com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown stop
+2025-12-17 16:03:50.095 [SpringApplicationShutdownHook] INFO  com.alibaba.nacos.client.naming - com.alibaba.nacos.client.naming.cache.ServiceInfoHolder do shutdown stop
+2025-12-17 16:03:50.095 [SpringApplicationShutdownHook] INFO  com.alibaba.nacos.client.naming - com.alibaba.nacos.client.naming.remote.NamingClientProxyDelegate do shutdown begin
+2025-12-17 16:03:50.095 [SpringApplicationShutdownHook] INFO  com.alibaba.nacos.client.naming - com.alibaba.nacos.client.naming.core.ServiceInfoUpdateService do shutdown begin
+2025-12-17 16:03:50.095 [SpringApplicationShutdownHook] INFO  com.alibaba.nacos.client.naming - com.alibaba.nacos.client.naming.core.ServiceInfoUpdateService do shutdown stop
+2025-12-17 16:03:50.095 [SpringApplicationShutdownHook] INFO  com.alibaba.nacos.client.naming - com.alibaba.nacos.client.naming.core.ServerListManager do shutdown begin
+2025-12-17 16:03:50.095 [SpringApplicationShutdownHook] WARN  com.alibaba.nacos.client.naming - [NamingHttpClientManager] Start destroying NacosRestTemplate
+2025-12-17 16:03:50.095 [SpringApplicationShutdownHook] WARN  com.alibaba.nacos.client.naming - [NamingHttpClientManager] Destruction of the end
+2025-12-17 16:03:50.095 [SpringApplicationShutdownHook] INFO  com.alibaba.nacos.client.naming - com.alibaba.nacos.client.naming.core.ServerListManager do shutdown stop
+2025-12-17 16:03:50.095 [SpringApplicationShutdownHook] INFO  com.alibaba.nacos.client.naming - com.alibaba.nacos.client.naming.remote.http.NamingHttpClientProxy do shutdown begin
+2025-12-17 16:03:50.095 [SpringApplicationShutdownHook] WARN  com.alibaba.nacos.client.naming - [NamingHttpClientManager] Start destroying NacosRestTemplate
+2025-12-17 16:03:50.095 [SpringApplicationShutdownHook] WARN  com.alibaba.nacos.client.naming - [NamingHttpClientManager] Destruction of the end
+2025-12-17 16:03:50.095 [SpringApplicationShutdownHook] INFO  com.alibaba.nacos.client.naming - com.alibaba.nacos.client.naming.remote.http.NamingHttpClientProxy do shutdown stop
+2025-12-17 16:03:50.095 [SpringApplicationShutdownHook] INFO  com.alibaba.nacos.common.remote.client - Shutdown rpc client, set status to shutdown
+2025-12-17 16:03:50.095 [SpringApplicationShutdownHook] INFO  com.alibaba.nacos.common.remote.client - Shutdown client event executor java.util.concurrent.ScheduledThreadPoolExecutor@5df79e3d[Running, pool size = 2, active threads = 2, queued tasks = 0, completed tasks = 0]
+2025-12-17 16:03:50.095 [SpringApplicationShutdownHook] INFO  com.alibaba.nacos.common.remote.client - Close current connection 1765307624095_192.168.88.1_61072
+2025-12-17 16:03:50.097 [nacos-grpc-client-executor-192.168.88.101-16] INFO  c.a.nacos.common.remote.client.grpc.GrpcClient - [1765307624095_192.168.88.1_61072]Ignore complete event,isRunning:false,isAbandon=false
+2025-12-17 16:03:50.099 [SpringApplicationShutdownHook] INFO  c.a.nacos.common.remote.client.grpc.GrpcClient - Shutdown grpc executor java.util.concurrent.ThreadPoolExecutor@aa421ef[Running, pool size = 4, active threads = 0, queued tasks = 0, completed tasks = 17]
+2025-12-17 16:03:50.099 [SpringApplicationShutdownHook] INFO  com.alibaba.nacos.client.naming - Shutdown grpc redo service executor java.util.concurrent.ScheduledThreadPoolExecutor@7fe7249a[Running, pool size = 1, active threads = 0, queued tasks = 1, completed tasks = 15]
+2025-12-17 16:03:50.099 [SpringApplicationShutdownHook] INFO  c.a.n.client.auth.ram.identify.CredentialWatcher - [null] CredentialWatcher is stopped
+2025-12-17 16:03:50.099 [SpringApplicationShutdownHook] INFO  c.a.n.client.auth.ram.identify.CredentialService - [null] CredentialService is freed
+2025-12-17 16:03:50.099 [SpringApplicationShutdownHook] INFO  com.alibaba.nacos.client.naming - com.alibaba.nacos.client.naming.remote.NamingClientProxyDelegate do shutdown stop
+2025-12-17 16:03:50.099 [SpringApplicationShutdownHook] INFO  o.a.r.s.support.DefaultRocketMQListenerContainer - container destroyed, DefaultRocketMQListenerContainer{consumerGroup='xiaohashu_group_CountPublishTopic', namespace='', nameServer='192.168.88.101:9876', topic='CountPublishTopic', consumeMode=CONCURRENTLY, selectorType=TAG, selectorExpression='*', messageModel=CLUSTERING', tlsEnable=false, instanceName=DEFAULT}
+2025-12-17 16:03:50.099 [SpringApplicationShutdownHook] INFO  o.a.r.s.support.DefaultRocketMQListenerContainer - container destroyed, DefaultRocketMQListenerContainer{consumerGroup='xiaohashu_groupCountLikeDBTopic', namespace='', nameServer='192.168.88.101:9876', topic='CountLikeDBTopic', consumeMode=CONCURRENTLY, selectorType=TAG, selectorExpression='*', messageModel=CLUSTERING', tlsEnable=false, instanceName=DEFAULT}
+2025-12-17 16:03:50.099 [SpringApplicationShutdownHook] INFO  o.a.r.s.support.DefaultRocketMQListenerContainer - container destroyed, DefaultRocketMQListenerContainer{consumerGroup='xiaohashu_groupCountCollectDBTopic', namespace='', nameServer='192.168.88.101:9876', topic='CountCollectDBTopic', consumeMode=CONCURRENTLY, selectorType=TAG, selectorExpression='*', messageModel=CLUSTERING', tlsEnable=false, instanceName=DEFAULT}
+2025-12-17 16:03:50.099 [SpringApplicationShutdownHook] INFO  o.a.r.s.support.DefaultRocketMQListenerContainer - container destroyed, DefaultRocketMQListenerContainer{consumerGroup='xiaohashu_group_CountNoteLikeTopic', namespace='', nameServer='192.168.88.101:9876', topic='CountNoteLikeTopic', consumeMode=CONCURRENTLY, selectorType=TAG, selectorExpression='*', messageModel=CLUSTERING', tlsEnable=false, instanceName=DEFAULT}
+2025-12-17 16:03:50.099 [SpringApplicationShutdownHook] INFO  o.a.r.s.support.DefaultRocketMQListenerContainer - container destroyed, DefaultRocketMQListenerContainer{consumerGroup='xiaohashu_groupCountFollowingTopic', namespace='', nameServer='192.168.88.101:9876', topic='CountFollowingTopic', consumeMode=ORDERLY, selectorType=TAG, selectorExpression='*', messageModel=CLUSTERING', tlsEnable=false, instanceName=DEFAULT}
+2025-12-17 16:03:50.099 [SpringApplicationShutdownHook] INFO  o.a.r.s.support.DefaultRocketMQListenerContainer - container destroyed, DefaultRocketMQListenerContainer{consumerGroup='xiaohashu_groupCountFOLLOWINGDBTopic', namespace='', nameServer='192.168.88.101:9876', topic='CountFOLLOWINGDBTopic', consumeMode=ORDERLY, selectorType=TAG, selectorExpression='*', messageModel=CLUSTERING', tlsEnable=false, instanceName=DEFAULT}
+2025-12-17 16:03:50.099 [SpringApplicationShutdownHook] INFO  o.a.r.s.support.DefaultRocketMQListenerContainer - container destroyed, DefaultRocketMQListenerContainer{consumerGroup='xiaohashu_groupCountFansTopic', namespace='', nameServer='192.168.88.101:9876', topic='CountFansTopic', consumeMode=ORDERLY, selectorType=TAG, selectorExpression='*', messageModel=CLUSTERING', tlsEnable=false, instanceName=DEFAULT}
+2025-12-17 16:03:50.099 [SpringApplicationShutdownHook] INFO  o.a.r.s.support.DefaultRocketMQListenerContainer - container destroyed, DefaultRocketMQListenerContainer{consumerGroup='xiaohashu_groupCountFansDBTopic', namespace='', nameServer='192.168.88.101:9876', topic='CountFansDBTopic', consumeMode=ORDERLY, selectorType=TAG, selectorExpression='*', messageModel=CLUSTERING', tlsEnable=false, instanceName=DEFAULT}
+2025-12-17 16:03:50.100 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...
+2025-12-17 16:03:50.103 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2025-12-17 16:03:50.103 [SpringApplicationShutdownHook] INFO  o.a.r.s.support.DefaultRocketMQListenerContainer - container destroyed, DefaultRocketMQListenerContainer{consumerGroup='xiaohashu_group_CountCollectLikeTopic', namespace='', nameServer='192.168.88.101:9876', topic='CountCollectLikeTopic', consumeMode=CONCURRENTLY, selectorType=TAG, selectorExpression='*', messageModel=CLUSTERING', tlsEnable=false, instanceName=DEFAULT}
+2025-12-17 16:03:50.218 [NettyClientSelector_1] INFO  RocketmqRemoting - closeChannel: close the connection to remote address[192.168.88.101:10911] result: true
+2025-12-17 16:03:50.219 [NettyClientSelector_1] INFO  RocketmqRemoting - closeChannel: close the connection to remote address[192.168.88.101:9876] result: true
+2025-12-17 16:22:34.796 [main] WARN  com.alibaba.nacos.client.logging.NacosLogging - Load Logback Configuration of Nacos fail, message: Could not initialize Logback Nacos logging from classpath:nacos-logback.xml
+2025-12-17 16:22:34.842 [main] WARN  com.alibaba.nacos.client.logging.NacosLogging - Load Logback Configuration of Nacos fail, message: Could not initialize Logback Nacos logging from classpath:nacos-logback.xml
+2025-12-17 16:22:35.006 [main] WARN  com.alibaba.nacos.client.logging.NacosLogging - Load Logback Configuration of Nacos fail, message: Could not initialize Logback Nacos logging from classpath:nacos-logback.xml
+2025-12-17 16:22:35.007 [main] INFO  com.alibaba.nacos.client.utils.ParamUtil - [settings] [req-serv] nacos-server port:8848
+2025-12-17 16:22:35.007 [main] INFO  com.alibaba.nacos.client.utils.ParamUtil - [settings] [http-client] connect timeout:1000
+2025-12-17 16:22:35.008 [main] INFO  com.alibaba.nacos.client.utils.ParamUtil - PER_TASK_CONFIG_SIZE: 3000.0
+2025-12-17 16:22:35.028 [main] INFO  c.a.n.p.auth.spi.client.ClientAuthPluginManager - [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.impl.NacosClientAuthServiceImpl success.
+2025-12-17 16:22:35.028 [main] INFO  c.a.n.p.auth.spi.client.ClientAuthPluginManager - [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.ram.RamClientAuthServiceImpl success.
+2025-12-17 16:22:35.029 [main] INFO  c.a.n.client.auth.ram.identify.CredentialWatcher - null No credential found
+2025-12-17 16:22:35.180 [main] WARN  com.alibaba.nacos.client.logging.NacosLogging - Load Logback Configuration of Nacos fail, message: Could not initialize Logback Nacos logging from classpath:nacos-logback.xml
+2025-12-17 16:22:35.190 [main] INFO  c.a.n.client.config.impl.LocalConfigInfoProcessor - LOCAL_SNAPSHOT_PATH:C:\Users\LeeShuchen\nacos\config
+2025-12-17 16:22:35.192 [main] INFO  com.alibaba.nacos.common.remote.client - [RpcClientFactory] create a new rpc client of 25db4385-88ed-476e-b121-5ef8dc39bf47_config-0
+2025-12-17 16:22:35.203 [main] INFO  com.alibaba.nacos.common.remote.client - [25db4385-88ed-476e-b121-5ef8dc39bf47_config-0] Register server push request handler:com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient$$Lambda$583/0x000002a1cf36db20
+2025-12-17 16:22:35.209 [main] INFO  com.alibaba.nacos.common.remote.client - [25db4385-88ed-476e-b121-5ef8dc39bf47_config-0] Register server push request handler:com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient$$Lambda$584/0x000002a1cf36df40
+2025-12-17 16:22:35.209 [main] INFO  com.alibaba.nacos.common.remote.client - [25db4385-88ed-476e-b121-5ef8dc39bf47_config-0] Registry connection listener to current client:com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient$1
+2025-12-17 16:22:35.209 [main] INFO  com.alibaba.nacos.common.remote.client - [25db4385-88ed-476e-b121-5ef8dc39bf47_config-0] RpcClient init, ServerListFactory = com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient$2
+2025-12-17 16:22:35.214 [main] INFO  com.alibaba.nacos.common.remote.client - [25db4385-88ed-476e-b121-5ef8dc39bf47_config-0] Try to connect to server on start up, server: {serverIp = '192.168.88.101', server main port = 8848}
+2025-12-17 16:22:35.241 [main] INFO  c.a.nacos.common.remote.client.grpc.GrpcClient - grpc client connection server:192.168.88.101 ip,serverPort:9848,grpcTslConfig:{"sslProvider":"OPENSSL","enableTls":false,"mutualAuthEnable":false,"trustAll":false}
+2025-12-17 16:22:35.849 [main] INFO  com.alibaba.nacos.common.remote.client - [25db4385-88ed-476e-b121-5ef8dc39bf47_config-0] Success to connect to server [192.168.88.101:8848] on start up, connectionId = 1765308797337_192.168.88.1_62648
+2025-12-17 16:22:35.850 [com.alibaba.nacos.client.remote.worker] INFO  com.alibaba.nacos.common.remote.client - [25db4385-88ed-476e-b121-5ef8dc39bf47_config-0] Notify connected event to listeners.
+2025-12-17 16:22:35.850 [com.alibaba.nacos.client.remote.worker] INFO  com.alibaba.nacos.client.config.impl.ClientWorker - [25db4385-88ed-476e-b121-5ef8dc39bf47_config-0] Connected,notify listen context...
+2025-12-17 16:22:35.850 [main] INFO  com.alibaba.nacos.common.remote.client - [25db4385-88ed-476e-b121-5ef8dc39bf47_config-0] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$ConnectResetRequestHandler
+2025-12-17 16:22:35.850 [main] INFO  com.alibaba.nacos.common.remote.client - [25db4385-88ed-476e-b121-5ef8dc39bf47_config-0] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$$Lambda$604/0x000002a1cf4d2a38
+2025-12-17 16:22:35.881 [main] INFO  com.alibaba.nacos.client.config.impl.Limiter - limitTime:5.0
+2025-12-17 16:22:36.060 [main] WARN  c.a.cloud.nacos.client.NacosPropertySourceBuilder - Ignore the empty nacos configuration and get it based on dataId[xiaohashu-user-count] & group[DEFAULT_GROUP]
+2025-12-17 16:22:36.065 [main] WARN  c.a.cloud.nacos.client.NacosPropertySourceBuilder - Ignore the empty nacos configuration and get it based on dataId[xiaohashu-user-count.yaml] & group[DEFAULT_GROUP]
+2025-12-17 16:22:36.069 [main] WARN  c.a.cloud.nacos.client.NacosPropertySourceBuilder - Ignore the empty nacos configuration and get it based on dataId[xiaohashu-user-count-dev.yaml] & group[DEFAULT_GROUP]
+2025-12-17 16:22:36.069 [main] INFO  o.s.c.b.c.PropertySourceBootstrapConfiguration - Located property source: [BootstrapPropertySource {name='bootstrapProperties-xiaohashu-user-count-dev.yaml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-xiaohashu-user-count.yaml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-xiaohashu-user-count,DEFAULT_GROUP'}]
+2025-12-17 16:22:36.074 [main] WARN  com.alibaba.nacos.client.logging.NacosLogging - Load Logback Configuration of Nacos fail, message: Could not initialize Logback Nacos logging from classpath:nacos-logback.xml
+2025-12-17 16:22:36.074 [main] INFO  c.q.x.count.biz.XiaohashuCountBizApplication - The following 1 profile is active: "dev"
+2025-12-17 16:22:36.537 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-12-17 16:22:36.539 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-12-17 16:22:36.553 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 6 ms. Found 0 Redis repository interfaces.
+2025-12-17 16:22:36.647 [main] INFO  o.springframework.cloud.context.scope.GenericScope - BeanFactory id=92c1d77c-f6de-367d-afcb-d95bc09ed733
+2025-12-17 16:22:36.820 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.apache.rocketmq.spring.autoconfigure.MessageConverterConfiguration' of type [org.apache.rocketmq.spring.autoconfigure.MessageConverterConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2025-12-17 16:22:36.855 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'createRocketMQMessageConverter' of type [org.apache.rocketmq.spring.support.RocketMQMessageConverter] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2025-12-17 16:22:36.857 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.commons.config.CommonsConfigAutoConfiguration' of type [org.springframework.cloud.commons.config.CommonsConfigAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2025-12-17 16:22:36.860 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2025-12-17 16:22:36.860 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'loadBalancerClientsDefaultsMappingsProvider' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration$$Lambda$757/0x000002a1cf690d38] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2025-12-17 16:22:36.861 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'defaultsBindHandlerAdvisor' of type [org.springframework.cloud.commons.config.DefaultsBindHandlerAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2025-12-17 16:22:36.865 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'rocketmq-org.apache.rocketmq.spring.autoconfigure.RocketMQProperties' of type [org.apache.rocketmq.spring.autoconfigure.RocketMQProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2025-12-17 16:22:36.865 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.apache.rocketmq.spring.autoconfigure.ListenerContainerConfiguration' of type [org.apache.rocketmq.spring.autoconfigure.ListenerContainerConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2025-12-17 16:22:37.013 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8088 (http)
+2025-12-17 16:22:37.021 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-12-17 16:22:37.021 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.5]
+2025-12-17 16:22:37.069 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-12-17 16:22:37.069 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 985 ms
+2025-12-17 16:22:37.159 [main] INFO  o.a.r.s.autoconfigure.RocketMQAutoConfiguration - a producer (xiaohashu_group) init on namesrv 192.168.88.101:9876
+2025-12-17 16:22:37.587 [main] INFO  o.a.r.s.support.DefaultRocketMQListenerContainer - running container: DefaultRocketMQListenerContainer{consumerGroup='xiaohashu_group_CountCollectLikeTopic', namespace='', nameServer='192.168.88.101:9876', topic='CountCollectLikeTopic', consumeMode=CONCURRENTLY, selectorType=TAG, selectorExpression='*', messageModel=CLUSTERING', tlsEnable=false, instanceName=DEFAULT}
+2025-12-17 16:22:37.588 [main] INFO  o.a.r.s.a.ListenerContainerConfiguration - Register the listener to container, listenerBeanName:countCollectUncollectConsumer, containerBeanName:org.apache.rocketmq.spring.support.DefaultRocketMQListenerContainer_1
+2025-12-17 16:22:37.596 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+2025-12-17 16:22:37.821 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2025-12-17 16:22:38.015 [main] INFO  o.a.r.s.support.DefaultRocketMQListenerContainer - running container: DefaultRocketMQListenerContainer{consumerGroup='xiaohashu_groupCountFansDBTopic', namespace='', nameServer='192.168.88.101:9876', topic='CountFansDBTopic', consumeMode=ORDERLY, selectorType=TAG, selectorExpression='*', messageModel=CLUSTERING', tlsEnable=false, instanceName=DEFAULT}
+2025-12-17 16:22:38.016 [main] INFO  o.a.r.s.a.ListenerContainerConfiguration - Register the listener to container, listenerBeanName:countFans2DBConsumer, containerBeanName:org.apache.rocketmq.spring.support.DefaultRocketMQListenerContainer_2
+2025-12-17 16:22:38.063 [main] INFO  o.a.r.s.support.DefaultRocketMQListenerContainer - running container: DefaultRocketMQListenerContainer{consumerGroup='xiaohashu_groupCountFansTopic', namespace='', nameServer='192.168.88.101:9876', topic='CountFansTopic', consumeMode=ORDERLY, selectorType=TAG, selectorExpression='*', messageModel=CLUSTERING', tlsEnable=false, instanceName=DEFAULT}
+2025-12-17 16:22:38.063 [main] INFO  o.a.r.s.a.ListenerContainerConfiguration - Register the listener to container, listenerBeanName:countFansConsumer, containerBeanName:org.apache.rocketmq.spring.support.DefaultRocketMQListenerContainer_3
+2025-12-17 16:22:38.106 [main] INFO  o.a.r.s.support.DefaultRocketMQListenerContainer - running container: DefaultRocketMQListenerContainer{consumerGroup='xiaohashu_groupCountFOLLOWINGDBTopic', namespace='', nameServer='192.168.88.101:9876', topic='CountFOLLOWINGDBTopic', consumeMode=ORDERLY, selectorType=TAG, selectorExpression='*', messageModel=CLUSTERING', tlsEnable=false, instanceName=DEFAULT}
+2025-12-17 16:22:38.107 [main] INFO  o.a.r.s.a.ListenerContainerConfiguration - Register the listener to container, listenerBeanName:countFollowing2DBConsumer, containerBeanName:org.apache.rocketmq.spring.support.DefaultRocketMQListenerContainer_4
+2025-12-17 16:22:38.161 [main] INFO  o.a.r.s.support.DefaultRocketMQListenerContainer - running container: DefaultRocketMQListenerContainer{consumerGroup='xiaohashu_groupCountFollowingTopic', namespace='', nameServer='192.168.88.101:9876', topic='CountFollowingTopic', consumeMode=ORDERLY, selectorType=TAG, selectorExpression='*', messageModel=CLUSTERING', tlsEnable=false, instanceName=DEFAULT}
+2025-12-17 16:22:38.161 [main] INFO  o.a.r.s.a.ListenerContainerConfiguration - Register the listener to container, listenerBeanName:countFollowingConsumer, containerBeanName:org.apache.rocketmq.spring.support.DefaultRocketMQListenerContainer_5
+2025-12-17 16:22:38.212 [main] INFO  o.a.r.s.support.DefaultRocketMQListenerContainer - running container: DefaultRocketMQListenerContainer{consumerGroup='xiaohashu_group_CountNoteLikeTopic', namespace='', nameServer='192.168.88.101:9876', topic='CountNoteLikeTopic', consumeMode=CONCURRENTLY, selectorType=TAG, selectorExpression='*', messageModel=CLUSTERING', tlsEnable=false, instanceName=DEFAULT}
+2025-12-17 16:22:38.212 [main] INFO  o.a.r.s.a.ListenerContainerConfiguration - Register the listener to container, listenerBeanName:countLikeUnlikeConsumer, containerBeanName:org.apache.rocketmq.spring.support.DefaultRocketMQListenerContainer_6
+2025-12-17 16:22:38.270 [main] INFO  o.a.r.s.support.DefaultRocketMQListenerContainer - running container: DefaultRocketMQListenerContainer{consumerGroup='xiaohashu_groupCountCollectDBTopic', namespace='', nameServer='192.168.88.101:9876', topic='CountCollectDBTopic', consumeMode=CONCURRENTLY, selectorType=TAG, selectorExpression='*', messageModel=CLUSTERING', tlsEnable=false, instanceName=DEFAULT}
+2025-12-17 16:22:38.270 [main] INFO  o.a.r.s.a.ListenerContainerConfiguration - Register the listener to container, listenerBeanName:countNoteCollect2DBConsumer, containerBeanName:org.apache.rocketmq.spring.support.DefaultRocketMQListenerContainer_7
+2025-12-17 16:22:38.315 [main] INFO  o.a.r.s.support.DefaultRocketMQListenerContainer - running container: DefaultRocketMQListenerContainer{consumerGroup='xiaohashu_groupCountLikeDBTopic', namespace='', nameServer='192.168.88.101:9876', topic='CountLikeDBTopic', consumeMode=CONCURRENTLY, selectorType=TAG, selectorExpression='*', messageModel=CLUSTERING', tlsEnable=false, instanceName=DEFAULT}
+2025-12-17 16:22:38.315 [main] INFO  o.a.r.s.a.ListenerContainerConfiguration - Register the listener to container, listenerBeanName:countNoteLike2DBConsumer, containerBeanName:org.apache.rocketmq.spring.support.DefaultRocketMQListenerContainer_8
+2025-12-17 16:22:38.360 [main] INFO  o.a.r.s.support.DefaultRocketMQListenerContainer - running container: DefaultRocketMQListenerContainer{consumerGroup='xiaohashu_group_CountPublishTopic', namespace='', nameServer='192.168.88.101:9876', topic='CountPublishTopic', consumeMode=CONCURRENTLY, selectorType=TAG, selectorExpression='*', messageModel=CLUSTERING', tlsEnable=false, instanceName=DEFAULT}
+2025-12-17 16:22:38.360 [main] INFO  o.a.r.s.a.ListenerContainerConfiguration - Register the listener to container, listenerBeanName:countPublishNoteConsumer, containerBeanName:org.apache.rocketmq.spring.support.DefaultRocketMQListenerContainer_9
+2025-12-17 16:22:38.884 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8088 (http) with context path ''
+2025-12-17 16:22:38.887 [main] INFO  com.alibaba.nacos.client.naming - initializer namespace from ans.namespace attribute : null
+2025-12-17 16:22:38.888 [main] INFO  com.alibaba.nacos.client.naming - initializer namespace from ALIBABA_ALIWARE_NAMESPACE attribute :null
+2025-12-17 16:22:38.888 [main] INFO  com.alibaba.nacos.client.naming - initializer namespace from namespace attribute :null
+2025-12-17 16:22:38.893 [main] INFO  c.a.n.p.auth.spi.client.ClientAuthPluginManager - [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.impl.NacosClientAuthServiceImpl success.
+2025-12-17 16:22:38.893 [main] INFO  c.a.n.p.auth.spi.client.ClientAuthPluginManager - [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.ram.RamClientAuthServiceImpl success.
+2025-12-17 16:22:38.895 [main] INFO  com.alibaba.nacos.common.remote.client - [RpcClientFactory] create a new rpc client of 3cc3c3b2-ff5e-4e8c-8be6-86a95b5b6b22
+2025-12-17 16:22:38.897 [main] INFO  com.alibaba.nacos.common.remote.client - [3cc3c3b2-ff5e-4e8c-8be6-86a95b5b6b22] RpcClient init, ServerListFactory = com.alibaba.nacos.client.naming.core.ServerListManager
+2025-12-17 16:22:38.897 [main] INFO  com.alibaba.nacos.common.remote.client - [3cc3c3b2-ff5e-4e8c-8be6-86a95b5b6b22] Registry connection listener to current client:com.alibaba.nacos.client.naming.remote.gprc.redo.NamingGrpcRedoService
+2025-12-17 16:22:38.898 [main] INFO  com.alibaba.nacos.common.remote.client - [3cc3c3b2-ff5e-4e8c-8be6-86a95b5b6b22] Register server push request handler:com.alibaba.nacos.client.naming.remote.gprc.NamingPushRequestHandler
+2025-12-17 16:22:38.898 [main] INFO  com.alibaba.nacos.common.remote.client - [3cc3c3b2-ff5e-4e8c-8be6-86a95b5b6b22] Try to connect to server on start up, server: {serverIp = '192.168.88.101', server main port = 8848}
+2025-12-17 16:22:38.898 [main] INFO  c.a.nacos.common.remote.client.grpc.GrpcClient - grpc client connection server:192.168.88.101 ip,serverPort:9848,grpcTslConfig:{"sslProvider":"OPENSSL","enableTls":false,"mutualAuthEnable":false,"trustAll":false}
+2025-12-17 16:22:39.019 [main] INFO  com.alibaba.nacos.common.remote.client - [3cc3c3b2-ff5e-4e8c-8be6-86a95b5b6b22] Success to connect to server [192.168.88.101:8848] on start up, connectionId = 1765308800547_192.168.88.1_62694
+2025-12-17 16:22:39.019 [main] INFO  com.alibaba.nacos.common.remote.client - [3cc3c3b2-ff5e-4e8c-8be6-86a95b5b6b22] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$ConnectResetRequestHandler
+2025-12-17 16:22:39.019 [main] INFO  com.alibaba.nacos.common.remote.client - [3cc3c3b2-ff5e-4e8c-8be6-86a95b5b6b22] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$$Lambda$604/0x000002a1cf4d2a38
+2025-12-17 16:22:39.019 [com.alibaba.nacos.client.remote.worker] INFO  com.alibaba.nacos.common.remote.client - [3cc3c3b2-ff5e-4e8c-8be6-86a95b5b6b22] Notify connected event to listeners.
+2025-12-17 16:22:39.019 [com.alibaba.nacos.client.remote.worker] INFO  com.alibaba.nacos.client.naming - Grpc connection connect
+2025-12-17 16:22:39.021 [main] INFO  com.alibaba.nacos.client.naming - [REGISTER-SERVICE] xiaohashu registering service xiaohashu-user-count with instance Instance{instanceId='null', ip='172.28.129.13', port=8088, weight=1.0, healthy=true, enabled=true, ephemeral=true, clusterName='DEFAULT', serviceName='null', metadata={IPv6=[2001:da8:c800:9000:0:0:1:c7d9], preserved.register.source=SPRING_CLOUD}}
+2025-12-17 16:22:39.034 [main] INFO  c.a.cloud.nacos.registry.NacosServiceRegistry - nacos registry, DEFAULT_GROUP xiaohashu-user-count 172.28.129.13:8088 register finished
+2025-12-17 16:22:39.137 [main] INFO  c.q.x.count.biz.XiaohashuCountBizApplication - Started XiaohashuCountBizApplication in 4.75 seconds (process running for 5.059)
+2025-12-17 16:22:39.139 [main] INFO  com.alibaba.nacos.client.config.impl.CacheData - nacos.cache.data.init.snapshot = true 
+2025-12-17 16:22:39.139 [main] INFO  com.alibaba.nacos.client.config.impl.ClientWorker - [fixed-xiaohashu-192.168.88.101_8848] [subscribe] xiaohashu-user-count+DEFAULT_GROUP+xiaohashu
+2025-12-17 16:22:39.143 [main] INFO  com.alibaba.nacos.client.config.impl.CacheData - [fixed-xiaohashu-192.168.88.101_8848] [add-listener] ok, tenant=xiaohashu, dataId=xiaohashu-user-count, group=DEFAULT_GROUP, cnt=1
+2025-12-17 16:22:39.143 [main] INFO  c.a.cloud.nacos.refresh.NacosContextRefresher - [Nacos Config] Listening config: dataId=xiaohashu-user-count, group=DEFAULT_GROUP
+2025-12-17 16:22:39.144 [main] INFO  com.alibaba.nacos.client.config.impl.ClientWorker - [fixed-xiaohashu-192.168.88.101_8848] [subscribe] xiaohashu-user-count.yaml+DEFAULT_GROUP+xiaohashu
+2025-12-17 16:22:39.144 [main] INFO  com.alibaba.nacos.client.config.impl.CacheData - [fixed-xiaohashu-192.168.88.101_8848] [add-listener] ok, tenant=xiaohashu, dataId=xiaohashu-user-count.yaml, group=DEFAULT_GROUP, cnt=1
+2025-12-17 16:22:39.144 [main] INFO  c.a.cloud.nacos.refresh.NacosContextRefresher - [Nacos Config] Listening config: dataId=xiaohashu-user-count.yaml, group=DEFAULT_GROUP
+2025-12-17 16:22:39.144 [main] INFO  com.alibaba.nacos.client.config.impl.ClientWorker - [fixed-xiaohashu-192.168.88.101_8848] [subscribe] xiaohashu-user-count-dev.yaml+DEFAULT_GROUP+xiaohashu
+2025-12-17 16:22:39.144 [main] INFO  com.alibaba.nacos.client.config.impl.CacheData - [fixed-xiaohashu-192.168.88.101_8848] [add-listener] ok, tenant=xiaohashu, dataId=xiaohashu-user-count-dev.yaml, group=DEFAULT_GROUP, cnt=1
+2025-12-17 16:22:39.144 [main] INFO  c.a.cloud.nacos.refresh.NacosContextRefresher - [Nacos Config] Listening config: dataId=xiaohashu-user-count-dev.yaml, group=DEFAULT_GROUP
+2025-12-17 16:22:39.378 [ConsumeMessageThread_xiaohashu_group_CountPublishTopic_1] INFO  c.q.x.count.biz.consumer.CountPublishNoteConsumer - =======get message to handle publish\unpublish count
+2025-12-17 16:22:39.378 [ConsumeMessageThread_xiaohashu_group_CountPublishTopic_1] INFO  c.q.x.count.biz.consumer.CountPublishNoteConsumer - =======get message to handle publish count
+2025-12-17 16:22:39.392 [ConsumeMessageThread_xiaohashu_group_CountPublishTopic_1] WARN  o.a.r.s.support.DefaultRocketMQListenerContainer - consume message failed. messageId:7F000001395863947C6B4A6E9CB00001, topic:CountPublishTopic, reconsumeTimes:10
+com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot construct instance of `com.quanxiaoha.xiaohashu.count.biz.model.dto.CountPublishNoteDTO` (although at least one Creator exists): no String-argument constructor/factory method to deserialize from String value ('CountPublishTopic:Publish')
+ at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 1, column: 1]
+	at com.fasterxml.jackson.databind.exc.MismatchedInputException.from(MismatchedInputException.java:63)
+	at com.fasterxml.jackson.databind.DeserializationContext.reportInputMismatch(DeserializationContext.java:1754)
+	at com.fasterxml.jackson.databind.DeserializationContext.handleMissingInstantiator(DeserializationContext.java:1379)
+	at com.fasterxml.jackson.databind.deser.std.StdDeserializer._deserializeFromString(StdDeserializer.java:311)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.deserializeFromString(BeanDeserializerBase.java:1588)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer._deserializeOther(BeanDeserializer.java:197)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:187)
+	at com.fasterxml.jackson.databind.deser.DefaultDeserializationContext.readRootValue(DefaultDeserializationContext.java:342)
+	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:4899)
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3846)
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3814)
+	at com.quanxiaoha.xiaohashu.common.util.JsonUtils.Parse_Object(JsonUtils.java:42)
+	at com.quanxiaoha.xiaohashu.count.biz.consumer.CountPublishNoteConsumer.handlePublishMessage(CountPublishNoteConsumer.java:52)
+	at com.quanxiaoha.xiaohashu.count.biz.consumer.CountPublishNoteConsumer.onMessage(CountPublishNoteConsumer.java:46)
+	at com.quanxiaoha.xiaohashu.count.biz.consumer.CountPublishNoteConsumer.onMessage(CountPublishNoteConsumer.java:25)
+	at org.apache.rocketmq.spring.support.DefaultRocketMQListenerContainer.handleMessage(DefaultRocketMQListenerContainer.java:461)
+	at org.apache.rocketmq.spring.support.DefaultRocketMQListenerContainer.access$100(DefaultRocketMQListenerContainer.java:71)
+	at org.apache.rocketmq.spring.support.DefaultRocketMQListenerContainer$DefaultMessageListenerConcurrently.consumeMessage(DefaultRocketMQListenerContainer.java:421)
+	at org.apache.rocketmq.client.impl.consumer.ConsumeMessageConcurrentlyService$ConsumeRequest.run(ConsumeMessageConcurrentlyService.java:402)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2025-12-17 16:24:03.078 [pool-batch-consume-blocking-queue-thread-0] INFO  c.q.x.count.biz.consumer.CountLikeUnlikeConsumer - ==> 【笔记点赞数】聚合消息, size: 1
+2025-12-17 16:24:03.079 [pool-batch-consume-blocking-queue-thread-0] INFO  c.q.x.count.biz.consumer.CountLikeUnlikeConsumer - ==> 【笔记点赞数】聚合消息, ["{\"userId\":2100,\"noteId\":1,\"timeStamp\":\"2025-12-17 16:24:01\",\"type\":1,\"creatorId\":2100}"]
+2025-12-17 16:24:03.270 [NettyClientPublicExecutor_1] INFO  c.q.x.count.biz.consumer.CountLikeUnlikeConsumer - ======send like note count message to database successfully
+2025-12-17 16:24:03.270 [ConsumeMessageThread_xiaohashu_groupCountLikeDBTopic_1] INFO  c.q.x.count.biz.consumer.CountNoteLike2DBConsumer - =====get message to save note like info into database
+2025-12-17 16:24:03.446 [ConsumeMessageThread_xiaohashu_groupCountLikeDBTopic_1] INFO  c.q.x.count.biz.consumer.CountNoteLike2DBConsumer - =====get message to save note like info into database successfully
+2025-12-17 16:31:39.531 [ConsumeMessageThread_xiaohashu_group_CountPublishTopic_2] INFO  c.q.x.count.biz.consumer.CountPublishNoteConsumer - =======get message to handle publish\unpublish count
+2025-12-17 16:31:39.531 [ConsumeMessageThread_xiaohashu_group_CountPublishTopic_2] INFO  c.q.x.count.biz.consumer.CountPublishNoteConsumer - =======get message to handle publish count
+2025-12-17 16:31:39.531 [ConsumeMessageThread_xiaohashu_group_CountPublishTopic_2] WARN  o.a.r.s.support.DefaultRocketMQListenerContainer - consume message failed. messageId:7F000001395863947C6B4A6E9CB00001, topic:CountPublishTopic, reconsumeTimes:11
+com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot construct instance of `com.quanxiaoha.xiaohashu.count.biz.model.dto.CountPublishNoteDTO` (although at least one Creator exists): no String-argument constructor/factory method to deserialize from String value ('CountPublishTopic:Publish')
+ at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 1, column: 1]
+	at com.fasterxml.jackson.databind.exc.MismatchedInputException.from(MismatchedInputException.java:63)
+	at com.fasterxml.jackson.databind.DeserializationContext.reportInputMismatch(DeserializationContext.java:1754)
+	at com.fasterxml.jackson.databind.DeserializationContext.handleMissingInstantiator(DeserializationContext.java:1379)
+	at com.fasterxml.jackson.databind.deser.std.StdDeserializer._deserializeFromString(StdDeserializer.java:311)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.deserializeFromString(BeanDeserializerBase.java:1588)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer._deserializeOther(BeanDeserializer.java:197)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:187)
+	at com.fasterxml.jackson.databind.deser.DefaultDeserializationContext.readRootValue(DefaultDeserializationContext.java:342)
+	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:4899)
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3846)
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3814)
+	at com.quanxiaoha.xiaohashu.common.util.JsonUtils.Parse_Object(JsonUtils.java:42)
+	at com.quanxiaoha.xiaohashu.count.biz.consumer.CountPublishNoteConsumer.handlePublishMessage(CountPublishNoteConsumer.java:52)
+	at com.quanxiaoha.xiaohashu.count.biz.consumer.CountPublishNoteConsumer.onMessage(CountPublishNoteConsumer.java:46)
+	at com.quanxiaoha.xiaohashu.count.biz.consumer.CountPublishNoteConsumer.onMessage(CountPublishNoteConsumer.java:25)
+	at org.apache.rocketmq.spring.support.DefaultRocketMQListenerContainer.handleMessage(DefaultRocketMQListenerContainer.java:461)
+	at org.apache.rocketmq.spring.support.DefaultRocketMQListenerContainer.access$100(DefaultRocketMQListenerContainer.java:71)
+	at org.apache.rocketmq.spring.support.DefaultRocketMQListenerContainer$DefaultMessageListenerConcurrently.consumeMessage(DefaultRocketMQListenerContainer.java:421)
+	at org.apache.rocketmq.client.impl.consumer.ConsumeMessageConcurrentlyService$ConsumeRequest.run(ConsumeMessageConcurrentlyService.java:402)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2025-12-17 16:33:35.342 [pool-batch-consume-blocking-queue-thread-0] INFO  c.q.x.c.biz.consumer.CountCollectUncollectConsumer - ==> 【笔记点赞数】聚合消息, size: 1
+2025-12-17 16:33:35.357 [NettyClientPublicExecutor_2] INFO  c.q.x.c.biz.consumer.CountCollectUncollectConsumer - ======send collect note count message to database successfully
+2025-12-17 16:33:35.361 [ConsumeMessageThread_xiaohashu_groupCountCollectDBTopic_1] INFO  c.q.x.c.biz.consumer.CountNoteCollect2DBConsumer - ========save collect note count message to database
+2025-12-17 16:33:35.371 [ConsumeMessageThread_xiaohashu_groupCountCollectDBTopic_1] INFO  c.q.x.c.biz.consumer.CountNoteCollect2DBConsumer - =====get message to save note collect info into database successfully
+2025-12-17 16:34:13.382 [pool-batch-consume-blocking-queue-thread-0] INFO  c.q.x.c.biz.consumer.CountCollectUncollectConsumer - ==> 【笔记点赞数】聚合消息, size: 1
+2025-12-17 16:34:13.393 [NettyClientPublicExecutor_3] INFO  c.q.x.c.biz.consumer.CountCollectUncollectConsumer - ======send collect note count message to database successfully
+2025-12-17 16:34:13.394 [ConsumeMessageThread_xiaohashu_groupCountCollectDBTopic_2] INFO  c.q.x.c.biz.consumer.CountNoteCollect2DBConsumer - ========save collect note count message to database
+2025-12-17 16:34:13.405 [ConsumeMessageThread_xiaohashu_groupCountCollectDBTopic_2] INFO  c.q.x.c.biz.consumer.CountNoteCollect2DBConsumer - =====get message to save note collect info into database successfully
+2025-12-17 16:34:19.393 [pool-batch-consume-blocking-queue-thread-0] INFO  c.q.x.c.biz.consumer.CountCollectUncollectConsumer - ==> 【笔记点赞数】聚合消息, size: 1
+2025-12-17 16:34:19.401 [NettyClientPublicExecutor_4] INFO  c.q.x.c.biz.consumer.CountCollectUncollectConsumer - ======send collect note count message to database successfully
+2025-12-17 16:34:19.403 [ConsumeMessageThread_xiaohashu_groupCountCollectDBTopic_3] INFO  c.q.x.c.biz.consumer.CountNoteCollect2DBConsumer - ========save collect note count message to database
+2025-12-17 16:34:19.414 [ConsumeMessageThread_xiaohashu_groupCountCollectDBTopic_3] INFO  c.q.x.c.biz.consumer.CountNoteCollect2DBConsumer - =====get message to save note collect info into database successfully
+2025-12-17 16:35:22.450 [pool-batch-consume-blocking-queue-thread-0] INFO  c.q.x.c.biz.consumer.CountCollectUncollectConsumer - ==> 【笔记点赞数】聚合消息, size: 1
+2025-12-17 16:35:22.457 [NettyClientPublicExecutor_5] INFO  c.q.x.c.biz.consumer.CountCollectUncollectConsumer - ======send collect note count message to database successfully
+2025-12-17 16:35:22.461 [ConsumeMessageThread_xiaohashu_groupCountCollectDBTopic_4] INFO  c.q.x.c.biz.consumer.CountNoteCollect2DBConsumer - ========save collect note count message to database
+2025-12-17 16:35:22.470 [ConsumeMessageThread_xiaohashu_groupCountCollectDBTopic_4] INFO  c.q.x.c.biz.consumer.CountNoteCollect2DBConsumer - =====get message to save note collect info into database successfully
+2025-12-17 16:35:41.465 [pool-batch-consume-blocking-queue-thread-0] INFO  c.q.x.c.biz.consumer.CountCollectUncollectConsumer - ==> 【笔记点赞数】聚合消息, size: 1
+2025-12-17 16:35:41.473 [NettyClientPublicExecutor_6] INFO  c.q.x.c.biz.consumer.CountCollectUncollectConsumer - ======send collect note count message to database successfully
+2025-12-17 16:35:41.475 [ConsumeMessageThread_xiaohashu_groupCountCollectDBTopic_5] INFO  c.q.x.c.biz.consumer.CountNoteCollect2DBConsumer - ========save collect note count message to database
+2025-12-17 16:35:41.483 [ConsumeMessageThread_xiaohashu_groupCountCollectDBTopic_5] INFO  c.q.x.c.biz.consumer.CountNoteCollect2DBConsumer - =====get message to save note collect info into database successfully
+2025-12-17 16:41:21.692 [pool-batch-consume-blocking-queue-thread-0] INFO  c.q.x.c.biz.consumer.CountCollectUncollectConsumer - ==> 【笔记点赞数】聚合消息, size: 1
+2025-12-17 16:41:21.700 [NettyClientPublicExecutor_7] INFO  c.q.x.c.biz.consumer.CountCollectUncollectConsumer - ======send collect note count message to database successfully
+2025-12-17 16:41:21.702 [ConsumeMessageThread_xiaohashu_groupCountCollectDBTopic_6] INFO  c.q.x.c.biz.consumer.CountNoteCollect2DBConsumer - ========save collect note count message to database
+2025-12-17 16:41:21.711 [ConsumeMessageThread_xiaohashu_groupCountCollectDBTopic_6] INFO  c.q.x.c.biz.consumer.CountNoteCollect2DBConsumer - =====get message to save note collect info into database successfully
+2025-12-17 16:41:39.578 [ConsumeMessageThread_xiaohashu_group_CountPublishTopic_3] INFO  c.q.x.count.biz.consumer.CountPublishNoteConsumer - =======get message to handle publish\unpublish count
+2025-12-17 16:41:39.578 [ConsumeMessageThread_xiaohashu_group_CountPublishTopic_3] INFO  c.q.x.count.biz.consumer.CountPublishNoteConsumer - =======get message to handle publish count
+2025-12-17 16:41:39.578 [ConsumeMessageThread_xiaohashu_group_CountPublishTopic_3] WARN  o.a.r.s.support.DefaultRocketMQListenerContainer - consume message failed. messageId:7F000001395863947C6B4A6E9CB00001, topic:CountPublishTopic, reconsumeTimes:12
+com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot construct instance of `com.quanxiaoha.xiaohashu.count.biz.model.dto.CountPublishNoteDTO` (although at least one Creator exists): no String-argument constructor/factory method to deserialize from String value ('CountPublishTopic:Publish')
+ at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 1, column: 1]
+	at com.fasterxml.jackson.databind.exc.MismatchedInputException.from(MismatchedInputException.java:63)
+	at com.fasterxml.jackson.databind.DeserializationContext.reportInputMismatch(DeserializationContext.java:1754)
+	at com.fasterxml.jackson.databind.DeserializationContext.handleMissingInstantiator(DeserializationContext.java:1379)
+	at com.fasterxml.jackson.databind.deser.std.StdDeserializer._deserializeFromString(StdDeserializer.java:311)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.deserializeFromString(BeanDeserializerBase.java:1588)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer._deserializeOther(BeanDeserializer.java:197)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:187)
+	at com.fasterxml.jackson.databind.deser.DefaultDeserializationContext.readRootValue(DefaultDeserializationContext.java:342)
+	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:4899)
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3846)
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3814)
+	at com.quanxiaoha.xiaohashu.common.util.JsonUtils.Parse_Object(JsonUtils.java:42)
+	at com.quanxiaoha.xiaohashu.count.biz.consumer.CountPublishNoteConsumer.handlePublishMessage(CountPublishNoteConsumer.java:52)
+	at com.quanxiaoha.xiaohashu.count.biz.consumer.CountPublishNoteConsumer.onMessage(CountPublishNoteConsumer.java:46)
+	at com.quanxiaoha.xiaohashu.count.biz.consumer.CountPublishNoteConsumer.onMessage(CountPublishNoteConsumer.java:25)
+	at org.apache.rocketmq.spring.support.DefaultRocketMQListenerContainer.handleMessage(DefaultRocketMQListenerContainer.java:461)
+	at org.apache.rocketmq.spring.support.DefaultRocketMQListenerContainer.access$100(DefaultRocketMQListenerContainer.java:71)
+	at org.apache.rocketmq.spring.support.DefaultRocketMQListenerContainer$DefaultMessageListenerConcurrently.consumeMessage(DefaultRocketMQListenerContainer.java:421)
+	at org.apache.rocketmq.client.impl.consumer.ConsumeMessageConcurrentlyService$ConsumeRequest.run(ConsumeMessageConcurrentlyService.java:402)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2025-12-17 16:44:12.829 [pool-batch-consume-blocking-queue-thread-0] INFO  c.q.x.c.biz.consumer.CountCollectUncollectConsumer - ==> 【笔记点赞数】聚合消息, size: 1
+2025-12-17 16:44:12.837 [NettyClientPublicExecutor_8] INFO  c.q.x.c.biz.consumer.CountCollectUncollectConsumer - ======send collect note count message to database successfully
+2025-12-17 16:44:12.839 [ConsumeMessageThread_xiaohashu_groupCountCollectDBTopic_7] INFO  c.q.x.c.biz.consumer.CountNoteCollect2DBConsumer - ========save collect note count message to database
+2025-12-17 16:44:12.848 [ConsumeMessageThread_xiaohashu_groupCountCollectDBTopic_7] INFO  c.q.x.c.biz.consumer.CountNoteCollect2DBConsumer - =====get message to save note collect info into database successfully
+2025-12-17 16:46:51.943 [pool-batch-consume-blocking-queue-thread-0] INFO  c.q.x.c.biz.consumer.CountCollectUncollectConsumer - ==> 【笔记点赞数】聚合消息, size: 1
+2025-12-17 16:46:51.951 [NettyClientPublicExecutor_9] INFO  c.q.x.c.biz.consumer.CountCollectUncollectConsumer - ======send collect note count message to database successfully
+2025-12-17 16:46:51.967 [ConsumeMessageThread_xiaohashu_groupCountCollectDBTopic_8] INFO  c.q.x.c.biz.consumer.CountNoteCollect2DBConsumer - ========save collect note count message to database
+2025-12-17 16:46:51.975 [ConsumeMessageThread_xiaohashu_groupCountCollectDBTopic_8] INFO  c.q.x.c.biz.consumer.CountNoteCollect2DBConsumer - =====get message to save note collect info into database successfully
+2025-12-17 16:47:13.961 [pool-batch-consume-blocking-queue-thread-0] INFO  c.q.x.c.biz.consumer.CountCollectUncollectConsumer - ==> 【笔记点赞数】聚合消息, size: 1
+2025-12-17 16:47:13.972 [NettyClientPublicExecutor_10] INFO  c.q.x.c.biz.consumer.CountCollectUncollectConsumer - ======send collect note count message to database successfully
+2025-12-17 16:47:13.975 [ConsumeMessageThread_xiaohashu_groupCountCollectDBTopic_9] INFO  c.q.x.c.biz.consumer.CountNoteCollect2DBConsumer - ========save collect note count message to database
+2025-12-17 16:47:13.987 [ConsumeMessageThread_xiaohashu_groupCountCollectDBTopic_9] INFO  c.q.x.c.biz.consumer.CountNoteCollect2DBConsumer - =====get message to save note collect info into database successfully
+2025-12-17 16:48:28.021 [pool-batch-consume-blocking-queue-thread-0] INFO  c.q.x.c.biz.consumer.CountCollectUncollectConsumer - ==> 【笔记点赞数】聚合消息, size: 1
+2025-12-17 16:48:28.029 [NettyClientPublicExecutor_11] INFO  c.q.x.c.biz.consumer.CountCollectUncollectConsumer - ======send collect note count message to database successfully
+2025-12-17 16:48:28.030 [ConsumeMessageThread_xiaohashu_groupCountCollectDBTopic_10] INFO  c.q.x.c.biz.consumer.CountNoteCollect2DBConsumer - ========save collect note count message to database
+2025-12-17 16:48:28.042 [ConsumeMessageThread_xiaohashu_groupCountCollectDBTopic_10] INFO  c.q.x.c.biz.consumer.CountNoteCollect2DBConsumer - =====get message to save note collect info into database successfully
+2025-12-17 16:48:33.029 [pool-batch-consume-blocking-queue-thread-0] INFO  c.q.x.c.biz.consumer.CountCollectUncollectConsumer - ==> 【笔记点赞数】聚合消息, size: 1
+2025-12-17 16:48:33.036 [NettyClientPublicExecutor_12] INFO  c.q.x.c.biz.consumer.CountCollectUncollectConsumer - ======send collect note count message to database successfully
+2025-12-17 16:48:33.074 [ConsumeMessageThread_xiaohashu_groupCountCollectDBTopic_11] INFO  c.q.x.c.biz.consumer.CountNoteCollect2DBConsumer - ========save collect note count message to database
+2025-12-17 16:48:33.084 [ConsumeMessageThread_xiaohashu_groupCountCollectDBTopic_11] INFO  c.q.x.c.biz.consumer.CountNoteCollect2DBConsumer - =====get message to save note collect info into database successfully
+2025-12-17 16:49:02.051 [pool-batch-consume-blocking-queue-thread-0] INFO  c.q.x.c.biz.consumer.CountCollectUncollectConsumer - ==> 【笔记点赞数】聚合消息, size: 1
+2025-12-17 16:49:02.091 [NettyClientPublicExecutor_13] INFO  c.q.x.c.biz.consumer.CountCollectUncollectConsumer - ======send collect note count message to database successfully
+2025-12-17 16:49:02.093 [ConsumeMessageThread_xiaohashu_groupCountCollectDBTopic_12] INFO  c.q.x.c.biz.consumer.CountNoteCollect2DBConsumer - ========save collect note count message to database
+2025-12-17 16:49:02.102 [ConsumeMessageThread_xiaohashu_groupCountCollectDBTopic_12] INFO  c.q.x.c.biz.consumer.CountNoteCollect2DBConsumer - =====get message to save note collect info into database successfully
+2025-12-17 16:49:04.056 [pool-batch-consume-blocking-queue-thread-0] INFO  c.q.x.c.biz.consumer.CountCollectUncollectConsumer - ==> 【笔记点赞数】聚合消息, size: 1
+2025-12-17 16:49:04.065 [NettyClientPublicExecutor_14] INFO  c.q.x.c.biz.consumer.CountCollectUncollectConsumer - ======send collect note count message to database successfully
+2025-12-17 16:49:04.065 [ConsumeMessageThread_xiaohashu_groupCountCollectDBTopic_13] INFO  c.q.x.c.biz.consumer.CountNoteCollect2DBConsumer - ========save collect note count message to database
+2025-12-17 16:49:04.075 [ConsumeMessageThread_xiaohashu_groupCountCollectDBTopic_13] INFO  c.q.x.c.biz.consumer.CountNoteCollect2DBConsumer - =====get message to save note collect info into database successfully
+2025-12-17 16:49:06.062 [pool-batch-consume-blocking-queue-thread-0] INFO  c.q.x.c.biz.consumer.CountCollectUncollectConsumer - ==> 【笔记点赞数】聚合消息, size: 1
+2025-12-17 16:49:06.069 [NettyClientPublicExecutor_15] INFO  c.q.x.c.biz.consumer.CountCollectUncollectConsumer - ======send collect note count message to database successfully
+2025-12-17 16:49:06.070 [ConsumeMessageThread_xiaohashu_groupCountCollectDBTopic_14] INFO  c.q.x.c.biz.consumer.CountNoteCollect2DBConsumer - ========save collect note count message to database
+2025-12-17 16:49:06.077 [ConsumeMessageThread_xiaohashu_groupCountCollectDBTopic_14] INFO  c.q.x.c.biz.consumer.CountNoteCollect2DBConsumer - =====get message to save note collect info into database successfully
+2025-12-17 16:51:23.166 [pool-batch-consume-blocking-queue-thread-0] INFO  c.q.x.c.biz.consumer.CountCollectUncollectConsumer - ==> 【笔记点赞数】聚合消息, size: 1
+2025-12-17 16:51:23.171 [NettyClientPublicExecutor_16] INFO  c.q.x.c.biz.consumer.CountCollectUncollectConsumer - ======send collect note count message to database successfully
+2025-12-17 16:51:23.210 [ConsumeMessageThread_xiaohashu_groupCountCollectDBTopic_15] INFO  c.q.x.c.biz.consumer.CountNoteCollect2DBConsumer - ========save collect note count message to database
+2025-12-17 16:51:23.220 [ConsumeMessageThread_xiaohashu_groupCountCollectDBTopic_15] INFO  c.q.x.c.biz.consumer.CountNoteCollect2DBConsumer - =====get message to save note collect info into database successfully
+2025-12-17 16:53:28.497 [pool-batch-consume-blocking-queue-thread-0] INFO  c.q.x.count.biz.consumer.CountLikeUnlikeConsumer - ==> 【笔记点赞数】聚合消息, size: 1
+2025-12-17 16:53:28.497 [pool-batch-consume-blocking-queue-thread-0] INFO  c.q.x.count.biz.consumer.CountLikeUnlikeConsumer - ==> 【笔记点赞数】聚合消息, ["{\"userId\":2100,\"noteId\":1,\"timeStamp\":\"2025-12-17 16:53:28\",\"type\":0,\"creatorId\":2100}"]
+2025-12-17 16:53:28.508 [NettyClientPublicExecutor_17] INFO  c.q.x.count.biz.consumer.CountLikeUnlikeConsumer - ======send like note count message to database successfully
+2025-12-17 16:53:28.546 [ConsumeMessageThread_xiaohashu_groupCountLikeDBTopic_2] INFO  c.q.x.count.biz.consumer.CountNoteLike2DBConsumer - =====get message to save note like info into database
+2025-12-17 16:53:28.556 [ConsumeMessageThread_xiaohashu_groupCountLikeDBTopic_2] INFO  c.q.x.count.biz.consumer.CountNoteLike2DBConsumer - =====get message to save note like info into database successfully
+2025-12-17 16:53:31.506 [pool-batch-consume-blocking-queue-thread-0] INFO  c.q.x.count.biz.consumer.CountLikeUnlikeConsumer - ==> 【笔记点赞数】聚合消息, size: 1
+2025-12-17 16:53:31.506 [pool-batch-consume-blocking-queue-thread-0] INFO  c.q.x.count.biz.consumer.CountLikeUnlikeConsumer - ==> 【笔记点赞数】聚合消息, ["{\"userId\":2100,\"noteId\":1,\"timeStamp\":\"2025-12-17 16:53:30\",\"type\":1,\"creatorId\":2100}"]
+2025-12-17 16:53:31.512 [NettyClientPublicExecutor_18] INFO  c.q.x.count.biz.consumer.CountLikeUnlikeConsumer - ======send like note count message to database successfully
+2025-12-17 16:53:31.550 [ConsumeMessageThread_xiaohashu_groupCountLikeDBTopic_3] INFO  c.q.x.count.biz.consumer.CountNoteLike2DBConsumer - =====get message to save note like info into database
+2025-12-17 16:53:31.559 [ConsumeMessageThread_xiaohashu_groupCountLikeDBTopic_3] INFO  c.q.x.count.biz.consumer.CountNoteLike2DBConsumer - =====get message to save note like info into database successfully
+2025-12-17 16:54:49.303 [pool-batch-consume-blocking-queue-thread-0] INFO  c.q.x.c.biz.consumer.CountCollectUncollectConsumer - ==> 【笔记点赞数】聚合消息, size: 1
+2025-12-17 16:54:49.349 [NettyClientPublicExecutor_19] INFO  c.q.x.c.biz.consumer.CountCollectUncollectConsumer - ======send collect note count message to database successfully
+2025-12-17 16:54:49.350 [ConsumeMessageThread_xiaohashu_groupCountCollectDBTopic_16] INFO  c.q.x.c.biz.consumer.CountNoteCollect2DBConsumer - ========save collect note count message to database
+2025-12-17 16:54:49.357 [ConsumeMessageThread_xiaohashu_groupCountCollectDBTopic_16] INFO  c.q.x.c.biz.consumer.CountNoteCollect2DBConsumer - =====get message to save note collect info into database successfully
+2025-12-17 16:57:29.425 [pool-batch-consume-blocking-queue-thread-0] INFO  c.q.x.c.biz.consumer.CountCollectUncollectConsumer - ==> 【笔记点赞数】聚合消息, size: 1
+2025-12-17 16:57:29.431 [NettyClientPublicExecutor_20] INFO  c.q.x.c.biz.consumer.CountCollectUncollectConsumer - ======send collect note count message to database successfully
+2025-12-17 16:57:29.433 [ConsumeMessageThread_xiaohashu_groupCountCollectDBTopic_17] INFO  c.q.x.c.biz.consumer.CountNoteCollect2DBConsumer - ========save collect note count message to database
+2025-12-17 16:57:29.441 [ConsumeMessageThread_xiaohashu_groupCountCollectDBTopic_17] INFO  c.q.x.c.biz.consumer.CountNoteCollect2DBConsumer - =====get message to save note collect info into database successfully
+2025-12-17 16:57:38.435 [pool-batch-consume-blocking-queue-thread-0] INFO  c.q.x.c.biz.consumer.CountCollectUncollectConsumer - ==> 【笔记点赞数】聚合消息, size: 1
+2025-12-17 16:57:38.442 [NettyClientPublicExecutor_21] INFO  c.q.x.c.biz.consumer.CountCollectUncollectConsumer - ======send collect note count message to database successfully
+2025-12-17 16:57:38.445 [ConsumeMessageThread_xiaohashu_groupCountCollectDBTopic_18] INFO  c.q.x.c.biz.consumer.CountNoteCollect2DBConsumer - ========save collect note count message to database
+2025-12-17 16:57:38.453 [ConsumeMessageThread_xiaohashu_groupCountCollectDBTopic_18] INFO  c.q.x.c.biz.consumer.CountNoteCollect2DBConsumer - =====get message to save note collect info into database successfully
+2025-12-17 16:57:58.454 [pool-batch-consume-blocking-queue-thread-0] INFO  c.q.x.c.biz.consumer.CountCollectUncollectConsumer - ==> 【笔记点赞数】聚合消息, size: 1
+2025-12-17 16:57:58.461 [NettyClientPublicExecutor_22] INFO  c.q.x.c.biz.consumer.CountCollectUncollectConsumer - ======send collect note count message to database successfully
+2025-12-17 16:57:58.463 [ConsumeMessageThread_xiaohashu_groupCountCollectDBTopic_19] INFO  c.q.x.c.biz.consumer.CountNoteCollect2DBConsumer - ========save collect note count message to database
+2025-12-17 16:57:58.473 [ConsumeMessageThread_xiaohashu_groupCountCollectDBTopic_19] INFO  c.q.x.c.biz.consumer.CountNoteCollect2DBConsumer - =====get message to save note collect info into database successfully
+2025-12-17 16:58:06.463 [pool-batch-consume-blocking-queue-thread-0] INFO  c.q.x.c.biz.consumer.CountCollectUncollectConsumer - ==> 【笔记点赞数】聚合消息, size: 1
+2025-12-17 16:58:06.472 [NettyClientPublicExecutor_23] INFO  c.q.x.c.biz.consumer.CountCollectUncollectConsumer - ======send collect note count message to database successfully
+2025-12-17 16:58:06.474 [ConsumeMessageThread_xiaohashu_groupCountCollectDBTopic_20] INFO  c.q.x.c.biz.consumer.CountNoteCollect2DBConsumer - ========save collect note count message to database
+2025-12-17 16:58:06.483 [ConsumeMessageThread_xiaohashu_groupCountCollectDBTopic_20] INFO  c.q.x.c.biz.consumer.CountNoteCollect2DBConsumer - =====get message to save note collect info into database successfully
+2025-12-17 16:58:16.475 [pool-batch-consume-blocking-queue-thread-0] INFO  c.q.x.c.biz.consumer.CountCollectUncollectConsumer - ==> 【笔记点赞数】聚合消息, size: 1
+2025-12-17 16:58:16.482 [NettyClientPublicExecutor_24] INFO  c.q.x.c.biz.consumer.CountCollectUncollectConsumer - ======send collect note count message to database successfully
+2025-12-17 16:58:16.484 [ConsumeMessageThread_xiaohashu_groupCountCollectDBTopic_1] INFO  c.q.x.c.biz.consumer.CountNoteCollect2DBConsumer - ========save collect note count message to database
+2025-12-17 16:58:16.495 [ConsumeMessageThread_xiaohashu_groupCountCollectDBTopic_1] INFO  c.q.x.c.biz.consumer.CountNoteCollect2DBConsumer - =====get message to save note collect info into database successfully
+2025-12-17 17:01:39.596 [ConsumeMessageThread_xiaohashu_group_CountPublishTopic_4] INFO  c.q.x.count.biz.consumer.CountPublishNoteConsumer - =======get message to handle publish\unpublish count
+2025-12-17 17:01:39.597 [ConsumeMessageThread_xiaohashu_group_CountPublishTopic_4] INFO  c.q.x.count.biz.consumer.CountPublishNoteConsumer - =======get message to handle publish count
+2025-12-17 17:01:39.597 [ConsumeMessageThread_xiaohashu_group_CountPublishTopic_4] WARN  o.a.r.s.support.DefaultRocketMQListenerContainer - consume message failed. messageId:7F000001395863947C6B4A6E9CB00001, topic:CountPublishTopic, reconsumeTimes:13
+com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot construct instance of `com.quanxiaoha.xiaohashu.count.biz.model.dto.CountPublishNoteDTO` (although at least one Creator exists): no String-argument constructor/factory method to deserialize from String value ('CountPublishTopic:Publish')
+ at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 1, column: 1]
+	at com.fasterxml.jackson.databind.exc.MismatchedInputException.from(MismatchedInputException.java:63)
+	at com.fasterxml.jackson.databind.DeserializationContext.reportInputMismatch(DeserializationContext.java:1754)
+	at com.fasterxml.jackson.databind.DeserializationContext.handleMissingInstantiator(DeserializationContext.java:1379)
+	at com.fasterxml.jackson.databind.deser.std.StdDeserializer._deserializeFromString(StdDeserializer.java:311)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.deserializeFromString(BeanDeserializerBase.java:1588)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer._deserializeOther(BeanDeserializer.java:197)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:187)
+	at com.fasterxml.jackson.databind.deser.DefaultDeserializationContext.readRootValue(DefaultDeserializationContext.java:342)
+	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:4899)
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3846)
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3814)
+	at com.quanxiaoha.xiaohashu.common.util.JsonUtils.Parse_Object(JsonUtils.java:42)
+	at com.quanxiaoha.xiaohashu.count.biz.consumer.CountPublishNoteConsumer.handlePublishMessage(CountPublishNoteConsumer.java:52)
+	at com.quanxiaoha.xiaohashu.count.biz.consumer.CountPublishNoteConsumer.onMessage(CountPublishNoteConsumer.java:46)
+	at com.quanxiaoha.xiaohashu.count.biz.consumer.CountPublishNoteConsumer.onMessage(CountPublishNoteConsumer.java:25)
+	at org.apache.rocketmq.spring.support.DefaultRocketMQListenerContainer.handleMessage(DefaultRocketMQListenerContainer.java:461)
+	at org.apache.rocketmq.spring.support.DefaultRocketMQListenerContainer.access$100(DefaultRocketMQListenerContainer.java:71)
+	at org.apache.rocketmq.spring.support.DefaultRocketMQListenerContainer$DefaultMessageListenerConcurrently.consumeMessage(DefaultRocketMQListenerContainer.java:421)
+	at org.apache.rocketmq.client.impl.consumer.ConsumeMessageConcurrentlyService$ConsumeRequest.run(ConsumeMessageConcurrentlyService.java:402)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2025-12-17 17:02:33.425 [pool-batch-consume-blocking-queue-thread-0] INFO  c.q.x.count.biz.consumer.CountLikeUnlikeConsumer - ==> 【笔记点赞数】聚合消息, size: 1
+2025-12-17 17:02:33.425 [pool-batch-consume-blocking-queue-thread-0] INFO  c.q.x.count.biz.consumer.CountLikeUnlikeConsumer - ==> 【笔记点赞数】聚合消息, ["{\"userId\":2100,\"noteId\":1,\"timeStamp\":\"2025-12-17 17:02:32\",\"type\":0,\"creatorId\":2100}"]
+2025-12-17 17:02:33.433 [NettyClientPublicExecutor_25] INFO  c.q.x.count.biz.consumer.CountLikeUnlikeConsumer - ======send like note count message to database successfully
+2025-12-17 17:02:33.435 [ConsumeMessageThread_xiaohashu_groupCountLikeDBTopic_4] INFO  c.q.x.count.biz.consumer.CountNoteLike2DBConsumer - =====get message to save note like info into database
+2025-12-17 17:02:33.445 [ConsumeMessageThread_xiaohashu_groupCountLikeDBTopic_4] INFO  c.q.x.count.biz.consumer.CountNoteLike2DBConsumer - =====get message to save note like info into database successfully
+2025-12-17 17:02:37.434 [pool-batch-consume-blocking-queue-thread-0] INFO  c.q.x.count.biz.consumer.CountLikeUnlikeConsumer - ==> 【笔记点赞数】聚合消息, size: 1
+2025-12-17 17:02:37.434 [pool-batch-consume-blocking-queue-thread-0] INFO  c.q.x.count.biz.consumer.CountLikeUnlikeConsumer - ==> 【笔记点赞数】聚合消息, ["{\"userId\":2100,\"noteId\":1,\"timeStamp\":\"2025-12-17 17:02:36\",\"type\":1,\"creatorId\":2100}"]
+2025-12-17 17:02:37.441 [NettyClientPublicExecutor_26] INFO  c.q.x.count.biz.consumer.CountLikeUnlikeConsumer - ======send like note count message to database successfully
+2025-12-17 17:02:37.444 [ConsumeMessageThread_xiaohashu_groupCountLikeDBTopic_5] INFO  c.q.x.count.biz.consumer.CountNoteLike2DBConsumer - =====get message to save note like info into database
+2025-12-17 17:02:37.452 [ConsumeMessageThread_xiaohashu_groupCountLikeDBTopic_5] INFO  c.q.x.count.biz.consumer.CountNoteLike2DBConsumer - =====get message to save note like info into database successfully
+2025-12-17 17:02:39.439 [pool-batch-consume-blocking-queue-thread-0] INFO  c.q.x.count.biz.consumer.CountLikeUnlikeConsumer - ==> 【笔记点赞数】聚合消息, size: 1
+2025-12-17 17:02:39.439 [pool-batch-consume-blocking-queue-thread-0] INFO  c.q.x.count.biz.consumer.CountLikeUnlikeConsumer - ==> 【笔记点赞数】聚合消息, ["{\"userId\":2100,\"noteId\":1,\"timeStamp\":\"2025-12-17 17:02:38\",\"type\":0,\"creatorId\":2100}"]
+2025-12-17 17:02:39.448 [NettyClientPublicExecutor_27] INFO  c.q.x.count.biz.consumer.CountLikeUnlikeConsumer - ======send like note count message to database successfully
+2025-12-17 17:02:39.449 [ConsumeMessageThread_xiaohashu_groupCountLikeDBTopic_6] INFO  c.q.x.count.biz.consumer.CountNoteLike2DBConsumer - =====get message to save note like info into database
+2025-12-17 17:02:39.458 [ConsumeMessageThread_xiaohashu_groupCountLikeDBTopic_6] INFO  c.q.x.count.biz.consumer.CountNoteLike2DBConsumer - =====get message to save note like info into database successfully
+2025-12-17 17:02:46.449 [pool-batch-consume-blocking-queue-thread-0] INFO  c.q.x.count.biz.consumer.CountLikeUnlikeConsumer - ==> 【笔记点赞数】聚合消息, size: 1
+2025-12-17 17:02:46.449 [pool-batch-consume-blocking-queue-thread-0] INFO  c.q.x.count.biz.consumer.CountLikeUnlikeConsumer - ==> 【笔记点赞数】聚合消息, ["{\"userId\":2100,\"noteId\":1,\"timeStamp\":\"2025-12-17 17:02:45\",\"type\":1,\"creatorId\":2100}"]
+2025-12-17 17:02:46.489 [NettyClientPublicExecutor_28] INFO  c.q.x.count.biz.consumer.CountLikeUnlikeConsumer - ======send like note count message to database successfully
+2025-12-17 17:02:46.489 [ConsumeMessageThread_xiaohashu_groupCountLikeDBTopic_7] INFO  c.q.x.count.biz.consumer.CountNoteLike2DBConsumer - =====get message to save note like info into database
+2025-12-17 17:02:46.497 [ConsumeMessageThread_xiaohashu_groupCountLikeDBTopic_7] INFO  c.q.x.count.biz.consumer.CountNoteLike2DBConsumer - =====get message to save note like info into database successfully
+2025-12-17 17:02:49.454 [pool-batch-consume-blocking-queue-thread-0] INFO  c.q.x.count.biz.consumer.CountLikeUnlikeConsumer - ==> 【笔记点赞数】聚合消息, size: 1
+2025-12-17 17:02:49.454 [pool-batch-consume-blocking-queue-thread-0] INFO  c.q.x.count.biz.consumer.CountLikeUnlikeConsumer - ==> 【笔记点赞数】聚合消息, ["{\"userId\":2100,\"noteId\":1,\"timeStamp\":\"2025-12-17 17:02:48\",\"type\":0,\"creatorId\":2100}"]
+2025-12-17 17:02:49.461 [NettyClientPublicExecutor_29] INFO  c.q.x.count.biz.consumer.CountLikeUnlikeConsumer - ======send like note count message to database successfully
+2025-12-17 17:02:49.499 [ConsumeMessageThread_xiaohashu_groupCountLikeDBTopic_8] INFO  c.q.x.count.biz.consumer.CountNoteLike2DBConsumer - =====get message to save note like info into database
+2025-12-17 17:02:49.507 [ConsumeMessageThread_xiaohashu_groupCountLikeDBTopic_8] INFO  c.q.x.count.biz.consumer.CountNoteLike2DBConsumer - =====get message to save note like info into database successfully
+2025-12-17 17:03:12.153 [pool-batch-consume-blocking-queue-thread-0] INFO  c.q.x.c.biz.consumer.CountCollectUncollectConsumer - ==> 【笔记点赞数】聚合消息, size: 1
+2025-12-17 17:03:12.159 [NettyClientPublicExecutor_30] INFO  c.q.x.c.biz.consumer.CountCollectUncollectConsumer - ======send collect note count message to database successfully
+2025-12-17 17:03:12.196 [ConsumeMessageThread_xiaohashu_groupCountCollectDBTopic_2] INFO  c.q.x.c.biz.consumer.CountNoteCollect2DBConsumer - ========save collect note count message to database
+2025-12-17 17:03:12.204 [ConsumeMessageThread_xiaohashu_groupCountCollectDBTopic_2] INFO  c.q.x.c.biz.consumer.CountNoteCollect2DBConsumer - =====get message to save note collect info into database successfully
+2025-12-17 17:19:20.832 [pool-batch-consume-blocking-queue-thread-0] INFO  c.q.x.c.biz.consumer.CountCollectUncollectConsumer - ==> 【笔记点赞数】聚合消息, size: 1
+2025-12-17 17:19:20.840 [NettyClientPublicExecutor_31] INFO  c.q.x.c.biz.consumer.CountCollectUncollectConsumer - ======send collect note count message to database successfully
+2025-12-17 17:19:20.842 [ConsumeMessageThread_xiaohashu_groupCountCollectDBTopic_3] INFO  c.q.x.c.biz.consumer.CountNoteCollect2DBConsumer - ========save collect note count message to database
+2025-12-17 17:19:20.871 [ConsumeMessageThread_xiaohashu_groupCountCollectDBTopic_3] INFO  c.q.x.c.biz.consumer.CountNoteCollect2DBConsumer - =====get message to save note collect info into database successfully
+2025-12-17 17:23:06.984 [pool-batch-consume-blocking-queue-thread-0] INFO  c.q.x.c.biz.consumer.CountCollectUncollectConsumer - ==> 【笔记点赞数】聚合消息, size: 1
+2025-12-17 17:23:06.992 [NettyClientPublicExecutor_32] INFO  c.q.x.c.biz.consumer.CountCollectUncollectConsumer - ======send collect note count message to database successfully
+2025-12-17 17:23:06.993 [ConsumeMessageThread_xiaohashu_groupCountCollectDBTopic_4] INFO  c.q.x.c.biz.consumer.CountNoteCollect2DBConsumer - ========save collect note count message to database
+2025-12-17 17:23:07.003 [ConsumeMessageThread_xiaohashu_groupCountCollectDBTopic_4] INFO  c.q.x.c.biz.consumer.CountNoteCollect2DBConsumer - =====get message to save note collect info into database successfully
+2025-12-17 17:25:26.399 [pool-batch-consume-blocking-queue-thread-0] INFO  c.q.x.count.biz.consumer.CountLikeUnlikeConsumer - ==> 【笔记点赞数】聚合消息, size: 1
+2025-12-17 17:25:26.399 [pool-batch-consume-blocking-queue-thread-0] INFO  c.q.x.count.biz.consumer.CountLikeUnlikeConsumer - ==> 【笔记点赞数】聚合消息, ["{\"userId\":2100,\"noteId\":1,\"timeStamp\":\"2025-12-17 17:25:25\",\"type\":1,\"creatorId\":2100}"]
+2025-12-17 17:25:26.407 [NettyClientPublicExecutor_1] INFO  c.q.x.count.biz.consumer.CountLikeUnlikeConsumer - ======send like note count message to database successfully
+2025-12-17 17:25:26.408 [ConsumeMessageThread_xiaohashu_groupCountLikeDBTopic_9] INFO  c.q.x.count.biz.consumer.CountNoteLike2DBConsumer - =====get message to save note like info into database
+2025-12-17 17:25:26.417 [ConsumeMessageThread_xiaohashu_groupCountLikeDBTopic_9] INFO  c.q.x.count.biz.consumer.CountNoteLike2DBConsumer - =====get message to save note like info into database successfully
+2025-12-17 17:25:28.404 [pool-batch-consume-blocking-queue-thread-0] INFO  c.q.x.count.biz.consumer.CountLikeUnlikeConsumer - ==> 【笔记点赞数】聚合消息, size: 1
+2025-12-17 17:25:28.404 [pool-batch-consume-blocking-queue-thread-0] INFO  c.q.x.count.biz.consumer.CountLikeUnlikeConsumer - ==> 【笔记点赞数】聚合消息, ["{\"userId\":2100,\"noteId\":1,\"timeStamp\":\"2025-12-17 17:25:28\",\"type\":0,\"creatorId\":2100}"]
+2025-12-17 17:25:28.410 [NettyClientPublicExecutor_2] INFO  c.q.x.count.biz.consumer.CountLikeUnlikeConsumer - ======send like note count message to database successfully
+2025-12-17 17:25:28.412 [ConsumeMessageThread_xiaohashu_groupCountLikeDBTopic_10] INFO  c.q.x.count.biz.consumer.CountNoteLike2DBConsumer - =====get message to save note like info into database
+2025-12-17 17:25:28.419 [ConsumeMessageThread_xiaohashu_groupCountLikeDBTopic_10] INFO  c.q.x.count.biz.consumer.CountNoteLike2DBConsumer - =====get message to save note like info into database successfully
+2025-12-17 17:25:31.411 [pool-batch-consume-blocking-queue-thread-0] INFO  c.q.x.count.biz.consumer.CountLikeUnlikeConsumer - ==> 【笔记点赞数】聚合消息, size: 1
+2025-12-17 17:25:31.411 [pool-batch-consume-blocking-queue-thread-0] INFO  c.q.x.count.biz.consumer.CountLikeUnlikeConsumer - ==> 【笔记点赞数】聚合消息, ["{\"userId\":2100,\"noteId\":1,\"timeStamp\":\"2025-12-17 17:25:30\",\"type\":1,\"creatorId\":2100}"]
+2025-12-17 17:25:31.418 [NettyClientPublicExecutor_3] INFO  c.q.x.count.biz.consumer.CountLikeUnlikeConsumer - ======send like note count message to database successfully
+2025-12-17 17:25:31.422 [ConsumeMessageThread_xiaohashu_groupCountLikeDBTopic_11] INFO  c.q.x.count.biz.consumer.CountNoteLike2DBConsumer - =====get message to save note like info into database
+2025-12-17 17:25:31.432 [ConsumeMessageThread_xiaohashu_groupCountLikeDBTopic_11] INFO  c.q.x.count.biz.consumer.CountNoteLike2DBConsumer - =====get message to save note like info into database successfully
+2025-12-17 17:25:35.419 [pool-batch-consume-blocking-queue-thread-0] INFO  c.q.x.count.biz.consumer.CountLikeUnlikeConsumer - ==> 【笔记点赞数】聚合消息, size: 1
+2025-12-17 17:25:35.419 [pool-batch-consume-blocking-queue-thread-0] INFO  c.q.x.count.biz.consumer.CountLikeUnlikeConsumer - ==> 【笔记点赞数】聚合消息, ["{\"userId\":2100,\"noteId\":1,\"timeStamp\":\"2025-12-17 17:25:35\",\"type\":0,\"creatorId\":2100}"]
+2025-12-17 17:25:35.425 [NettyClientPublicExecutor_4] INFO  c.q.x.count.biz.consumer.CountLikeUnlikeConsumer - ======send like note count message to database successfully
+2025-12-17 17:25:35.428 [ConsumeMessageThread_xiaohashu_groupCountLikeDBTopic_12] INFO  c.q.x.count.biz.consumer.CountNoteLike2DBConsumer - =====get message to save note like info into database
+2025-12-17 17:25:35.437 [ConsumeMessageThread_xiaohashu_groupCountLikeDBTopic_12] INFO  c.q.x.count.biz.consumer.CountNoteLike2DBConsumer - =====get message to save note like info into database successfully
+2025-12-17 17:28:10.179 [pool-batch-consume-blocking-queue-thread-0] INFO  c.q.x.c.biz.consumer.CountCollectUncollectConsumer - ==> 【笔记点赞数】聚合消息, size: 1
+2025-12-17 17:28:10.201 [NettyClientPublicExecutor_5] INFO  c.q.x.c.biz.consumer.CountCollectUncollectConsumer - ======send collect note count message to database successfully
+2025-12-17 17:28:10.202 [ConsumeMessageThread_xiaohashu_groupCountCollectDBTopic_5] INFO  c.q.x.c.biz.consumer.CountNoteCollect2DBConsumer - ========save collect note count message to database
+2025-12-17 17:28:10.212 [ConsumeMessageThread_xiaohashu_groupCountCollectDBTopic_5] INFO  c.q.x.c.biz.consumer.CountNoteCollect2DBConsumer - =====get message to save note collect info into database successfully
+2025-12-17 17:28:26.594 [Thread-7] WARN  com.alibaba.nacos.common.notify.NotifyCenter - [NotifyCenter] Start destroying Publisher
+2025-12-17 17:28:26.594 [Thread-1] WARN  c.alibaba.nacos.common.http.HttpClientBeanHolder - [HttpClientBeanHolder] Start destroying common HttpClient
+2025-12-17 17:28:26.595 [Thread-7] WARN  com.alibaba.nacos.common.notify.NotifyCenter - [NotifyCenter] Destruction of the end
+2025-12-17 17:28:26.597 [Thread-1] WARN  c.alibaba.nacos.common.http.HttpClientBeanHolder - [HttpClientBeanHolder] Destruction of the end
+2025-12-17 17:28:26.658 [NettyClientSelector_1] INFO  RocketmqRemoting - closeChannel: close the connection to remote address[192.168.88.101:10911] result: true
+2025-12-17 17:28:26.659 [NettyClientSelector_1] INFO  RocketmqRemoting - closeChannel: close the connection to remote address[192.168.88.101:9876] result: true
+2025-12-17 17:28:26.669 [NettyClientSelector_1] INFO  RocketmqRemoting - closeChannel: close the connection to remote address[192.168.88.101:10911] result: true
+2025-12-17 17:28:26.669 [NettyClientSelector_1] INFO  RocketmqRemoting - closeChannel: close the connection to remote address[192.168.88.101:9876] result: true
+2025-12-17 17:28:26.674 [NettyClientSelector_1] INFO  RocketmqRemoting - closeChannel: close the connection to remote address[192.168.88.101:10911] result: true
+2025-12-17 17:28:26.674 [NettyClientSelector_1] INFO  RocketmqRemoting - closeChannel: close the connection to remote address[192.168.88.101:9876] result: true
+2025-12-17 17:28:26.679 [NettyClientSelector_1] INFO  RocketmqRemoting - closeChannel: close the connection to remote address[192.168.88.101:10911] result: true
+2025-12-17 17:28:26.682 [NettyClientSelector_1] INFO  RocketmqRemoting - closeChannel: close the connection to remote address[192.168.88.101:9876] result: true
+2025-12-17 17:28:26.689 [NettyClientSelector_1] INFO  RocketmqRemoting - closeChannel: close the connection to remote address[192.168.88.101:10911] result: true
+2025-12-17 17:28:26.689 [NettyClientSelector_1] INFO  RocketmqRemoting - closeChannel: close the connection to remote address[192.168.88.101:9876] result: true
+2025-12-17 17:28:26.695 [NettyClientSelector_1] INFO  RocketmqRemoting - closeChannel: close the connection to remote address[192.168.88.101:10911] result: true
+2025-12-17 17:28:26.696 [NettyClientSelector_1] INFO  RocketmqRemoting - closeChannel: close the connection to remote address[192.168.88.101:9876] result: true
+2025-12-17 17:28:26.700 [NettyClientSelector_1] INFO  RocketmqRemoting - closeChannel: close the connection to remote address[192.168.88.101:10911] result: true
+2025-12-17 17:28:26.700 [NettyClientSelector_1] INFO  RocketmqRemoting - closeChannel: close the connection to remote address[192.168.88.101:9876] result: true
+2025-12-17 17:28:26.704 [NettyClientSelector_1] INFO  RocketmqRemoting - closeChannel: close the connection to remote address[192.168.88.101:10911] result: true
+2025-12-17 17:28:26.704 [NettyClientSelector_1] INFO  RocketmqRemoting - closeChannel: close the connection to remote address[192.168.88.101:9876] result: true
+2025-12-17 17:28:26.709 [NettyClientSelector_1] INFO  RocketmqRemoting - closeChannel: close the connection to remote address[192.168.88.101:10911] result: true
+2025-12-17 17:28:26.709 [NettyClientSelector_1] INFO  RocketmqRemoting - closeChannel: close the connection to remote address[192.168.88.101:9876] result: true
+2025-12-17 17:28:26.753 [SpringApplicationShutdownHook] INFO  c.a.cloud.nacos.registry.NacosServiceRegistry - De-registering from Nacos Server now...
+2025-12-17 17:28:26.754 [SpringApplicationShutdownHook] INFO  com.alibaba.nacos.client.naming - [DEREGISTER-SERVICE] xiaohashu deregistering service xiaohashu-user-count with instance: Instance{instanceId='null', ip='172.28.129.13', port=8088, weight=1.0, healthy=true, enabled=true, ephemeral=true, clusterName='DEFAULT', serviceName='null', metadata={}}
+2025-12-17 17:28:26.757 [SpringApplicationShutdownHook] INFO  c.a.cloud.nacos.registry.NacosServiceRegistry - De-registration finished.
+2025-12-17 17:28:26.760 [SpringApplicationShutdownHook] INFO  com.alibaba.nacos.client.naming - com.alibaba.nacos.client.naming.cache.ServiceInfoHolder do shutdown begin
+2025-12-17 17:28:26.760 [SpringApplicationShutdownHook] INFO  com.alibaba.nacos.client.naming - com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown begin
+2025-12-17 17:28:26.760 [SpringApplicationShutdownHook] INFO  com.alibaba.nacos.client.naming - com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown stop
+2025-12-17 17:28:26.760 [SpringApplicationShutdownHook] INFO  com.alibaba.nacos.client.naming - com.alibaba.nacos.client.naming.cache.ServiceInfoHolder do shutdown stop
+2025-12-17 17:28:26.760 [SpringApplicationShutdownHook] INFO  com.alibaba.nacos.client.naming - com.alibaba.nacos.client.naming.remote.NamingClientProxyDelegate do shutdown begin
+2025-12-17 17:28:26.760 [SpringApplicationShutdownHook] INFO  com.alibaba.nacos.client.naming - com.alibaba.nacos.client.naming.core.ServiceInfoUpdateService do shutdown begin
+2025-12-17 17:28:26.760 [SpringApplicationShutdownHook] INFO  com.alibaba.nacos.client.naming - com.alibaba.nacos.client.naming.core.ServiceInfoUpdateService do shutdown stop
+2025-12-17 17:28:26.760 [SpringApplicationShutdownHook] INFO  com.alibaba.nacos.client.naming - com.alibaba.nacos.client.naming.core.ServerListManager do shutdown begin
+2025-12-17 17:28:26.760 [SpringApplicationShutdownHook] WARN  com.alibaba.nacos.client.naming - [NamingHttpClientManager] Start destroying NacosRestTemplate
+2025-12-17 17:28:26.760 [SpringApplicationShutdownHook] WARN  com.alibaba.nacos.client.naming - [NamingHttpClientManager] Destruction of the end
+2025-12-17 17:28:26.760 [SpringApplicationShutdownHook] INFO  com.alibaba.nacos.client.naming - com.alibaba.nacos.client.naming.core.ServerListManager do shutdown stop
+2025-12-17 17:28:26.760 [SpringApplicationShutdownHook] INFO  com.alibaba.nacos.client.naming - com.alibaba.nacos.client.naming.remote.http.NamingHttpClientProxy do shutdown begin
+2025-12-17 17:28:26.760 [SpringApplicationShutdownHook] WARN  com.alibaba.nacos.client.naming - [NamingHttpClientManager] Start destroying NacosRestTemplate
+2025-12-17 17:28:26.760 [SpringApplicationShutdownHook] WARN  com.alibaba.nacos.client.naming - [NamingHttpClientManager] Destruction of the end
+2025-12-17 17:28:26.760 [SpringApplicationShutdownHook] INFO  com.alibaba.nacos.client.naming - com.alibaba.nacos.client.naming.remote.http.NamingHttpClientProxy do shutdown stop
+2025-12-17 17:28:26.761 [SpringApplicationShutdownHook] INFO  com.alibaba.nacos.common.remote.client - Shutdown rpc client, set status to shutdown
+2025-12-17 17:28:26.761 [SpringApplicationShutdownHook] INFO  com.alibaba.nacos.common.remote.client - Shutdown client event executor java.util.concurrent.ScheduledThreadPoolExecutor@4816e5c6[Running, pool size = 2, active threads = 2, queued tasks = 0, completed tasks = 0]
+2025-12-17 17:28:26.761 [SpringApplicationShutdownHook] INFO  com.alibaba.nacos.common.remote.client - Close current connection 1765308800547_192.168.88.1_62694
+2025-12-17 17:28:26.763 [SpringApplicationShutdownHook] INFO  c.a.nacos.common.remote.client.grpc.GrpcClient - Shutdown grpc executor java.util.concurrent.ThreadPoolExecutor@6e9b757e[Running, pool size = 3, active threads = 0, queued tasks = 0, completed tasks = 801]
+2025-12-17 17:28:26.763 [SpringApplicationShutdownHook] INFO  com.alibaba.nacos.client.naming - Shutdown grpc redo service executor java.util.concurrent.ScheduledThreadPoolExecutor@60dbe56f[Running, pool size = 1, active threads = 0, queued tasks = 1, completed tasks = 1315]
+2025-12-17 17:28:26.763 [SpringApplicationShutdownHook] INFO  c.a.n.client.auth.ram.identify.CredentialWatcher - [null] CredentialWatcher is stopped
+2025-12-17 17:28:26.763 [SpringApplicationShutdownHook] INFO  c.a.n.client.auth.ram.identify.CredentialService - [null] CredentialService is freed
+2025-12-17 17:28:26.764 [SpringApplicationShutdownHook] INFO  com.alibaba.nacos.client.naming - com.alibaba.nacos.client.naming.remote.NamingClientProxyDelegate do shutdown stop
+2025-12-17 17:28:26.766 [SpringApplicationShutdownHook] INFO  o.a.r.s.support.DefaultRocketMQListenerContainer - container destroyed, DefaultRocketMQListenerContainer{consumerGroup='xiaohashu_group_CountPublishTopic', namespace='', nameServer='192.168.88.101:9876', topic='CountPublishTopic', consumeMode=CONCURRENTLY, selectorType=TAG, selectorExpression='*', messageModel=CLUSTERING', tlsEnable=false, instanceName=DEFAULT}
+2025-12-17 17:28:26.766 [SpringApplicationShutdownHook] INFO  o.a.r.s.support.DefaultRocketMQListenerContainer - container destroyed, DefaultRocketMQListenerContainer{consumerGroup='xiaohashu_groupCountLikeDBTopic', namespace='', nameServer='192.168.88.101:9876', topic='CountLikeDBTopic', consumeMode=CONCURRENTLY, selectorType=TAG, selectorExpression='*', messageModel=CLUSTERING', tlsEnable=false, instanceName=DEFAULT}
+2025-12-17 17:28:26.767 [SpringApplicationShutdownHook] INFO  o.a.r.s.support.DefaultRocketMQListenerContainer - container destroyed, DefaultRocketMQListenerContainer{consumerGroup='xiaohashu_groupCountCollectDBTopic', namespace='', nameServer='192.168.88.101:9876', topic='CountCollectDBTopic', consumeMode=CONCURRENTLY, selectorType=TAG, selectorExpression='*', messageModel=CLUSTERING', tlsEnable=false, instanceName=DEFAULT}
+2025-12-17 17:28:26.767 [SpringApplicationShutdownHook] INFO  o.a.r.s.support.DefaultRocketMQListenerContainer - container destroyed, DefaultRocketMQListenerContainer{consumerGroup='xiaohashu_group_CountNoteLikeTopic', namespace='', nameServer='192.168.88.101:9876', topic='CountNoteLikeTopic', consumeMode=CONCURRENTLY, selectorType=TAG, selectorExpression='*', messageModel=CLUSTERING', tlsEnable=false, instanceName=DEFAULT}
+2025-12-17 17:28:26.767 [SpringApplicationShutdownHook] INFO  o.a.r.s.support.DefaultRocketMQListenerContainer - container destroyed, DefaultRocketMQListenerContainer{consumerGroup='xiaohashu_groupCountFollowingTopic', namespace='', nameServer='192.168.88.101:9876', topic='CountFollowingTopic', consumeMode=ORDERLY, selectorType=TAG, selectorExpression='*', messageModel=CLUSTERING', tlsEnable=false, instanceName=DEFAULT}
+2025-12-17 17:28:26.767 [SpringApplicationShutdownHook] INFO  o.a.r.s.support.DefaultRocketMQListenerContainer - container destroyed, DefaultRocketMQListenerContainer{consumerGroup='xiaohashu_groupCountFOLLOWINGDBTopic', namespace='', nameServer='192.168.88.101:9876', topic='CountFOLLOWINGDBTopic', consumeMode=ORDERLY, selectorType=TAG, selectorExpression='*', messageModel=CLUSTERING', tlsEnable=false, instanceName=DEFAULT}
+2025-12-17 17:28:26.767 [SpringApplicationShutdownHook] INFO  o.a.r.s.support.DefaultRocketMQListenerContainer - container destroyed, DefaultRocketMQListenerContainer{consumerGroup='xiaohashu_groupCountFansTopic', namespace='', nameServer='192.168.88.101:9876', topic='CountFansTopic', consumeMode=ORDERLY, selectorType=TAG, selectorExpression='*', messageModel=CLUSTERING', tlsEnable=false, instanceName=DEFAULT}
+2025-12-17 17:28:26.767 [SpringApplicationShutdownHook] INFO  o.a.r.s.support.DefaultRocketMQListenerContainer - container destroyed, DefaultRocketMQListenerContainer{consumerGroup='xiaohashu_groupCountFansDBTopic', namespace='', nameServer='192.168.88.101:9876', topic='CountFansDBTopic', consumeMode=ORDERLY, selectorType=TAG, selectorExpression='*', messageModel=CLUSTERING', tlsEnable=false, instanceName=DEFAULT}
+2025-12-17 17:28:26.767 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...
+2025-12-17 17:28:26.768 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2025-12-17 17:28:26.768 [SpringApplicationShutdownHook] INFO  o.a.r.s.support.DefaultRocketMQListenerContainer - container destroyed, DefaultRocketMQListenerContainer{consumerGroup='xiaohashu_group_CountCollectLikeTopic', namespace='', nameServer='192.168.88.101:9876', topic='CountCollectLikeTopic', consumeMode=CONCURRENTLY, selectorType=TAG, selectorExpression='*', messageModel=CLUSTERING', tlsEnable=false, instanceName=DEFAULT}
+2025-12-17 17:28:26.907 [NettyClientSelector_1] INFO  RocketmqRemoting - closeChannel: close the connection to remote address[192.168.88.101:10911] result: true
+2025-12-17 17:28:26.908 [NettyClientSelector_1] INFO  RocketmqRemoting - closeChannel: close the connection to remote address[192.168.88.101:9876] result: true
