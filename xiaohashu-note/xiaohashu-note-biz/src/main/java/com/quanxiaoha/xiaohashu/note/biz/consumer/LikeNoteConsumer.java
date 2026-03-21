@@ -9,11 +9,16 @@ import com.quanxiaoha.xiaohashu.note.biz.domain.mapper.NoteLikeDOMapper;
 import com.quanxiaoha.xiaohashu.note.biz.model.dto.LikeNoteDTO;
 import jakarta.annotation.Resource;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.rocketmq.client.producer.SendCallback;
+import org.apache.rocketmq.client.producer.SendResult;
 import org.apache.rocketmq.common.message.Message;
 import org.apache.rocketmq.spring.annotation.ConsumeMode;
 import org.apache.rocketmq.spring.annotation.MessageModel;
 import org.apache.rocketmq.spring.annotation.RocketMQMessageListener;
 import org.apache.rocketmq.spring.core.RocketMQListener;
+import org.apache.rocketmq.spring.core.RocketMQTemplate;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.messaging.support.MessageBuilder;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -26,6 +31,9 @@ public class LikeNoteConsumer implements RocketMQListener<Message> {
     private NoteLikeDOMapper  noteLikeDOMapper;
     @Resource
     private RateLimiter rateLimiter;
+    @Autowired
+    private RocketMQTemplate rocketMQTemplate;
+
     @Override
     public void onMessage(Message message) {
         //get token
@@ -46,10 +54,62 @@ public class LikeNoteConsumer implements RocketMQListener<Message> {
             default -> log.error("========get like note type error ");
         }
     }
-    void handleLikeNote(LikeNoteDTO likeNoteDTO){
+    void handleLikeNote(LikeNoteDTO likeNoteDTO) {
+        if (ObjectUtil.isNull(likeNoteDTO)) {
+            return;
+        }
+        NoteLikeDO noteLikeDO = NoteLikeDO.builder()
+                .noteId(likeNoteDTO.getNoteId())
+                .userId(likeNoteDTO.getUserId())
+                .createTime(likeNoteDTO.getTimeStamp())
+                .status(likeNoteDTO.getType())
+                .build();
+        int count = noteLikeDOMapper.insertOrUpdate(noteLikeDO);
         log.info("========save like note successfully");
+        if (count <= 0) return;
+        org.springframework.messaging.Message<String> message = MessageBuilder
+                .withPayload(JsonUtils.toJsonString(likeNoteDTO)).build();
+        rocketMQTemplate.asyncSend(MQConstants.TOPIC_COUNT_NOTE_LIKE,message,new SendCallback() {
+
+            @Override
+            public void onSuccess(SendResult sendResult) {
+                log.info("========count like note successfully");
+            }
+
+            @Override
+            public void onException(Throwable throwable) {
+                log.info("========count like note unsuccessfully");
+            }
+        });
     }
+
+
     void handleUnlikeNote(LikeNoteDTO likeNoteDTO){
+        if(ObjectUtil.isNull(likeNoteDTO)){
+            return ;
+        }
+        NoteLikeDO noteLikeDO = NoteLikeDO.builder()
+                .noteId(likeNoteDTO.getNoteId())
+                .userId(likeNoteDTO.getUserId())
+                .createTime(likeNoteDTO.getTimeStamp())
+                .status(likeNoteDTO.getType())
+                .build();
+        int count = noteLikeDOMapper.update2UnlikeByUserIdAndNoteId(noteLikeDO);
         log.info("========save unlike note successfully");
+        if (count <= 0) return;
+        org.springframework.messaging.Message<String> message = MessageBuilder
+                .withPayload(JsonUtils.toJsonString(likeNoteDTO)).build();
+        rocketMQTemplate.asyncSend(MQConstants.TOPIC_COUNT_NOTE_LIKE,message,new SendCallback() {
+
+            @Override
+            public void onSuccess(SendResult sendResult) {
+                log.info("========count unlike note successfully");
+            }
+
+            @Override
+            public void onException(Throwable throwable) {
+                log.info("========count unlike note unsuccessfully");
+            }
+        });
     }
 }

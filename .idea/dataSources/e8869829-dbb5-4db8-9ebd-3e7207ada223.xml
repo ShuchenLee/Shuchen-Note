@@ -22,10 +22,21 @@
     <schema id="15" parent="1" name="7"/>
     <schema id="16" parent="1" name="8"/>
     <schema id="17" parent="1" name="9"/>
-    <data__structure id="18" parent="2" name="newFilter"/>
-    <string id="19" parent="2" name="Authorization:login:session:2100"/>
-    <string id="20" parent="2" name="Authorization:login:token:CE9waSg1ZEKJcJbyyaKKBPxGVcdd2PXoHMSg5IF6Xq1bo7VNDhkeHyfCuPmV518EbWmV6zQd9AbQqFkhotb8XvJB6CqQf4OoBHGxeOTEYyde0l8QY63uqPS40pXUloUE"/>
-    <string id="21" parent="2" name="push.permission.flag"/>
-    <string id="22" parent="2" name="role:permissions:common_user"/>
+    <data__structure id="18" parent="2" name="20251222_0"/>
+    <data__structure id="19" parent="2" name="bloom:dataAlign:note:collections:20251222"/>
+    <data__structure id="20" parent="2" name="bloom:dataAlign:note:likes:20251222"/>
+    <data__structure id="21" parent="2" name="bloom:dataAlign:user:fans:20251222"/>
+    <data__structure id="22" parent="2" name="bloom:dataAlign:user:follow:20251222"/>
+    <data__structure id="23" parent="2" name="bloom:note:collect:2100"/>
+    <data__structure id="24" parent="2" name="newFilter"/>
+    <hash-table id="25" parent="2" name="count:note:1"/>
+    <hash-table id="26" parent="2" name="note:count:1"/>
+    <hash-table id="27" parent="2" name="user:count:2100"/>
+    <hash-table id="28" parent="2" name="user:note:2100"/>
+    <string id="29" parent="2" name="Authorization:login:session:2100"/>
+    <string id="30" parent="2" name="Authorization:login:token:CE9waSg1ZEKJcJbyyaKKBPxGVcdd2PXoHMSg5IF6Xq1bo7VNDhkeHyfCuPmV518EbWmV6zQd9AbQqFkhotb8XvJB6CqQf4OoBHGxeOTEYyde0l8QY63uqPS40pXUloUE"/>
+    <string id="31" parent="2" name="note:detail:1"/>
+    <string id="32" parent="2" name="role:permissions:common_user"/>
+    <string id="33" parent="2" name="user:info:2100"/>
   </database-model>
 </dataSource>

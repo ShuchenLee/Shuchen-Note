@@ -46,3 +46,9 @@ spring:
             - Path=/relation/**
           filters:
             - StripPrefix=1
+        - id: search
+          uri: lb://xiaohashu-search
+          predicates:
+            - Path=/search/**
+          filters:
+            - StripPrefix=1

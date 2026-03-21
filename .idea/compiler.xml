@@ -19,6 +19,7 @@
         <module name="xiaohashu-note-biz" />
         <module name="xiaohashu-user-relation-biz" />
         <module name="xiaoha-spring-boot-starter-biz-operationlog" />
+        <module name="xiaohashu-data-align" />
         <module name="xiaohashu-user-api" />
         <module name="xiaohashu-distributed-id-generator-biz" />
         <module name="xiaohashu-note-api" />
@@ -26,6 +27,7 @@
         <module name="xiaoha-spring-boot-starter-biz-context" />
         <module name="xiaoha-spring-boot-starter-jackson" />
         <module name="xiaohashu-user-biz" />
+        <module name="xiaohashu-search" />
         <module name="xiaoha-common" />
         <module name="xiaohashu-distributed-id-generator-api" />
         <module name="xiaohashu-kv-api" />

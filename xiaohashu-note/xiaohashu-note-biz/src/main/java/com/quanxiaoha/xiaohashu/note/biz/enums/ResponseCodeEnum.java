@@ -22,6 +22,9 @@ public enum ResponseCodeEnum implements BaseExceptionInterface {
     NOTE_SET_TOP_ERROR("NOTE-20008", "笔记设置为置顶错误"),
     NOTE_CANT_OPERATE("NOTE-20009", "非笔记作者不能操作"),
     NOTE_HAVE_LIKED("NOTE-200010", "已经点赞过该笔记"),
+    NOTE_HAVE_NOT_LIKED("NOTE-200011", "未点赞过该笔记"),
+    NOTE_HAVE_COLLECTED("NOTE-200012", "已经收藏过该笔记"),
+    NOTE_HAVE_NOT_COLLECTED("NOTE-200013", "未收藏过该笔记"),
     ;
     // 异常码
     private final String errorCode;

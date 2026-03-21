@@ -3,7 +3,6 @@ package com.quanxiaoha.xiaohashu.note.biz.service.impl;
 import cn.hutool.core.collection.CollUtil;
 import cn.hutool.core.util.ObjectUtil;
 import cn.hutool.core.util.RandomUtil;
-import com.alibaba.nacos.api.common.ResponseCode;
 import com.alibaba.nacos.shaded.com.google.common.base.Preconditions;
 import com.github.benmanes.caffeine.cache.Cache;
 import com.github.benmanes.caffeine.cache.Caffeine;
@@ -14,12 +13,16 @@ import com.quanxiaoha.xiaohashu.common.util.JsonUtils;
 import com.quanxiaoha.xiaohashu.context.holder.ContextHolder;
 import com.quanxiaoha.xiaohashu.note.biz.constants.MQConstants;
 import com.quanxiaoha.xiaohashu.note.biz.constants.RedisConstants;
+import com.quanxiaoha.xiaohashu.note.biz.domain.dataobject.NoteCollectionDO;
 import com.quanxiaoha.xiaohashu.note.biz.domain.dataobject.NoteDO;
 import com.quanxiaoha.xiaohashu.note.biz.domain.dataobject.NoteLikeDO;
+import com.quanxiaoha.xiaohashu.note.biz.domain.mapper.NoteCollectionDOMapper;
 import com.quanxiaoha.xiaohashu.note.biz.domain.mapper.NoteDOMapper;
 import com.quanxiaoha.xiaohashu.note.biz.domain.mapper.NoteLikeDOMapper;
 import com.quanxiaoha.xiaohashu.note.biz.domain.mapper.TopicDOMapper;
 import com.quanxiaoha.xiaohashu.note.biz.enums.*;
+import com.quanxiaoha.xiaohashu.note.biz.model.dto.CollectNoteDTO;
+import com.quanxiaoha.xiaohashu.note.biz.model.dto.CountPublishNoteDTO;
 import com.quanxiaoha.xiaohashu.note.biz.model.dto.LikeNoteDTO;
 import com.quanxiaoha.xiaohashu.note.biz.model.vo.req.*;
 import com.quanxiaoha.xiaohashu.note.biz.model.vo.resp.GetNoteDetailRespVO;
@@ -31,10 +34,11 @@ import com.quanxiaoha.xiaohashu.user.api.dto.resp.FindByUserIdRespDTO;
 import jakarta.annotation.Resource;
 import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.lang3.ObjectUtils;
+import org.apache.commons.lang3.RandomUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.rocketmq.client.producer.SendCallback;
 import org.apache.rocketmq.client.producer.SendResult;
-import org.apache.rocketmq.spring.core.RocketMQListener;
 import org.apache.rocketmq.spring.core.RocketMQTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.ClassPathResource;
@@ -79,6 +83,8 @@ public class NoteServiceImpl implements NoteService {
             .build();
     @Autowired
     private NoteLikeDOMapper noteLikeDOMapper;
+    @Autowired
+    private NoteCollectionDOMapper noteCollectionDOMapper;
 
     @Override
     public Response<?> publishNote(PublishNoteVO publishNoteVO) {
@@ -88,6 +94,7 @@ public class NoteServiceImpl implements NoteService {
         if(Objects.isNull(noteTypeEnum)){
             throw new BizException(ResponseCodeEnum.NOTE_TYPE_ERROE);
         }
+        LocalDateTime createTime = LocalDateTime.now();
         //check images and video
         String images= null;
         String video = null;
@@ -139,8 +146,8 @@ public class NoteServiceImpl implements NoteService {
                 .imgUris(images)
                 .videoUri(video)
                 .visible(NoteVisibleEnum.PUBLIC.getCode())
-                .createTime(LocalDateTime.now())
-                .updateTime(LocalDateTime.now())
+                .createTime(createTime)
+                .updateTime(createTime)
                 .status(NoteStatusEnum.NORMAL.getCode())
                 .contentUuid(contentId)
                 .build();
@@ -150,7 +157,25 @@ public class NoteServiceImpl implements NoteService {
         }catch (Exception e){
             log.error("笔记存储失败，{}",e);
         }
+        CountPublishNoteDTO countPublicNoteDTO = CountPublishNoteDTO.builder()
+                .userId(creatorId)
+                .noteId(Long.valueOf(noteId))
+                .createTime(createTime)
+                .type(PublishNoteEnum.PUBLISH.getType())
+                .build();
+        String countPublishNoteDestination = MQConstants.TOPIC_COUNT_PUBLISH + ":" + MQConstants.TAG_PUBLISH;
+        Message<String> message = MessageBuilder.withPayload(JsonUtils.toJsonString(countPublicNoteDTO)).build();
+        rocketMQTemplate.asyncSend(countPublishNoteDestination, message, new SendCallback() {
+            @Override
+            public void onSuccess(SendResult sendResult) {
+                log.info("======send message to count publish note successfully");
+            }
 
+            @Override
+            public void onException(Throwable throwable) {
+                log.error("======send message to count publish note unsuccessfully");
+            }
+        });
         return Response.success();
     }
     @Override
@@ -358,17 +383,19 @@ public class NoteServiceImpl implements NoteService {
         Long noteId = deleteNoteReqVO.getNoteId();
         //check operation permission
         Long currUserId = ContextHolder.getUserId();
+        LocalDateTime now = LocalDateTime.now();
         NoteDO selectNoteDO = noteDOMapper.selectByPrimaryKey(noteId);
         if(Objects.isNull(selectNoteDO)){
             throw new BizException(ResponseCodeEnum.NOTE_NOT_EXIST);
         }
-        if(Objects.equals(selectNoteDO.getCreatorId(),currUserId)){
+        if(!Objects.equals(selectNoteDO.getCreatorId(),currUserId)){
+            log.info("=============current userId {},note creator userId {}",currUserId,selectNoteDO.getCreatorId());
             throw new BizException(ResponseCodeEnum.NOTE_CANT_OPERATE);
         }
         //logically delete
         NoteDO noteDO = NoteDO.builder()
                 .id(noteId)
-                .updateTime(LocalDateTime.now())
+                .updateTime(now)
                 .status(NoteStatusEnum.DELETED.getCode())
                 .build();
         //delete redis cache
@@ -376,6 +403,26 @@ public class NoteServiceImpl implements NoteService {
         redisTemplate.delete(redisKey);
         //delete local cache use message queue
         rocketMQTemplate.syncSend(MQConstants.TOPIC_DELETE_NOTE_LOCAL_CACHE, noteId);
+        CountPublishNoteDTO countPublicNoteDTO = CountPublishNoteDTO.builder()
+                .userId(currUserId)
+                .noteId(noteId)
+                .createTime(now)
+                .type(PublishNoteEnum.UNPUBLISH.getType())
+                .build();
+        String countPublishNoteDestination = MQConstants.TOPIC_COUNT_PUBLISH + ":" + MQConstants.TAG_UNPUBLISH;
+        Message<String> message = MessageBuilder.withPayload(JsonUtils.toJsonString(countPublicNoteDTO)).build();
+        rocketMQTemplate.asyncSend(countPublishNoteDestination, message, new SendCallback() {
+            @Override
+            public void onSuccess(SendResult sendResult) {
+                log.info("======send message to count unpublish note successfully");
+            }
+
+            @Override
+            public void onException(Throwable throwable) {
+                log.error("======send message to count unpublish note unsuccessfully");
+            }
+        });
+
         return Response.success();
     }
 
@@ -437,7 +484,7 @@ public class NoteServiceImpl implements NoteService {
         Long noteId = likeNoteReqVO.getNoteId();
         Long currUserId = ContextHolder.getUserId();
         //if note exists
-        checkNoteExist(noteId);
+        Long creatorId = checkNoteExist(noteId);
         LocalDateTime now = LocalDateTime.now();
         Long timeStamp = DateUtils.getTimeTamp(now);
         //if user have liked the note user bloom filter
@@ -469,13 +516,12 @@ public class NoteServiceImpl implements NoteService {
                 int count = noteLikeDOMapper.selectIfLikedByUserId(currUserId, noteId);
                 if (count > 0) {
                     //if have like
-                    List<NoteLikeDO> userLikeNoteList = noteLikeDOMapper.selectAllByUserId(currUserId);
-                    List<Long> noteIdList = userLikeNoteList.stream().map(NoteLikeDO::getNoteId).toList();
-                    initialBloom(redisKey, noteIdList);
+                    initialBloom(currUserId);
                     throw new BizException(ResponseCodeEnum.NOTE_HAVE_LIKED);
                 } else {
                     //not have like
                     //create bloom filter and add info
+                    initialBloom(currUserId);
                     DefaultRedisScript<Long> redisScript = new DefaultRedisScript<>();
                     long expireSecs = 60 * 60 ^ 24 + RandomUtil.randomLong(60 * 60 ^ 24);
                     redisScript.setScriptSource(new ResourceScriptSource(new ClassPathResource("/lua/bloom_create_and_add.lua")));
@@ -513,6 +559,7 @@ public class NoteServiceImpl implements NoteService {
                 .noteId(noteId)
                 .type(LikeNoteEnum.LIKE.getType())
                 .timeStamp(now)
+                .creatorId(creatorId)
                 .build();
         String hashKey = String.valueOf(currUserId);
         Message<String> message = MessageBuilder.withPayload(JsonUtils.toJsonString(likeNoteDTO)).build();
@@ -531,11 +578,268 @@ public class NoteServiceImpl implements NoteService {
         return Response.success();
     }
 
+    public Response<?> unlikeNote(UnlikeNoteReqVO unlikeNoteReqVO) {
+        //if note eixst
+        Long userId = ContextHolder.getUserId();
+        Long noteId = unlikeNoteReqVO.getNoteId();
+        Long creatorId = checkNoteExist(noteId);
+        LocalDateTime now = LocalDateTime.now();
+        //if have liked
+        log.info("=====check have liked");
+        DefaultRedisScript<Long> script = new DefaultRedisScript<>();
+        String redisKey = RedisConstants.buildBloomUserNoteLikeListKey(userId);
+        script.setScriptSource(new ResourceScriptSource(new ClassPathResource("/lua/bloom_note_unlike_check.lua")));
+        script.setResultType(Long.class);
+        Long luaResult = (Long)redisTemplate.execute(script, Collections.singletonList(redisKey), noteId);
+        LuaResultEnum luaResultEnum = LuaResultEnum.valueOf(luaResult);
+        String likeListKey = RedisConstants.buildUserNoteLikesKey(userId);
+        switch(luaResultEnum){
+            case NOT_LIKE -> {
+                throw new BizException(ResponseCodeEnum.NOTE_HAVE_NOT_LIKED);
+            }
+            case NOT_EXIST->{
+                log.info("========bloom not exist,create it");
+                initialBloom(userId);
+                //get like info from database
+                int count = noteLikeDOMapper.selectIfLikedByUserId(userId, noteId);
+                if (count <= 0) {
+                    //if have like
+                    throw new BizException(ResponseCodeEnum.NOTE_HAVE_NOT_LIKED);
+                }
+            }
+
+        }
+        //update zset
+        String likeNoteListKey = RedisConstants.buildUserNoteLikesKey(userId);
+        redisTemplate.opsForZSet().remove(likeNoteListKey, noteId);
+        //update database
+        LikeNoteDTO likeNoteDTO = LikeNoteDTO.builder()
+                .userId(userId)
+                .noteId(noteId)
+                .type(LikeNoteEnum.UNLIKE.getType())
+                .timeStamp(now)
+                .creatorId(creatorId)
+                .build();
+        String hashKey = String.valueOf(userId);
+        Message<String> message = MessageBuilder.withPayload(JsonUtils.toJsonString(likeNoteDTO)).build();
+        String destination = MQConstants.TOPIC_LIKE_NOTE +":" + MQConstants.TAG_UNLIKE;
+        rocketMQTemplate.asyncSendOrderly(destination, message,hashKey, new SendCallback() {
+            @Override
+            public void onSuccess(SendResult sendResult) {
+                log.info("======send unlike note message successfully");
+            }
+
+            @Override
+            public void onException(Throwable throwable) {
+                log.info("======send unlike note message unsuccessfully");
+            }
+        });
+        return Response.success();
+    }
+
+    @Override
+    public Response<?> collectNote(CollectNoteReqVO collectNoteReqVO) {
+        //get uerId and noteId
+        Long userId = ContextHolder.getUserId();
+        Long noteId = collectNoteReqVO.getNoteId();
+        LocalDateTime now = LocalDateTime.now();
+        //if note exist
+        Long creatorId = checkNoteExist(noteId);
+        //if have collected
+        //first use bloom filter
+        DefaultRedisScript<Long> bloomScript = new DefaultRedisScript<>();
+        bloomScript.setResultType(Long.class);
+        bloomScript.setScriptSource(new ResourceScriptSource(new  ClassPathResource("/lua/bloom_collect_check.lua")));
+        String bloomRedisKey = RedisConstants.buildBloomUserNoteCollectKey(userId);
+        String collectListRedisKey = RedisConstants.buildUserNoteCollectKey(userId);
+        Long bloomCheckResult = (Long)redisTemplate.execute(bloomScript, Collections.singletonList(bloomRedisKey), noteId);
+        CollectLuaResultEnum bloomCheckResultEnum = CollectLuaResultEnum.valueOf(bloomCheckResult);
+        switch (bloomCheckResultEnum){
+            case NOTE_COLLECTED -> {
+                //bloom judge not have collect
+                Double score = redisTemplate.opsForZSet().score(collectListRedisKey, noteId);
+                if(ObjectUtils.isNotEmpty(score)){
+                    throw new BizException(ResponseCodeEnum.NOTE_HAVE_COLLECTED);
+                }
+                int count = noteCollectionDOMapper.selectIfCollectd(userId, noteId);
+                if(count > 0 ){
+                    initialCollectRedisList(userId);
+                    throw new BizException(ResponseCodeEnum.NOTE_HAVE_COLLECTED);
+                }
+
+            }
+            case NOT_EXIST -> {
+                //bloom not exist
+                //check in database
+                int count = noteCollectionDOMapper.selectIfCollectd(userId, noteId);
+                initialNoteCollectionBloom(userId);
+                if(count > 0){
+                    //hava collected
+                    throw new BizException(ResponseCodeEnum.NOTE_HAVE_COLLECTED);
+                }else{
+                    long expireSecs = 60*60*24 + RandomUtils.nextInt(0, 60*60*24);
+                    DefaultRedisScript<Long> bloomScript1 = new DefaultRedisScript<>();
+                    bloomScript1.setResultType(Long.class);
+                    bloomScript1.setScriptSource(new  ResourceScriptSource(new ClassPathResource("/lua/bloom_collect_create_and_add.lua")));
+                    redisTemplate.execute(bloomScript1, Collections.singletonList(bloomRedisKey), noteId,expireSecs);
+                }
+            }
+        }
+        //update user collection list in redis
+        CollectLuaResultEnum updateRedisResult = updateCollectionList(userId,noteId,now);
+        if(updateRedisResult == CollectLuaResultEnum.NOT_EXIST){
+            initialCollectRedisList(userId);
+            long expireSecs = 60 * 60 ^ 24 + RandomUtil.randomLong(60 * 60 ^ 24);
+            redisTemplate.opsForZSet().add(collectListRedisKey,noteId, DateUtils.getTimeTamp(now));
+            redisTemplate.expire(collectListRedisKey, expireSecs, TimeUnit.SECONDS);
+        }
+        //send MQ message to
+        CollectNoteDTO collectNoteDTO = CollectNoteDTO.builder()
+                .noteId(noteId)
+                .userId(userId)
+                .createTime(now)
+                .creatorId(creatorId)
+                .type(CollectNoteEnum.COLLECT.getType())
+                .build();
+        String hashKey = String.valueOf(userId);
+        Message<String> message =  MessageBuilder.withPayload(JsonUtils.toJsonString(collectNoteDTO)).build();
+        String destination = MQConstants.TOPIC_COLLECT_NOTE +":"+ MQConstants.TAG_COLLECT;
+        rocketMQTemplate.asyncSendOrderly(destination, message , hashKey,new SendCallback() {
+            @Override
+            public void onSuccess(SendResult sendResult) {
+                log.info("======send collect note message to database successfully");
+            }
+
+            @Override
+            public void onException(Throwable throwable) {
+                log.error("======send collect note message to database unsuccessfully");
+            }
+        });
+        return Response.success();
+    }
+
+    @Override
+    public Response<?> uncollectNote(UncollectNoteReqVO uncollectNoteReqVO) {
+        //get userId noteId timestamp
+        Long userId = ContextHolder.getUserId();
+        Long noteId= uncollectNoteReqVO.getNoteId();
+        LocalDateTime timestamp = LocalDateTime.now();
+        String bloomRedisKey = RedisConstants.buildBloomUserNoteCollectKey(userId);
+        String collectListRedisKey = RedisConstants.buildUserNoteCollectKey(userId);
+        //check if note exist
+        Long creatorId = checkNoteExist(noteId);
+        //check if have collect
+        DefaultRedisScript<Long> bloomScript = new DefaultRedisScript<>();
+        bloomScript.setScriptSource(new ResourceScriptSource(new ClassPathResource("/lua/bloom_uncollect_check.lua")));
+        bloomScript.setResultType(Long.class);
+        Long bloomResult = (Long)redisTemplate.execute(bloomScript,Collections.singletonList(bloomRedisKey),noteId);
+        CollectLuaResultEnum bloomCheckResultEnum = CollectLuaResultEnum.valueOf(bloomResult);
+        switch (bloomCheckResultEnum){
+            case NOT_COLLECTED -> throw new BizException(ResponseCodeEnum.NOTE_HAVE_NOT_COLLECTED);
+            case NOT_EXIST -> {
+                //initial bloom
+                initialNoteCollectionBloom(userId);
+                int count = noteCollectionDOMapper.selectIfCollectd(userId, noteId);
+                if(count <= 0) throw new BizException(ResponseCodeEnum.NOTE_HAVE_NOT_COLLECTED);
+            }
+        }
+        //update zset
+        redisTemplate.opsForZSet().remove(collectListRedisKey, noteId);
+        //update database
+        String hashKey = String.valueOf(userId);
+        CollectNoteDTO collectNoteDTO = CollectNoteDTO.builder()
+                .userId(userId)
+                .noteId(noteId)
+                .createTime(timestamp)
+                .type(CollectNoteEnum.UNCOLLECT.getType())
+                .creatorId(creatorId)
+                .build();
+        Message<String> message = MessageBuilder.withPayload(JsonUtils.toJsonString(collectNoteDTO)).build();
+        String destination = MQConstants.TOPIC_COLLECT_NOTE +":"+ MQConstants.TAG_UNCOLLECT;
+        rocketMQTemplate.asyncSendOrderly(destination, message , hashKey,new SendCallback() {
+            @Override
+            public void onSuccess(SendResult sendResult) {
+                log.info("======send uncollect note message to database successfully");
+            }
+
+            @Override
+            public void onException(Throwable throwable) {
+                log.info("======send uncollect note message to database unsuccessfully");
+            }
+        });
+        return Response.success();
+    }
+
+    private CollectLuaResultEnum updateCollectionList(Long userId, Long noteId, LocalDateTime now) {
+        Long timeStamp = DateUtils.getTimeTamp(now);
+        DefaultRedisScript<Long> collectListScript = new DefaultRedisScript<>();
+        collectListScript.setResultType(Long.class);
+        collectListScript.setScriptSource(new ResourceScriptSource(new  ClassPathResource("/lua/collect_check_and_add.lua")));
+        String collectListRedisKey = RedisConstants.buildUserNoteCollectKey(userId);
+        Long result = (Long)redisTemplate.execute(collectListScript, Collections.singletonList(collectListRedisKey), timeStamp, userId);
+        return CollectLuaResultEnum.valueOf(result);
+    }
+
+    /**
+     * initial user collect list
+     * @param userId
+     */
+    private void initialCollectRedisList(Long userId) {
+        //get the user all note collection
+        List<NoteCollectionDO> noteCollectionDOList = noteCollectionDOMapper.selectAllByUserIdLimit(userId);
+        String redisKey = RedisConstants.buildUserNoteCollectKey(userId);
+        Boolean exist = redisTemplate.hasKey(redisKey);
+        if(!exist){
+            long expireSecs = 60 * 60 ^ 24 + RandomUtil.randomLong(60 * 60 ^ 24);
+            List<Long> luaArgs =  new ArrayList<>();
+            if(CollUtil.isEmpty(noteCollectionDOList)) return ;
+            noteCollectionDOList.forEach(noteCollectionDO -> {
+                luaArgs.add(DateUtils.getTimeTamp(noteCollectionDO.getCreateTime()));
+                luaArgs.add(noteCollectionDO.getNoteId());
+            });
+            luaArgs.add(expireSecs);
+            DefaultRedisScript<Long> collectListScript = new DefaultRedisScript<>();
+            collectListScript.setResultType(Long.class);
+            collectListScript.setScriptSource(new ResourceScriptSource(new ClassPathResource("/lua/collect_create_and_add_batch.lua")));
+            redisTemplate.execute(collectListScript, Collections.singletonList(redisKey), luaArgs.toArray());
+        }
+
+    }
+
+    /**
+     * build note collection bloom filter
+     * @param userId
+     */
+    private void initialNoteCollectionBloom(Long userId) {
+        //get the user all note collection
+        List<NoteCollectionDO> noteCollectionDOList = noteCollectionDOMapper.selectAllByUserId(userId);
+        if (CollUtil.isEmpty(noteCollectionDOList)) {
+            return ;
+        }
+        List<Long> noteIdList = noteCollectionDOList.stream().map(NoteCollectionDO::getNoteId).toList();
+        String redisKey = RedisConstants.buildBloomUserNoteCollectKey(userId);
+
+        List<Long> luaArgs =  new ArrayList<>();
+        noteIdList.forEach(noteId -> {
+            luaArgs.add(noteId);
+        });
+        long expireSecs = 60 * 60 ^ 24 + RandomUtil.randomLong(60 * 60 ^ 24);
+        luaArgs.add(expireSecs);
+        DefaultRedisScript<Long> bloomScript = new DefaultRedisScript<>();
+        bloomScript.setResultType(Long.class);
+        bloomScript.setScriptSource(new  ResourceScriptSource(new ClassPathResource("/lua/bloom_add_collection_batch.lua")));
+        redisTemplate.execute(bloomScript, Collections.singletonList(redisKey), luaArgs.toArray());
+
+
+    }
+
+
     private void initalLikeList(Long currUserId) {
         String redisKey = RedisConstants.buildUserNoteLikesKey(currUserId);
         boolean exist = redisTemplate.hasKey(redisKey);
         if(!exist){
             List<NoteLikeDO> userLikeNoteList = noteLikeDOMapper.selectLikedByUserIdAndLimit(currUserId,100);
+            if(ObjectUtil.isEmpty(userLikeNoteList)) return ;
             DefaultRedisScript<Long> redisScript = new DefaultRedisScript<>();
             long expireSecs = 60 * 60 ^ 24 + RandomUtil.randomLong(60 * 60 ^ 24);
             redisScript.setScriptSource(new ResourceScriptSource(new ClassPathResource("/lua/like_list_add_batch.lua")));
@@ -563,15 +867,24 @@ public class NoteServiceImpl implements NoteService {
         return result;
     }
 
-    private void initialBloom(String redisKey, List<Long> noteIdList) {
+    private void initialBloom(Long userId) {
         taskExecutor.execute(()->{
             try{
+                String redisKey = RedisConstants.buildUserNoteLikesKey(userId);
+                List<NoteLikeDO> noteIdList = noteLikeDOMapper.selectAllByUserId(userId);
                 Long expireSecs = 60*60^24 + RandomUtil.randomLong(60*60^24);
-                noteIdList.add(expireSecs);
-                DefaultRedisScript<Long> redisScript = new DefaultRedisScript<>();
-                redisScript.setResultType(Long.class);
-                redisScript.setScriptSource(new ResourceScriptSource(new ClassPathResource("/lua/bloom_add_batch.lua")));
-                redisTemplate.execute(redisScript, Collections.singletonList(redisKey), noteIdList);
+                if(CollUtil.isNotEmpty(noteIdList)){
+                    List<Object> luaArgs = new ArrayList<>();
+                    noteIdList.forEach(noteId -> {
+                        luaArgs.add(noteId.getNoteId());
+                    });
+                    luaArgs.add(expireSecs);
+                    DefaultRedisScript<Long> redisScript = new DefaultRedisScript<>();
+                    redisScript.setResultType(Long.class);
+                    redisScript.setScriptSource(new ResourceScriptSource(new ClassPathResource("/lua/bloom_add_batch.lua")));
+                    redisTemplate.execute(redisScript, Collections.singletonList(redisKey), luaArgs.toArray());
+                }
+
             }catch (Exception e){
                 log.error("initialBloom error",e);
             }
@@ -579,20 +892,21 @@ public class NoteServiceImpl implements NoteService {
         });
     }
 
-    private void checkNoteExist(Long noteId) {
-
+    private Long checkNoteExist(Long noteId) {
         //find in local cache
         String localCache = caffeine.getIfPresent(noteId);
-        if(Objects.isNull(localCache)){
+        GetNoteDetailRespVO getNoteDetailRespVO = JsonUtils.Parse_Object(localCache, GetNoteDetailRespVO.class);
+        if(Objects.isNull(getNoteDetailRespVO)){
             log.info("======note {} not in cache",noteId);
             String redisKey = RedisConstants.buildNoteDetailKey(noteId);
-            Object o = redisTemplate.opsForValue().get(redisKey);
-            if(Objects.isNull(o)){
-                log.info("======note {} not in cache",noteId);
-                int count = noteDOMapper.selectByNoteId(noteId);
-                if(count <= 0) throw new BizException(ResponseCodeEnum.NOTE_NOT_EXIST);
-            }else{
-                //put note info into redis and cache
+            String o = (String)redisTemplate.opsForValue().get(redisKey);
+            getNoteDetailRespVO =  JsonUtils.Parse_Object(o,GetNoteDetailRespVO.class);
+            if(Objects.isNull(getNoteDetailRespVO)){
+                log.info("======note {} not in redis",noteId);
+                Long creatorId = noteDOMapper.selectCreatorIdByNoteId(noteId);
+                if(Objects.isNull(creatorId)){
+                    throw new BizException(ResponseCodeEnum.NOTE_NOT_EXIST);
+                }//put note info into redis and cache
                 taskExecutor.execute(() -> {
                     GetNoteDetailReqVO getNoteDetailReqVO = GetNoteDetailReqVO
                             .builder()
@@ -600,8 +914,11 @@ public class NoteServiceImpl implements NoteService {
                             .build();
                     getNoteDetail(getNoteDetailReqVO);
                 });
+                return creatorId;
             }
+
         }
+        return getNoteDetailRespVO.getCreatorId();
     }
 }
 

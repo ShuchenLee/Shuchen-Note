@@ -16,4 +16,5 @@ public class LikeNoteDTO {
     private Long noteId;
     private LocalDateTime timeStamp;
     private Integer type;
+    private Long creatorId;
 }

@@ -4,10 +4,12 @@ import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
+import com.fasterxml.jackson.databind.type.CollectionType;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import lombok.SneakyThrows;
 import org.apache.commons.lang3.StringUtils;
 
+import java.util.List;
 import java.util.Map;
 
 public class JsonUtils {
@@ -46,6 +48,16 @@ public class JsonUtils {
         };
         // 将 JSON 字符串转换为 Map
         return OBJECT_MAPPER.readValue(mapStr, OBJECT_MAPPER.getTypeFactory().constructMapType(Map.class, keyClass, valueClass));
+    }
+    @SneakyThrows
+    public static <T> List<T> parseList(String listStr, Class<T> clazz){
+        // 使用 TypeReference 指定 List<T> 的泛型类型
+        return OBJECT_MAPPER.readValue(listStr, new TypeReference<List<T>>() {
+            @Override
+            public CollectionType getType() {
+                return OBJECT_MAPPER.getTypeFactory().constructCollectionType(List.class, clazz);
+            }
+        });
     }
 
 }

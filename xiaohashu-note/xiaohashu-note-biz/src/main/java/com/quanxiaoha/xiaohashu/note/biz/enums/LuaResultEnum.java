@@ -8,6 +8,7 @@ import org.checkerframework.checker.units.qual.A;
 @AllArgsConstructor
 public enum LuaResultEnum {
     NOT_EXIST(-1L),
+    NOT_LIKE(0L),
     NOTE_LIKED(1L);
     private final Long code;
 

@@ -17,4 +17,10 @@ public interface NoteService {
 
     Response<?> likeNote(LikeNoteReqVO likeNoteReqVO);
 
+    Response<?> unlikeNote(UnlikeNoteReqVO unlikeNoteReqVO);
+
+    Response<?> collectNote(CollectNoteReqVO collectNoteReqVO);
+
+    Response<?> uncollectNote(UncollectNoteReqVO uncollectNoteReqVO);
+
 }
